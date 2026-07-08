@@ -9,6 +9,7 @@ import { useLocaleSwitch } from "@/lib/i18n/hooks/useLocaleSwitch"
 import { Button } from "@/components/ui/button"
 
 import { useDict } from "@/lib/i18n/hooks/useDict"
+import { NAVIGATION } from "@/constants/navigation/navigation"
 
 export function NavigationDesktopCTA() {
   const dict = useDict()
@@ -27,7 +28,7 @@ export function NavigationDesktopCTA() {
         size="sm"
         className="rounded-lg bg-foreground hover:bg-foreground/90 text-background px-4 h-8 text-xs"
       >
-        <a href="#contact">{dict.hero.cta}</a>
+        <a href={NAVIGATION.CONTACT_FORM}>{dict.common.discuss_task}</a>
       </Button>
     </div>
   )

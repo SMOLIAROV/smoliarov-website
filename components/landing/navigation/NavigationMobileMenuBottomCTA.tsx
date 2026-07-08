@@ -9,7 +9,7 @@ import { useDict } from "@/lib/i18n/hooks/useDict"
 import { useLocaleSwitch } from "@/lib/i18n/hooks/useLocaleSwitch"
 
 import type { MobileMenuBottomCTAProps } from "./types"
-
+import { NAVIGATION } from "@/constants/navigation/navigation"
 
 export function NavigationMobileMenuBottomCTA({
   isOpen,
@@ -24,11 +24,7 @@ export function NavigationMobileMenuBottomCTA({
         flex flex-col gap-3 pt-6
         border-t border-foreground/10
         transition-all duration-500
-        ${
-          isOpen
-            ? "opacity-100 translate-y-0"
-            : "opacity-0 translate-y-4"
-        }
+        ${isOpen ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}
       `}
       style={{
         transitionDelay: isOpen ? "300ms" : "0ms",
@@ -46,14 +42,10 @@ export function NavigationMobileMenuBottomCTA({
           active:scale-[0.98]
         "
       >
-        <a
-          href="#contact"
-          onClick={onClose}
-        >
-          {dict.hero.cta}
+        <a href={NAVIGATION.CONTACT_FORM} onClick={onClose}>
+          {dict.common.discuss_task}
         </a>
       </Button>
-
 
       <Link
         href={switchLocalePath}

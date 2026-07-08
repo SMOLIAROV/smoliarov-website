@@ -1,8 +1,11 @@
 import { Menu, X } from "lucide-react"
 import { MobileMenuButtonProps } from "./types"
 
-export function NavigationMobileMenuButton({ isOpen, onClick }: MobileMenuButtonProps){
-    return (
+export function NavigationMobileMenuButton({
+  isOpen,
+  onClick,
+}: MobileMenuButtonProps) {
+  return (
     <button
       onClick={onClick}
       className="xl:hidden p-2 text-foreground transition-colors"

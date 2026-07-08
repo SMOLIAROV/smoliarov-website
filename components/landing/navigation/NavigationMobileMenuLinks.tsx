@@ -1,13 +1,16 @@
 "use client"
-import { useDict } from "@/lib/i18n/hooks/useDict";
-import { MobileMenuLinksProps } from "./types";
-import { getNavLinks } from "@/constants/navigation/getNavLinks";
+import { useDict } from "@/lib/i18n/hooks/useDict"
+import { MobileMenuLinksProps } from "./types"
+import { getNavLinks } from "@/constants/navigation/getNavLinks"
 
-export function NavigationMobileMenuLinks({ isOpen, onClose }: MobileMenuLinksProps){
-    const dict = useDict()
-    const navLinks = getNavLinks(dict)
+export function NavigationMobileMenuLinks({
+  isOpen,
+  onClose,
+}: MobileMenuLinksProps) {
+  const dict = useDict()
+  const navLinks = getNavLinks(dict)
 
-    return (
+  return (
     <div className="flex-1 flex flex-col justify-center gap-4 sm:gap-6">
       {navLinks.map((link, i) => (
         <a

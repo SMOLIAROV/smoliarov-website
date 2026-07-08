@@ -1,4 +1,4 @@
-import { MobileMenuCloseButtonProps } from "./types";
+import { MobileMenuCloseButtonProps } from "./types"
 import { X } from "lucide-react"
 
 export function NavigationMobileMenuCloseButton({

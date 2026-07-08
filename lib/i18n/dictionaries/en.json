@@ -1,6 +1,7 @@
 {
   "common": {
-    "loading": "Loading"
+    "loading": "Loading",
+    "discuss_task": "Discuss the task"
   },
   "navigation": {
     "services": "Solutions",
@@ -12,6 +13,9 @@
     "contact": "Submit a request"
   },
   "hero": {
-    "cta": "Discuss the task"
+    "title": "Simple solutions for your business",
+    "subtitle": "Ready‑to‑use services and automation — no confusion, clear deadlines",
+    "description": "Describe your task in your own words — get a working tool that eliminates routine.",
+    "view_examples": "View examples"
   }
 }

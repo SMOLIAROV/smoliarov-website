@@ -1,13 +1,15 @@
 import type { Dictionary } from "@/lib/i18n/dictionaries"
 
-export function getNavLinks(i18n: Dictionary) {
+import { NAVIGATION } from "./navigation"
+
+export function getNavLinks(dict: Dictionary) {
   return [
-    { name: i18n.navigation.services, href: "#services" },
-    { name: i18n.navigation.examples, href: "#examples" },
-    { name: i18n.navigation.process, href: "#process" },
-    { name: i18n.navigation.why_us, href: "#why_us" },
-    { name: i18n.navigation.faq, href: "#faq" },
-    { name: i18n.navigation.reviews, href: "#reviews" },
-    { name: i18n.navigation.contact, href: "#contact" },
+    { name: dict.navigation.services, href: NAVIGATION.SERVICES },
+    { name: dict.navigation.examples, href: NAVIGATION.EXAMPLES },
+    { name: dict.navigation.process, href: NAVIGATION.PROCESS },
+    { name: dict.navigation.why_us, href: NAVIGATION.WHY_US },
+    { name: dict.navigation.faq, href: NAVIGATION.FAQ },
+    { name: dict.navigation.reviews, href: NAVIGATION.REVIEWS },
+    { name: dict.navigation.contact, href: NAVIGATION.CONTACT_FORM },
   ] as const
 }
