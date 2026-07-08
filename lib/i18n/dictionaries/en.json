@@ -1,0 +1,17 @@
+{
+  "common": {
+    "loading": "Loading"
+  },
+  "navigation": {
+    "services": "Solutions",
+    "examples": "Examples",
+    "process": "Process",
+    "why_us": "Why us",
+    "faq": "FAQ",
+    "reviews": "Reviews",
+    "contact": "Submit a request"
+  },
+  "hero": {
+    "cta": "Discuss the task"
+  }
+}
