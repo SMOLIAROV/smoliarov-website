@@ -2,6 +2,8 @@
 
 import type { ReactNode } from "react"
 
+import { CookieBanner } from "../features/cookie-banner"
+
 import {
   LoadingScreen,
   LoadingScreenProvider,
@@ -14,6 +16,7 @@ export function SiteUiShell({ children }: { children: ReactNode }) {
     <LoadingScreenProvider value={useLoadingProgress()}>
       <LoadingScreen />
       {children}
+      <CookieBanner />
     </LoadingScreenProvider>
   )
 }

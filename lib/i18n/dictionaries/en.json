@@ -25,6 +25,12 @@
     "description": "Describe your task in your own words — get a working tool that eliminates routine.",
     "view_examples": "View examples"
   },
+  "cookie_banner": {
+    "title": "We use cookies",
+    "message": "Cookies help us improve the site and remember your preferences.",
+    "accept": "Accept",
+    "decline": "Decline"
+  },
   "footer": {
     "description": "A reliable foundation for your business",
     "links": {

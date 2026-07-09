@@ -18,10 +18,10 @@ export function NavigationSection() {
       <PageContainer>
         <nav className="bg-background/80 backdrop-blur-xl border border-foreground/10 rounded-2xl shadow-lg">
           <div className="flex items-center justify-between px-4 md:px-6 h-14">
-          <Logo />
-          <NavigationDesktop />
-          <NavigationDesktopCTA />
-          <NavigationMobileMenuButton isOpen={isOpen} onClick={toggle} />
+            <Logo />
+            <NavigationDesktop />
+            <NavigationDesktopCTA />
+            <NavigationMobileMenuButton isOpen={isOpen} onClick={toggle} />
           </div>
         </nav>
       </PageContainer>
