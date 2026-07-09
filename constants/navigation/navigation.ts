@@ -1,4 +1,5 @@
 export const NAVIGATION = {
+  HOME: "#",
   SERVICES: "#services",
   EXAMPLES: "#examples",
   PROCESS: "#process",

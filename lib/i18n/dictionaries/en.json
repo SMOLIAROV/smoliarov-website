@@ -1,7 +1,14 @@
 {
   "common": {
+    "name": "Smoliarov Denis Nikolaevich",
     "loading": "Loading",
-    "discuss_task": "Discuss the task"
+    "discuss_task": "Discuss the task",
+    "legal": {
+      "privacy": "Privacy policy",
+      "cookies": "Cookie policy",
+      "offer": "Public offer"
+    },
+    "avaliable": "Available for projects"
   },
   "navigation": {
     "services": "Solutions",
@@ -17,5 +24,16 @@
     "subtitle": "Ready‑to‑use services and automation — no confusion, clear deadlines",
     "description": "Describe your task in your own words — get a working tool that eliminates routine.",
     "view_examples": "View examples"
+  },
+  "footer": {
+    "description": "A reliable foundation for your business",
+    "links": {
+      "title": "Navigation"
+    },
+    "legal": {
+      "title": "Legal details",
+      "unp": "UNP: CE7175769"
+    },
+    "copyright": "All rights reserved."
   }
 }
