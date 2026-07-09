@@ -1,6 +1,7 @@
 "use client"
 
 import { Logo } from "@/components/common/Logo"
+import { PageContainer } from "@/components/common/PageContainer"
 import { useMobileMenu } from "./hooks"
 import { NavigationDesktop } from "./NavigationDesktop"
 
@@ -13,15 +14,17 @@ export function NavigationSection() {
   const { isOpen, toggle, close } = useMobileMenu()
 
   return (
-    <header className="fixed z-50 top-4 left-4 right-4">
-      <nav className="mx-auto bg-background/80 backdrop-blur-xl border border-foreground/10 rounded-2xl shadow-lg max-w-[1200px]">
-        <div className="flex items-center justify-between px-6 lg:px-8 h-14">
+    <header className="fixed z-50 top-4 inset-x-0">
+      <PageContainer>
+        <nav className="bg-background/80 backdrop-blur-xl border border-foreground/10 rounded-2xl shadow-lg">
+          <div className="flex items-center justify-between px-4 md:px-6 h-14">
           <Logo />
           <NavigationDesktop />
           <NavigationDesktopCTA />
           <NavigationMobileMenuButton isOpen={isOpen} onClick={toggle} />
-        </div>
-      </nav>
+          </div>
+        </nav>
+      </PageContainer>
 
       <NavigationMobileMenu isOpen={isOpen} onClose={close} />
     </header>
