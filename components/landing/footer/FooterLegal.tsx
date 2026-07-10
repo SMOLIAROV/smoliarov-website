@@ -1,6 +1,7 @@
 "use client"
 
-import { getLegalLinks } from "@/constants/legal/getLegalLinks"
+import { getFooterLegalDocs } from "@/constants/legal/getLegalDocs"
+import { ROUTES } from "@/constants/routes"
 import { useDict } from "@/lib/i18n/hooks/useDict"
 import { useLocale } from "@/lib/i18n/hooks/useLocale"
 import Link from "next/link"
@@ -8,6 +9,7 @@ import Link from "next/link"
 export function FooterLegal() {
   const dict = useDict()
   const locale = useLocale()
+  const docs = getFooterLegalDocs(dict)
 
   return (
     <div>
@@ -19,13 +21,13 @@ export function FooterLegal() {
         <p>{dict.common.name}</p>
         <p>{dict.footer.legal.unp}</p>
 
-        {getLegalLinks(dict, locale).map((link) => (
+        {docs.map((doc) => (
           <Link
-            key={link.slug}
-            href={link.href}
+            key={doc.slug}
+            href={ROUTES.legal(locale, doc.slug)}
             className="block hover:text-white transition-colors"
           >
-            {link.label}
+            {doc.title}
           </Link>
         ))}
       </div>

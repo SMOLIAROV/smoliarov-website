@@ -4,15 +4,18 @@ import Link from "next/link"
 
 import { PageContainer } from "@/components/common/PageContainer"
 import { Button } from "@/components/ui/button"
-import { LEGAL } from "@/constants/legal/legal"
+import { LEGAL_SLUGS } from "@/constants/legal/legal"
+import { getLegalDoc } from "@/constants/legal/getLegalDocs"
+import { ROUTES } from "@/constants/routes"
 import { useDict } from "@/lib/i18n/hooks/useDict"
-import { useLegalLink } from "@/lib/i18n/hooks/useLegalLink"
 
 import { useCookieConsent } from "./hooks/useCookieConsent"
+import { useLocale } from "@/lib/i18n/hooks/useLocale"
 
 export function CookieBanner() {
   const dict = useDict()
-  const cookiesLink = useLegalLink(LEGAL.COOKIES)
+  const locale = useLocale()
+  const cookiesDoc = getLegalDoc(dict, LEGAL_SLUGS.COOKIES)
   const { isVisible, setConsent } = useCookieConsent()
 
   if (!isVisible) {
@@ -41,10 +44,10 @@ export function CookieBanner() {
             >
               {dict.cookie_banner.message}{" "}
               <Link
-                href={cookiesLink.href}
+                href={ROUTES.legal(locale, LEGAL_SLUGS.COOKIES)}
                 className="text-foreground underline-offset-4 transition-colors hover:text-foreground/80 hover:underline"
               >
-                {cookiesLink.label}
+                {cookiesDoc?.title}
               </Link>
             </p>
           </div>
