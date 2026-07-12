@@ -2,9 +2,17 @@ import "@/styles/global.css"
 
 import { fontVariables } from "@/styles/fonts"
 
-export default function RootLayout({ children }) {
+export default async function RootLayout({
+  children,
+  params,
+}: {
+  children: React.ReactNode
+  params: Promise<{ locale: string }>
+}) {
+  const { locale } = await params
+
   return (
-    <html lang="en">
+    <html lang={locale} data-scroll-behavior="smooth">
       <body
         className={`${fontVariables} font-sans antialiased overflow-x-clip`}
       >

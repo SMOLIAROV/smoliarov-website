@@ -3,18 +3,13 @@
 import { Button } from "@/components/ui/button"
 import { ArrowRight } from "lucide-react"
 import { useDict } from "@/lib/i18n/hooks/useDict"
-import { useVisibility } from "@/hooks/useVisibility"
 import { NAVIGATION } from "@/constants/navigation/navigation"
 
 export function HeroCTA() {
   const dict = useDict()
-  const isVisible = useVisibility()
 
   return (
-    <div
-      className={`flex flex-col sm:flex-row gap-3 transition-all duration-1000 delay-300 
-    ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
-    >
+    <div className="flex flex-col sm:flex-row gap-3 transition-all duration-1000 delay-300 opacity-100 translate-y-0">
       <Button
         size="lg"
         className="rounded-lg bg-white hover:bg-white/90 text-black px-5 md:px-8 h-11 md:h-12 text-sm"

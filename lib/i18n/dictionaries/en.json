@@ -26,11 +26,31 @@
     "description": "Describe your task in your own words — get a working tool that eliminates routine.",
     "view_examples": "View examples"
   },
-  "cookie_banner": {
-    "title": "We use cookies",
-    "message": "Cookies help us improve the site and remember your preferences.",
-    "accept": "Accept",
-    "decline": "Decline"
+  "solutions": {
+    "title": "Services",
+    "subtitle": "What we do",
+    "items": {
+      "websites": {
+        "title": "Sites",
+        "description": "Modern, fast, and responsive business cards, landing pages, and corporate websites."
+      },
+      "web_apps": {
+        "title": "Services and Web applications",
+        "description": "Custom user portals, e-commerce platforms, complex business logic, and system integrations."
+      },
+      "telegram_bots": {
+        "title": "Telegram bots",
+        "description": "Sales, Notification, Support, and Business Management Automation."
+      },
+      "automation": {
+        "title": "Workflow Automation",
+        "description": "Eliminate the routine: integrations, parsing, reporting, and document flow."
+      },
+      "custom": {
+        "title": "Custom development",
+        "description": "API, complex integrations, and custom business solutions."
+      }
+    }
   },
   "footer": {
     "description": "A reliable foundation for your business",
@@ -42,5 +62,11 @@
       "unp": "UNP: CE7175769"
     },
     "copyright": "All rights reserved."
+  },
+  "cookie_banner": {
+    "title": "We use cookies",
+    "message": "Cookies help us improve the site and remember your preferences.",
+    "accept": "Accept",
+    "decline": "Decline"
   }
 }
