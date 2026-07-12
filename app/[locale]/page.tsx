@@ -1,3 +1,4 @@
+import { CtaSection } from "@/components/landing/cta/CtaSection"
 import { FooterSection } from "@/components/landing/footer/FooterSection"
 import { HeroSection } from "@/components/landing/hero/HeroSection"
 import { NavigationSection } from "@/components/landing/navigation/NavigationSectios"
@@ -11,6 +12,7 @@ export default function HomePage() {
       <main className="relative min-h-screen">
         <HeroSection />
         <SolutionSection />
+        <CtaSection />
       </main>
 
       <FooterSection />

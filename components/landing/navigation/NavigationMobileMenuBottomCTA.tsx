@@ -10,6 +10,7 @@ import { useLocaleSwitch } from "@/lib/i18n/hooks/useLocaleSwitch"
 
 import type { MobileMenuBottomCTAProps } from "./types"
 import { NAVIGATION } from "@/constants/navigation/navigation"
+import { useNavLink } from "@/hooks/navigation/useNavLink"
 
 export function NavigationMobileMenuBottomCTA({
   isOpen,
@@ -42,7 +43,7 @@ export function NavigationMobileMenuBottomCTA({
           active:scale-[0.98]
         "
       >
-        <a href={NAVIGATION.CONTACT_FORM} onClick={onClose}>
+        <a href={useNavLink(NAVIGATION.CONTACT_FORM).href} onClick={onClose}>
           {dict.common.discuss_task}
         </a>
       </Button>

@@ -1,3 +1,4 @@
+import { AvaliableBage } from "@/components/common/AvaliableBage"
 import { useDict } from "@/lib/i18n/hooks/useDict"
 
 export function FooterBottom() {
@@ -11,10 +12,7 @@ export function FooterBottom() {
       </p>
 
       <div className="flex items-center gap-3 text-[10px] md:text-xs text-white/30">
-        <span className="flex items-center gap-1.5">
-          <span className="w-1.5 h-1.5 rounded-full bg-green-500 animate-pulse" />
-          {dict.common.avaliable}
-        </span>
+        <AvaliableBage />
       </div>
     </div>
   )

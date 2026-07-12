@@ -10,6 +10,7 @@ import { Button } from "@/components/ui/button"
 
 import { useDict } from "@/lib/i18n/hooks/useDict"
 import { NAVIGATION } from "@/constants/navigation/navigation"
+import { useNavLink } from "@/hooks/navigation/useNavLink"
 
 export function NavigationDesktopCTA() {
   const dict = useDict()
@@ -28,7 +29,9 @@ export function NavigationDesktopCTA() {
         size="sm"
         className="rounded-lg bg-foreground hover:bg-foreground/90 text-background px-4 h-8 text-xs"
       >
-        <a href={NAVIGATION.CONTACT_FORM}>{dict.common.discuss_task}</a>
+        <a href={useNavLink(NAVIGATION.CONTACT_FORM).href}>
+          {dict.common.discuss_task}
+        </a>
       </Button>
     </div>
   )
