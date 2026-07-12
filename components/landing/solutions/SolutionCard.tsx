@@ -3,7 +3,7 @@
 import Image from "next/image"
 import { ArrowUpRight } from "lucide-react"
 import { cn } from "@/lib/utils/cn"
-import type { Solution } from "../../../constants/solutions/solutions.data"
+import type { Solution } from "@/constants/solutions/solutions.data"
 
 interface SolutionCardProps {
   solution: Solution
@@ -21,13 +21,13 @@ export function SolutionCard({
   return (
     <div
       className={cn(
-        "group relative overflow-hidden border border-foreground/10 bg-card/30 backdrop-blur-sm rounded-3xl h-full flex",
+        "group relative overflow-hidden border border-foreground/10 bg-card/30 rounded-2xl h-full flex",
         className
       )}
     >
       <div className="flex-1 p-6 md:p-8 flex flex-col relative z-10">
         <div className="flex items-start justify-between mb-6">
-          <div className="w-12 h-12 flex items-center justify-center border border-foreground/20 rounded-2xl">
+          <div className="w-12 h-12 flex items-center justify-center border border-foreground/20 rounded-xl">
             <Icon className="w-6 h-6 text-foreground/70" />
           </div>
         </div>

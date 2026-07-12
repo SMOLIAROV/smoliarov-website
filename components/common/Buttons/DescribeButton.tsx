@@ -11,7 +11,7 @@ export function DescribeButton() {
 
   return (
     <Button
-      className="rounded-lg bg-white hover:bg-white/90 text-black px-5 md:px-8 h-11 md:h-12 text-sm"
+      className="rounded-xl bg-white hover:bg-white/90 text-black px-5 md:px-8 h-11 md:h-12 text-sm"
       asChild
     >
       <a

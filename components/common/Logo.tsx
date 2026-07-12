@@ -4,7 +4,7 @@ export function Logo() {
   return (
     <a
       href={NAVIGATION.HOME}
-      className="flex items-center gap-3 group whitespace-nowrap"
+      className="inline-flex items-center gap-3 group whitespace-nowrap"
     >
       <div className="relative flex items-center justify-center border w-9 h-9 border-foreground/20 group-hover:border-foreground/40">
         <span className="font-retro font-bold tracking-tighter text-base text-foreground">

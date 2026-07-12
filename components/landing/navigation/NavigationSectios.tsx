@@ -16,7 +16,7 @@ export function NavigationSection() {
   return (
     <header className="fixed z-50 top-4 inset-x-0">
       <PageContainer>
-        <nav className="bg-background/80 backdrop-blur-xl border border-foreground/10 rounded-2xl shadow-lg">
+        <nav className="bg-background/80 backdrop-blur-xl border border-foreground/10 rounded-xl shadow-lg">
           <div className="flex items-center justify-between px-4 md:px-6 h-14">
             <Logo />
             <NavigationDesktop />

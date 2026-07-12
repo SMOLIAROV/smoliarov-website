@@ -2,6 +2,7 @@
   "common": {
     "name": "Smoliarov Denis Nikolaevich",
     "loading": "Loading",
+    "slogan": "A reliable foundation for your business",
     "discuss_task": "Discuss the task",
     "legal": {
       "privacy": "Privacy policy",
@@ -9,12 +10,13 @@
       "offer": "Public offer"
     },
     "avaliable": "Available for projects",
-    "back_home": "Go to homepage"
+    "back_home": "Go to homepage",
+    "step": "Step"
   },
   "navigation": {
     "services": "Solutions",
     "examples": "Examples",
-    "process": "Process",
+    "worflow": "Workflow",
     "why_us": "Why us",
     "faq": "FAQ",
     "reviews": "Reviews",
@@ -27,7 +29,7 @@
     "view_examples": "View examples"
   },
   "solutions": {
-    "title": "Services",
+    "title": "Solutions",
     "subtitle": "What we do",
     "items": {
       "websites": {
@@ -53,8 +55,60 @@
     }
   },
   "cta": "Ready to bring order to your business and remove routine work.",
+  "workflow": {
+    "title": "Workflow",
+    "subtitle": "How we work",
+    "description": "We bring a transparent and structured approach to every project, keeping you fully informed at every stage of development.",
+    "steps": {
+      "analysis": {
+        "title": "Analysis",
+        "description": "We dive deep into your challenge to find the best solution.",
+        "details": [
+          "Analyzing the business and its objectives",
+          "Competitor analysis",
+          "Hypothesis generation"
+        ]
+      },
+      "design": {
+        "title": "Design",
+        "description": "Detailed technical specifications, structure, and project estimation.",
+        "details": [
+          "Drafting the scope of work",
+          "Architectural design",
+          "Accurate project estimation"
+        ]
+      },
+      "development": {
+        "title": "Development",
+        "description": "Coding with regular progress updates.",
+        "details": [
+          "Sprint-based development",
+          "Bi-weekly demos",
+          "Full process transparency"
+        ]
+      },
+      "testing": {
+        "title": "Testing",
+        "description": "We perform comprehensive testing to ensure system stability.",
+        "details": ["Manual Testing", "Automated Testing", "Bug Fixing"]
+      },
+      "deploy": {
+        "title": "Deploy",
+        "description": "We deploy the project and hand over all access credentials.",
+        "details": [
+          "Pre-launch Preparation",
+          "Team Training",
+          "Documentation Handover"
+        ]
+      },
+      "support": {
+        "title": "Support",
+        "description": "We stay in touch and provide ongoing assistance after the launch.",
+        "details": ["Warranty Support", "Consulting", "Minor Enhancements"]
+      }
+    }
+  },
   "footer": {
-    "description": "A reliable foundation for your business",
     "links": {
       "title": "Navigation"
     },

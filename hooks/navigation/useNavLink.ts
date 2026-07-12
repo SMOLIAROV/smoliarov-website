@@ -15,7 +15,7 @@ export function useNavLink(key: string) {
       name: dict.navigation.examples,
       href: `#${NAVIGATION.EXAMPLES}`,
     },
-    process: { name: dict.navigation.process, href: `#${NAVIGATION.PROCESS}` },
+    worklow: { name: dict.navigation.worflow, href: `#${NAVIGATION.WORKFLOW}` },
     why_us: { name: dict.navigation.why_us, href: `#${NAVIGATION.WHY_US}` },
     faq: { name: dict.navigation.faq, href: `#${NAVIGATION.FAQ}` },
     reviews: { name: dict.navigation.reviews, href: `#${NAVIGATION.REVIEWS}` },

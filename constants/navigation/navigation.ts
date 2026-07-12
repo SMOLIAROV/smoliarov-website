@@ -1,8 +1,8 @@
 export const NAVIGATION = {
   HOME: "",
   SERVICES: "services",
+  WORKFLOW: "worklow",
   EXAMPLES: "examples",
-  PROCESS: "process",
   WHY_US: "why_us",
   FAQ: "faq",
   REVIEWS: "reviews",

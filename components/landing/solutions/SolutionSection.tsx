@@ -2,7 +2,7 @@
 
 import { SolutionsHeader } from "./SolutionsHeader"
 import { SolutionCard } from "./SolutionCard"
-import { getSolutions } from "../../../constants/solutions/solutions.data"
+import { getSolutions } from "@/constants/solutions/solutions.data"
 import { useDict } from "@/lib/i18n/hooks/useDict"
 
 export function SolutionSection() {

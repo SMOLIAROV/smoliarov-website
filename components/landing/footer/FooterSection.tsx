@@ -36,7 +36,7 @@ export function FooterSection() {
               <Logo />
 
               <p className="text-white/50 leading-relaxed mt-5 mb-5 max-w-sm text-xs md:text-sm">
-                {dict.footer.description}
+                {dict.common.slogan}
               </p>
 
               <FooterSocial />
