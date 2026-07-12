@@ -6,6 +6,7 @@ import {
   Rocket,
   Headphones,
 } from "lucide-react"
+import React from "react"
 
 export type WorkflowStep = {
   key: string

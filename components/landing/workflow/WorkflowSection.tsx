@@ -1,7 +1,5 @@
-"use client"
-
 import { WorkflowHeader } from "./WorkflowHeader"
-import { WorkflowTimeline } from "./WorkflowTimeline"
+import { WorkflowTimeline } from "./workflow_timline/WorkflowTimeline"
 
 export function WorkflowSection() {
   return (

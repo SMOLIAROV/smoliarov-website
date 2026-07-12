@@ -1,3 +1,5 @@
+"use client"
+
 import { NAVIGATION } from "@/constants/navigation/navigation"
 import { useDict } from "@/lib/i18n/hooks/useDict"
 

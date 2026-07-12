@@ -1,4 +1,5 @@
 import { Globe, Zap, MessageSquare, Settings, Code2 } from "lucide-react"
+import React from "react"
 
 export type Solution = {
   key: string

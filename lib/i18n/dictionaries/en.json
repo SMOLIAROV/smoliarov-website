@@ -108,6 +108,12 @@
       }
     }
   },
+  "reviews": {
+    "title": "Reviews",
+    "subtitle": "What our clients say",
+    "description": "Real Success Stories from Our Partners",
+    "all_reviews": "View all reviews"
+  },
   "footer": {
     "links": {
       "title": "Navigation"

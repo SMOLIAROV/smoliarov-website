@@ -11,6 +11,7 @@ import { isLegalSlug } from "@/constants/legal/legal"
 import { legalComponents } from "@/lib/mdx/legal-components"
 import { PageContainer } from "@/components/common/PageContainer"
 import { ROUTES } from "@/constants/routes"
+import { BackHomeButton } from "@/components/common/Buttons/BackHomeButton"
 
 export default async function LegalPage({
   params,
@@ -35,13 +36,7 @@ export default async function LegalPage({
     <div className="min-h-screen bg-background">
       <PageContainer>
         <div className="max-w-3xl mx-auto py-10 md:py-14">
-          <Link
-            href={ROUTES.home(locale)}
-            className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors"
-          >
-            <ArrowLeft className="w-4 h-4" />
-            {dict.common.back_home}
-          </Link>
+          <BackHomeButton />
 
           <article className="mt-10">
             <MDXRemote source={source} components={legalComponents} />

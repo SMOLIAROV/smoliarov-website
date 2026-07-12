@@ -8,9 +8,11 @@ next.config.js
 
 # Production build
 dist/
+public/images/reviews
 
 # Environment variables
 .env
+.env.docker
 .env.local
 .env.development.local
 .env.test.local

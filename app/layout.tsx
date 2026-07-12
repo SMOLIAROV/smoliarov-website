@@ -2,6 +2,8 @@ import "@/styles/global.css"
 
 import { fontVariables } from "@/styles/fonts"
 
+import React from "react"
+
 export default async function RootLayout({
   children,
   params,
