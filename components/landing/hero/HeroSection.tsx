@@ -13,7 +13,7 @@ export function HeroSection() {
       <HeroSectionBackground />
       <HeroGridLines />
 
-      <PageContainer className="relative z-10 pt-24 md:pt-32 lg:pt-40 pb-36 md:pb-44 lg:pb-48">
+      <PageContainer>
         <div className="lg:max-w-[65%]">
           <HeroMainHeadline />
           <HeroDescription />

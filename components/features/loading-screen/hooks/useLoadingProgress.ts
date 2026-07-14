@@ -1,32 +1,51 @@
-import { useEffect, useState } from "react"
+"use client"
+
+import { useEffect, useState, useRef } from "react"
+import { usePathname } from "next/navigation"
 
 export function useLoadingProgress() {
+  const pathname = usePathname()
   const [progress, setProgress] = useState(0)
   const [isHidden, setIsHidden] = useState(false)
 
+  const intervalRef = useRef<ReturnType<typeof setInterval> | null>(null)
+  const timeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null)
+
   useEffect(() => {
-    const interval = setInterval(() => {
-      setProgress((value) => {
-        if (value >= 100) {
-          clearInterval(interval)
+    setProgress(0)
+    setIsHidden(false)
+
+    if (intervalRef.current) clearInterval(intervalRef.current)
+    if (timeoutRef.current) clearTimeout(timeoutRef.current)
+
+    intervalRef.current = setInterval(() => {
+      setProgress((prev) => {
+        if (prev >= 100) {
+          if (intervalRef.current) clearInterval(intervalRef.current)
           return 100
         }
-
-        return Math.min(value + 2, 100)
+        return Math.min(prev + 6, 100)
       })
-    }, 30)
+    }, 16)
 
-    return () => clearInterval(interval)
-  }, [])
+    return () => {
+      if (intervalRef.current) clearInterval(intervalRef.current)
+    }
+  }, [pathname])
 
   useEffect(() => {
     if (progress < 100) return
 
-    const timer = setTimeout(() => {
+    timeoutRef.current = setTimeout(() => {
       setIsHidden(true)
-    }, 1000)
+    }, 450)
 
-    return () => clearTimeout(timer)
+    return () => {
+      if (timeoutRef.current) {
+        clearTimeout(timeoutRef.current)
+        timeoutRef.current = null
+      }
+    }
   }, [progress])
 
   return {

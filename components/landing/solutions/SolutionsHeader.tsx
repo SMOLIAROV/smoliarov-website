@@ -7,7 +7,7 @@ export function SolutionsHeader() {
   const dict = useDict()
 
   return (
-    <div id={NAVIGATION.SERVICES} className="mb-6 md:mb-10">
+    <div id={NAVIGATION.SOLUTIONS} className="mb-6 md:mb-10">
       <span className="inline-flex items-center gap-2 md:gap-3 text-xs md:text-sm font-mono text-muted-foreground mb-3 md:mb-6">
         <span className="w-6 md:w-12 h-px bg-foreground/30" />
         {dict.solutions.subtitle}

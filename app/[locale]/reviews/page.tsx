@@ -2,14 +2,19 @@ import { ReviewCard } from "@/components/landing/reviews/ReviewCard"
 import { BackHomeButton } from "@/components/common/Buttons/BackHomeButton"
 import { ReviewsHeader } from "@/components/landing/reviews/ReviewsHeader"
 import { getAllReviews } from "@/lib/reviews/getAllReviews"
+import { PageContainer } from "@/components/common/PageContainer"
+import { SwitchLocaleButton } from "@/components/common/Buttons/SwitchLocaleButton"
 
 export default async function ReviewsPage() {
   const reviews = await getAllReviews()
 
   return (
     <div className="min-h-screen bg-black text-white">
-      <div className="mx-auto max-w-[1400px] px-4 pb-16 pt-24 md:px-6 lg:px-12">
-        <BackHomeButton />
+      <PageContainer className="pt-24">
+        <div className="flex items-center justify-between w-full mb-10">
+          <BackHomeButton />
+          <SwitchLocaleButton />
+        </div>
 
         <ReviewsHeader />
 
@@ -24,7 +29,7 @@ export default async function ReviewsPage() {
         )}
 
         <BackHomeButton />
-      </div>
+      </PageContainer>
     </div>
   )
 }

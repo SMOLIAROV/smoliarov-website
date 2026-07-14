@@ -12,6 +12,7 @@ import { legalComponents } from "@/lib/mdx/legal-components"
 import { PageContainer } from "@/components/common/PageContainer"
 import { ROUTES } from "@/constants/routes"
 import { BackHomeButton } from "@/components/common/Buttons/BackHomeButton"
+import { SwitchLocaleButton } from "@/components/common/Buttons/SwitchLocaleButton"
 
 export default async function LegalPage({
   params,
@@ -36,7 +37,10 @@ export default async function LegalPage({
     <div className="min-h-screen bg-background">
       <PageContainer>
         <div className="max-w-3xl mx-auto py-10 md:py-14">
-          <BackHomeButton />
+          <div className="flex items-center justify-between w-full mb-10">
+            <BackHomeButton />
+            <SwitchLocaleButton />
+          </div>
 
           <article className="mt-10">
             <MDXRemote source={source} components={legalComponents} />

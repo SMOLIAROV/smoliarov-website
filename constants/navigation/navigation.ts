@@ -1,10 +1,8 @@
 export const NAVIGATION = {
   HOME: "",
-  SERVICES: "services",
+  SOLUTIONS: "solutions",
   WORKFLOW: "worklow",
   REVIEWS: "reviews",
-  EXAMPLES: "examples",
-  WHY_US: "why_us",
+  CONTACT_FORM: "contact_form",
   FAQ: "faq",
-  CONTACT_FORM: "contact",
 } as const

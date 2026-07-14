@@ -11,29 +11,43 @@
     },
     "avaliable": "Available for projects",
     "back_home": "Go to homepage",
-    "step": "Step"
+    "step": "Step",
+    "project_types": {
+      "website": "Website",
+      "service": "Service / Web application",
+      "bot": "Telegram bot",
+      "automation": "Workflow Automation",
+      "custom": "Custom development"
+    },
+    "up_to": "Up to",
+    "more_then": "More then",
+    "min": "min.",
+    "consent": {
+      "i_agree": "I agree to",
+      "privacy": "personal data processing",
+      "i_accept_terms": "I accept the terms of the",
+      "offer": "public offer"
+    }
   },
   "navigation": {
-    "services": "Solutions",
-    "examples": "Examples",
+    "solutions": "Solutions",
     "worflow": "Workflow",
-    "why_us": "Why us",
-    "faq": "FAQ",
     "reviews": "Reviews",
-    "contact": "Submit a request"
+    "contact": "Submit a request",
+    "faq": "FAQ"
   },
   "hero": {
     "title": "Simple solutions for your business",
     "subtitle": "Ready‑to‑use services and automation — no confusion, clear deadlines",
     "description": "Describe your task in your own words — get a working tool that eliminates routine.",
-    "view_examples": "View examples"
+    "view_solutions": "View solutions"
   },
   "solutions": {
     "title": "Solutions",
     "subtitle": "What we do",
     "items": {
       "websites": {
-        "title": "Sites",
+        "title": "Websites",
         "description": "Modern, fast, and responsive business cards, landing pages, and corporate websites."
       },
       "web_apps": {
@@ -113,6 +127,39 @@
     "subtitle": "What our clients say",
     "description": "Real Success Stories from Our Partners",
     "all_reviews": "View all reviews"
+  },
+  "contact_form": {
+    "title": "Submit a request",
+    "subtitle": "One step away from getting started",
+    "description": "Even if you don't know the right name for it, describe it in your own words. We'll figure it out and offer a clear solution with real deadlines.",
+    "optional": "Optional",
+    "fields": {
+      "name": {
+        "label": "Name",
+        "placeholder": "John Doe"
+      },
+      "email": {
+        "label": "E-mail",
+        "placeholder": "john@example.com"
+      },
+      "phone": {
+        "label": "Phone",
+        "placeholder": "+375 12 345 67 89"
+      },
+      "project_type": {
+        "label": "What needs to be done",
+        "placeholder": "Choose project"
+      },
+      "budget": {
+        "label": "Budget",
+        "placeholder": "Choose budget"
+      },
+      "message": {
+        "label": "Describe the task",
+        "placeholder": "What problem do you want to solve and what should happen in the end..."
+      }
+    },
+    "send": "Send"
   },
   "footer": {
     "links": {

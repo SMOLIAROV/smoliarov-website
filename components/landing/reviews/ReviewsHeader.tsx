@@ -8,7 +8,7 @@ export function ReviewsHeader() {
   return (
     <div className="mb-10 md:mb-14">
       <span className="mb-3 inline-flex items-center gap-3 text-xs font-mono text-muted-foreground md:text-sm">
-        <span className="h-px w-12 bg-foreground/30" />
+        <span className="w-6 md:w-12 h-px bg-foreground/30" />
         {dict.reviews.subtitle}
       </span>
       <h2 className="font-display text-3xl tracking-tight text-white md:text-5xl">

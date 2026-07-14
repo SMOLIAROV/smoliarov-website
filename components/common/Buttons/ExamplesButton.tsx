@@ -15,8 +15,8 @@ export function ExamplesButton() {
       className="rounded-xl border-foreground/15 text-white hover:bg-white/10 px-5 md:px-8 h-11 md:h-12 text-sm"
       asChild
     >
-      <a href={useNavLink(NAVIGATION.EXAMPLES).href}>
-        {dict.hero.view_examples}
+      <a href={useNavLink(NAVIGATION.SOLUTIONS).href}>
+        {dict.hero.view_solutions}
       </a>
     </Button>
   )

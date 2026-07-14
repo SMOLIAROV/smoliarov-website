@@ -5,6 +5,8 @@ import { NavigationSection } from "@/components/landing/navigation/NavigationSec
 import { WorkflowSection } from "@/components/landing/workflow/WorkflowSection"
 import { SolutionsSection } from "@/components/landing/solutions/SolutionsSection"
 import { ReviewsSection } from "@/components/landing/reviews/ReviewsSection"
+import { HandsSection } from "@/components/landing/hands/HandsSection"
+import { ContactFormSection } from "@/components/contact-form/ContactFormSection"
 
 export default function HomePage() {
   return (
@@ -16,7 +18,9 @@ export default function HomePage() {
         <SolutionsSection />
         <CtaSection />
         <WorkflowSection />
+        <HandsSection />
         <ReviewsSection />
+        <ContactFormSection />
       </main>
 
       <FooterSection />

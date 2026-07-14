@@ -12,9 +12,11 @@ import {
 import { useLoadingProgress } from "../features/loading-screen/hooks/useLoadingProgress"
 
 export function SiteUiShell({ children }: { children: ReactNode }) {
+  const loading = useLoadingProgress()
+
   return (
     <LoadingScreenProvider value={useLoadingProgress()}>
-      <LoadingScreen />
+      {!loading.isHidden && <LoadingScreen />}
       {children}
       <CookieBanner />
     </LoadingScreenProvider>
