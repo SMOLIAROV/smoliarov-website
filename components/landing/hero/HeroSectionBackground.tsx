@@ -8,6 +8,7 @@ export function HeroSectionBackground() {
         src={HeroImage}
         alt="Hero background image"
         className="w-full h-full object-cover object-center opacity-80"
+        priority
       />
 
       <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/30 to-transparent" />

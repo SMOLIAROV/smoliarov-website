@@ -208,5 +208,19 @@
     "message": "Cookies help us improve the site and remember your preferences.",
     "accept": "Accept",
     "decline": "Decline"
+  },
+  "promo": {
+    "title": "DOMAIN + 1 MONTH FREE HOSTING",
+    "subtitle": "Promotion",
+    "time_left": "Time left",
+    "timer": {
+      "day": "d",
+      "hour": "h",
+      "minute": "m",
+      "second": "s"
+    },
+    "order_website": "Order a website",
+    "promo_terms": "Terms of the Promotion",
+    "remark": "Order a website development and get a domain (.by, .ru, .online, .site, etc.) and CloudVPS Light 1 hosting plan included"
   }
 }

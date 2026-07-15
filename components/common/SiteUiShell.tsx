@@ -15,7 +15,7 @@ export function SiteUiShell({ children }: { children: ReactNode }) {
   const loading = useLoadingProgress()
 
   return (
-    <LoadingScreenProvider value={useLoadingProgress()}>
+    <LoadingScreenProvider value={loading}>
       {!loading.isHidden && <LoadingScreen />}
       {children}
       <CookieBanner />

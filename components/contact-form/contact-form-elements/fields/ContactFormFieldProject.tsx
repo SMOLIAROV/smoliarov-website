@@ -6,12 +6,24 @@ import { SelectContent } from "@/components/ui/select/SelectContent"
 import { SelectItem } from "@/components/ui/select/SelectItem"
 import { SelectTrigger } from "@/components/ui/select/SelectTrigger"
 import { SelectValue } from "@/components/ui/select/SelectValue"
+import { FORM_PARAMS } from "@/constants/form/form"
 import { projects } from "@/constants/project/projects"
 import { useDict } from "@/lib/i18n/hooks/useDict"
 import { Briefcase } from "lucide-react"
+import { useSearchParams } from "next/navigation"
+import { useEffect, useState } from "react"
 
 export function ContactFormFieldProject() {
     const dict = useDict()
+
+    const projectFromUrl = useSearchParams().get(FORM_PARAMS.PROJECT_TYPE)
+    const urlValue  = projects(dict).some(p => p.slug === projectFromUrl) ? projectFromUrl : ""
+
+    const [value, setValue] = useState(urlValue)
+
+    useEffect(() => {
+        setValue(urlValue)
+    }, [urlValue])
     
     return (
         <div className="space-y-1.5">
@@ -20,7 +32,7 @@ export function ContactFormFieldProject() {
             {dict.contact_form.fields.project_type.label}
           </Label>
 
-          <Select>
+          <Select value={value} onValueChange={setValue}>
             <SelectTrigger>
                 <SelectValue placeholder={dict.contact_form.fields.project_type.placeholder} />
             </SelectTrigger>

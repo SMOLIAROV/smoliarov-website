@@ -5,4 +5,5 @@ export const NAVIGATION = {
   REVIEWS: "reviews",
   CONTACT_FORM: "contact_form",
   FAQ: "faq",
+  PROMO: "promo"
 } as const
