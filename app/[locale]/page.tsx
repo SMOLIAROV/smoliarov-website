@@ -7,6 +7,7 @@ import { SolutionsSection } from "@/components/landing/solutions/SolutionsSectio
 import { ReviewsSection } from "@/components/landing/reviews/ReviewsSection"
 import { HandsSection } from "@/components/landing/hands/HandsSection"
 import { ContactFormSection } from "@/components/contact-form/ContactFormSection"
+import { FaqSection } from "@/components/landing/faq/FaqSection"
 
 export default function HomePage() {
   return (
@@ -21,6 +22,7 @@ export default function HomePage() {
         <HandsSection />
         <ReviewsSection />
         <ContactFormSection />
+        <FaqSection />
       </main>
 
       <FooterSection />

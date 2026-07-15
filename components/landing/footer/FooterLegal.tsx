@@ -4,7 +4,6 @@ import { getFooterLegalDocs } from "@/constants/legal/getLegalDocs"
 import { ROUTES } from "@/constants/routes"
 import { useDict } from "@/lib/i18n/hooks/useDict"
 import { useLocale } from "@/lib/i18n/hooks/useLocale"
-import Link from "next/link"
 
 export function FooterLegal() {
   const dict = useDict()
@@ -17,20 +16,21 @@ export function FooterLegal() {
         {dict.footer.legal.title}
       </h3>
 
-      <div className="space-y-2 text-xs md:text-sm text-white/40">
-        <p>{dict.common.name}</p>
-        <p>{dict.footer.legal.unp}</p>
+      <ul className="space-y-2.5 md:space-y-3">
+        <p className="text-xs md:text-sm text-white/40">{dict.common.name}</p>
+        <p className="text-xs md:text-sm text-white/40">{dict.footer.legal.unp}</p>
 
-        {docs.map((doc) => (
-          <Link
-            key={doc.slug}
-            href={ROUTES.legal(locale, doc.slug)}
-            className="block hover:text-white transition-colors"
-          >
-            {doc.title}
-          </Link>
+        {docs.map((link) => (
+          <li key={link.slug}>
+            <a 
+              href={ROUTES.legal(locale, link.slug)}
+              className="text-xs md:text-sm text-white/40 hover:text-white transition-colors"
+            >
+              {link.title}
+            </a>
+          </li>
         ))}
-      </div>
+      </ul>
     </div>
   )
 }

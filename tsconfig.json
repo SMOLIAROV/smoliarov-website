@@ -29,6 +29,6 @@
     "**/*.mts",
     "**/*.ts",
     "**/*.tsx"
-  ],
+, "constants/faq"  ],
   "exclude": ["node_modules"]
 }

@@ -161,6 +161,38 @@
     },
     "send": "Send"
   },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "subtitle": "Clear answers in plain language",
+    "description": "Straightforward answers to what clients usually care about",
+    "image_caption": "// step by step to the goal",
+    "items": {
+      "timeline": {
+        "question": "I don't understand programming — how do I explain what I need?",
+        "answer": "Just describe the problem you want to solve and what the final result should look like. We'll turn it into a plan. No technical terms required."
+      },
+      "payment": {
+        "question": "How will I know the project is actually moving?",
+        "answer": "Once a week you get a live demonstration: you open a link and see what's ready. We don't expect payment without it."
+      },
+      "tech": {
+        "question": "What if I want to change something along the way?",
+        "answer": "Small tweaks we apply right away. A major expansion we discuss separately — no conflicts, just a new phase."
+      },
+      "communication": {
+        "question": "How much of my time will this take?",
+        "answer": "About an hour for the initial discussion and 15–20 minutes per week to review progress. We take care of the rest, you don't have to manage the process."
+      },
+      "support_after": {
+        "question": "What happens after delivery?",
+        "answer": "A month of free fixes and adjustments. If something goes wrong due to our fault, we fix it. After that, support is by separate agreement."
+      },
+      "confidentiality": {
+        "question": "Do you guarantee confidentiality?",
+        "answer": "Yes. We sign a non‑disclosure agreement. All data, ideas, and developments belong to you and are not used anywhere else."
+      }
+    }
+  },
   "footer": {
     "links": {
       "title": "Navigation"
