@@ -13,36 +13,36 @@ import { FORM_PARAMS } from "@/constants/form/form"
 import { useContactFormNavigation } from "@/hooks/contact-form/useContactFormNavigation"
 
 export function PromoSection() {
-    const { isExpired } = useTimer(PROMO_DATES.free_domain_and_hosting);
+  const { isExpired } = useTimer(PROMO_DATES.free_domain_and_hosting)
 
-    const searchParams = useSearchParams();
-    const project = searchParams.get(FORM_PARAMS.PROJECT_TYPE);
+  const searchParams = useSearchParams()
+  const project = searchParams.get(FORM_PARAMS.PROJECT_TYPE)
 
-    const { scrollToForm } = useContactFormNavigation();
+  const { scrollToForm } = useContactFormNavigation()
 
-    useEffect(() => {
-        if (!project) return;
+  useEffect(() => {
+    if (!project) return
 
-        scrollToForm();
-    }, [project, scrollToForm]);
+    scrollToForm()
+  }, [project, scrollToForm])
 
-    if (isExpired) {
-        return null;
-    }
-    
-    return (
-        <section className="relative py-12 md:py-16 lg:py-24 bg-black overflow-hidden">
-            <PageContainer>
-                <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-start lg:items-stretch">
-                    <div className="space-y-6 pt-2">
-                        <PromoHeader />
-                        <PromoTimer />
-                        <PromoCTA />
-                    </div>
+  if (isExpired) {
+    return null
+  }
 
-                    <PromoImage />
-                </div>
-             </PageContainer>
-        </section>
-    )
+  return (
+    <section className="relative py-12 md:py-16 lg:py-24 bg-black overflow-hidden">
+      <PageContainer>
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-start lg:items-stretch">
+          <div className="space-y-6 pt-2">
+            <PromoHeader />
+            <PromoTimer />
+            <PromoCTA />
+          </div>
+
+          <PromoImage />
+        </div>
+      </PageContainer>
+    </section>
+  )
 }

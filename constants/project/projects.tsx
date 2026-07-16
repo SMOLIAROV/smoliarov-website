@@ -5,8 +5,10 @@ export const PROJECT_TYPES = {
   SERVICE: "service",
   BOT: "bot",
   AUTOMATION: "automation",
-  CUSTOM: "custom"
+  CUSTOM: "custom",
 } as const
+
+export const PROJECT_TYPE_VALUES = Object.values(PROJECT_TYPES)
 
 export const projects = (dict: Dictionary) => [
   {

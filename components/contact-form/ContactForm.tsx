@@ -1,13 +1,34 @@
-import { ContactFormSendButton } from "./contact-form-elements/buttons/ContactFormSendButton";
-import { ContactFormFields } from "./ContactFormFields";
+"use client"
+
+import { useContactForm } from "@/hooks/contact-form/useContactForm"
+import { ContactFormSendButton } from "./contact-form-elements/buttons/ContactFormSendButton"
+import { ContactFormFields } from "./ContactFormFields"
+import { ContactFormMessage } from "./ContactFormMessage"
 
 export function ContactForm() {
-    return (
-        <div className="transition-all duration-1000 delay-200">
-            <form className="space-y-4">
-                <ContactFormFields />
-                <ContactFormSendButton />
-            </form>
-        </div>
-    )
+  const {
+    handleSubmit,
+    control,
+    register,
+    errors,
+    isSubmitting,
+    status,
+    errorMessage,
+  } = useContactForm()
+
+  return (
+    <div className="transition-all duration-1000 delay-200">
+      <form onSubmit={handleSubmit} className="space-y-4">
+        <ContactFormFields
+          control={control}
+          register={register}
+          errors={errors}
+        />
+
+        <ContactFormSendButton disabled={isSubmitting} />
+
+        <ContactFormMessage status={status} errorMessage={errorMessage} />
+      </form>
+    </div>
+  )
 }

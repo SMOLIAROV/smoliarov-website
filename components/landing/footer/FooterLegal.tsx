@@ -18,11 +18,13 @@ export function FooterLegal() {
 
       <ul className="space-y-2.5 md:space-y-3">
         <p className="text-xs md:text-sm text-white/40">{dict.common.name}</p>
-        <p className="text-xs md:text-sm text-white/40">{dict.footer.legal.unp}</p>
+        <p className="text-xs md:text-sm text-white/40">
+          {dict.footer.legal.unp}
+        </p>
 
         {docs.map((link) => (
           <li key={link.slug}>
-            <a 
+            <a
               href={ROUTES.legal(locale, link.slug)}
               className="text-xs md:text-sm text-white/40 hover:text-white transition-colors"
             >

@@ -13,7 +13,7 @@ export function NavigationDesktopCTA() {
   return (
     <div className="hidden xl:flex items-center gap-4">
       <SwitchLocaleButton />
-      
+
       <Button
         size="sm"
         className="rounded-lg bg-foreground hover:bg-foreground/90 text-background px-4 h-8 text-xs"

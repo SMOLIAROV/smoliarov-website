@@ -136,19 +136,34 @@
     "fields": {
       "name": {
         "label": "Name",
-        "placeholder": "John Doe"
+        "placeholder": "John Doe",
+        "errors": {
+          "required": "Enter your name",
+          "invalid": "Name can only contain letters"
+        }
       },
       "email": {
         "label": "E-mail",
-        "placeholder": "john@example.com"
+        "placeholder": "john@example.com",
+        "errors": {
+          "required": "Enter your email",
+          "invalid": "Enter a valid email address"
+        }
       },
       "phone": {
         "label": "Phone",
-        "placeholder": "+375 12 345 67 89"
+        "placeholder": "+375 12 345 67 89",
+        "errors": {
+          "invalid": "Enter a valid phone number in the format +375 XX XXX XX XX"
+        }
       },
       "project_type": {
         "label": "What needs to be done",
-        "placeholder": "Choose project"
+        "placeholder": "Choose project",
+        "errors": {
+          "required": "Select a project type",
+          "invalid": "The selected project does not exist"
+        }
       },
       "budget": {
         "label": "Budget",
@@ -156,10 +171,36 @@
       },
       "message": {
         "label": "Describe the task",
-        "placeholder": "What problem do you want to solve and what should happen in the end..."
+        "placeholder": "What problem do you want to solve and what should happen in the end...",
+        "errors": {
+          "required": "Write a message",
+          "min": "Minimum 10 characters",
+          "max": "Maximum 1000 characters"
+        }
+      },
+      "consent_privacy": {
+        "errors": {
+          "required": "You must agree to the Privacy Policy"
+        }
+      },
+      "consent_offer": {
+        "errors": {
+          "required": "You must accept the Terms and Conditions"
+        }
       }
     },
-    "send": "Send"
+    "send": "Send",
+    "message": {
+      "success": {
+        "request_created": "Thank you! Your message has been sent successfully. We will contact you shortly.",
+        "confirmation_sent": "We have sent a confirmation to your email"
+      },
+      "errors": {
+        "iternal": "An error occurred while sending. Please try again later.",
+        "rate_limit": "Too many requests. Please try again later.",
+        "invalid": "Invalid form data"
+      }
+    }
   },
   "faq": {
     "title": "Frequently Asked Questions",

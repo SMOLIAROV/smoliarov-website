@@ -22,4 +22,5 @@ export const SelectScrollDownButton = React.forwardRef<
   </SelectPrimitive.ScrollDownButton>
 ))
 
-SelectScrollDownButton.displayName = SelectPrimitive.ScrollDownButton.displayName
+SelectScrollDownButton.displayName =
+  SelectPrimitive.ScrollDownButton.displayName

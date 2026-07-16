@@ -17,4 +17,26 @@ model Review {
   date      DateTime
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
+
+  @@index([date])
+  @@index([createdAt])
+}
+
+model ContactSubmission {
+  id              String   @id @default(cuid())
+  name            String
+  email           String
+  phone           String?
+  projectType     String
+  budget          String?
+  message         String   @db.Text
+  consentPrivacy  Boolean
+  consentOffer    Boolean
+  status          String   @default("new") // new | read | replied | archived
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+
+  @@index([createdAt])
+  @@index([email])
+  @@index([status])
 }

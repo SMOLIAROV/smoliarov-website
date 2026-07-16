@@ -11,40 +11,65 @@ import { projects } from "@/constants/project/projects"
 import { useDict } from "@/lib/i18n/hooks/useDict"
 import { Briefcase } from "lucide-react"
 import { useSearchParams } from "next/navigation"
-import { useEffect, useState } from "react"
+import { Controller } from "react-hook-form"
+import { FieldControlProps } from "./types"
 
-export function ContactFormFieldProject() {
-    const dict = useDict()
+export function ContactFormFieldProject({ control, error }: FieldControlProps) {
+  const dict = useDict()
 
-    const projectFromUrl = useSearchParams().get(FORM_PARAMS.PROJECT_TYPE)
-    const urlValue  = projects(dict).some(p => p.slug === projectFromUrl) ? projectFromUrl : ""
+  const projectFromUrl = useSearchParams().get(FORM_PARAMS.PROJECT_TYPE)
+  const urlValue = projects(dict).some((p) => p.slug === projectFromUrl)
+    ? projectFromUrl
+    : ""
 
-    const [value, setValue] = useState(urlValue)
+  return (
+    <div className="space-y-1.5">
+      <Label className="flex items-center gap-1.5 text-xs md:text-sm">
+        <Briefcase className="w-3 h-3 md:w-3.5 md:h-3.5 text-muted-foreground" />
+        {dict.contact_form.fields.project_type.label}
+      </Label>
 
-    useEffect(() => {
-        setValue(urlValue)
-    }, [urlValue])
-    
-    return (
-        <div className="space-y-1.5">
-          <Label className="flex items-center gap-1.5 text-xs md:text-sm">
-            <Briefcase className="w-3 h-3 md:w-3.5 md:h-3.5 text-muted-foreground" />
-            {dict.contact_form.fields.project_type.label}
-          </Label>
+      <Controller
+        name="project_type"
+        control={control}
+        render={({ field }) => {
+          if (urlValue && !field.value) {
+            field.onChange(urlValue)
+          }
 
-          <Select value={value} onValueChange={setValue}>
-            <SelectTrigger>
-                <SelectValue placeholder={dict.contact_form.fields.project_type.placeholder} />
-            </SelectTrigger>
-            
-            <SelectContent>
-              {projects(dict).map(({slug, label}) => (
-                <SelectItem key={slug} value={slug}>
-                  {label}
-                </SelectItem>
-              ))}
-            </SelectContent>
-          </Select>
-        </div>
-    )
+          return (
+            <>
+              <Select value={field.value} onValueChange={field.onChange}>
+                <SelectTrigger
+                  className={
+                    error ? "border-destructive focus:ring-destructive" : ""
+                  }
+                >
+                  <SelectValue
+                    placeholder={
+                      dict.contact_form.fields.project_type.placeholder
+                    }
+                  />
+                </SelectTrigger>
+
+                <SelectContent>
+                  {projects(dict).map(({ slug, label }) => (
+                    <SelectItem key={slug} value={slug}>
+                      {label}
+                    </SelectItem>
+                  ))}
+                </SelectContent>
+              </Select>
+
+              {error && (
+                <p className="text-[13px] text-destructive mt-0.5">
+                  {error.message}
+                </p>
+              )}
+            </>
+          )
+        }}
+      />
+    </div>
+  )
 }
