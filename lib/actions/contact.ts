@@ -12,13 +12,15 @@ export async function submitContactForm(data: unknown, dict: Dictionary) {
     headersList.get("x-forwarded-for")?.split(",")[0]?.trim() ||
     headersList.get("x-real-ip") ||
     "unknown"
-
-  try {
-    await contactFormLimiter.consume(ip)
-  } catch {
-    return {
-      success: false,
-      error: dict.contact_form.message.errors.rate_limit,
+    
+  if (contactFormLimiter) {
+    try {
+      await contactFormLimiter.consume(ip)
+    } catch {
+      return {
+        success: false,
+        error: dict.contact_form.message.errors.rate_limit,
+      }
     }
   }
 
