@@ -1,10 +1,14 @@
 import { EmailLayout } from "../components/EmailLayout"
 import { EmailText } from "../components/EmailText"
 
-export function ContactEmail() {
+interface ContactEmailProps {
+  name: string
+}
+
+export function ContactEmail({ name }: ContactEmailProps) {
   return (
     <EmailLayout preview="Мы получили вашу заявку">
-      <EmailText>Здравствуйте!</EmailText>
+      <EmailText>Здравствуйте, {name}!</EmailText>
 
       <EmailText>
         Мы уже получили ваши данные и очень рады, что вы выбрали нас для
@@ -14,15 +18,16 @@ export function ContactEmail() {
       <EmailText color="#d4cfc4">Что дальше?</EmailText>
 
       <EmailText color="#d4cfc4">
-        - Я внимательно изучу ваш запрос и свяжусь с вами в ближайшие 24 часа.
+        - Мы внимательно изучим ваш запрос и свяжемся с вами в ближайшие 24
+        часа.
         <br />
-        - Мы обсудим все детали, чтобы я точно понял, что вам нужно.
-        <br />- После этого я пришлю финальное предложение по срокам и
+        - Мы обсудим все детали, чтобы мы точно поняли, что вам нужно.
+        <br />- После этого мы пришлем финальное предложение по срокам и
         стоимости.
       </EmailText>
 
       <EmailText color="#d4cfc4">
-        Если у вас есть что дополнить — смело отвечайте на это письмо, я всегда
+        Если у вас есть что дополнить — смело отвечайте на это письмо, мы всегда
         на связи.
       </EmailText>
     </EmailLayout>

@@ -58,7 +58,7 @@ export async function submitContactForm(data: unknown) {
       message: validated.data.message,
     })
 
-    await sendContactEmail(validated.data.email)
+    await sendContactEmail(validated.data.email, validated.data.name)
 
     return {
       success: true,

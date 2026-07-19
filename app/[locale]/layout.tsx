@@ -8,6 +8,7 @@ import { I18nProvider } from "@/lib/i18n/provider"
 
 import { notFound } from "next/navigation"
 import { isValidLocale } from "@/lib/i18n/config"
+import { YandexMetrics } from "@/components/common/YandexMetrics"
 
 export default async function LocaleLayout({ children, params }) {
   const { locale } = await params
@@ -22,6 +23,8 @@ export default async function LocaleLayout({ children, params }) {
     <I18nProvider locale={locale} dict={dict}>
       <DocumentLocaleSync locale={locale} />
       <SiteUiShell>{children}</SiteUiShell>
+
+      <YandexMetrics />
     </I18nProvider>
   )
 }
