@@ -13,7 +13,9 @@ export function PromoHeader() {
         {dict.promo.subtitle.toUpperCase()}
       </span>
       <h2 className="font-display text-3xl tracking-tight text-white md:text-5xl">
-        {dict.promo.title.toUpperCase()}
+        {dict.promo.title.first.toUpperCase()}
+        <br />
+        {dict.promo.title.second.toUpperCase()}
       </h2>
     </div>
   )

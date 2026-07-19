@@ -94,20 +94,12 @@
       "development": {
         "title": "Developing",
         "description": "We create the product in stages and regularly show the intermediate result.",
-        "details": [
-          "Work on sprints",
-          "Demonstration of progress",
-          "Feedback"
-        ]
+        "details": ["Work on sprints", "Demonstration of progress", "Feedback"]
       },
       "testing": {
         "title": "Checking it out",
         "description": "We are testing all the functions, fixing errors and preparing the project for launch.",
-        "details": [
-          "Functionality check",
-          "Bug fixing",
-          "Final testing"
-        ]
+        "details": ["Functionality check", "Bug fixing", "Final testing"]
       },
       "deploy": {
         "title": "Launching",
@@ -121,11 +113,7 @@
       "support": {
         "title": "Evolve",
         "description": "After the launch, we stay in touch, help develop the product and add new functionality.",
-        "details": [
-          "Warranty Support", 
-          "Consulting", 
-          "Project evolve"
-        ]
+        "details": ["Warranty Support", "Consulting", "Project evolve"]
       }
     }
   },
@@ -262,7 +250,10 @@
     "decline": "Decline"
   },
   "promo": {
-    "title": "DOMAIN + 1 MONTH FREE HOSTING",
+    "title": {
+      "first": "DOMAIN + HOSTING",
+      "second": "1 MONTH FREE"
+    },
     "subtitle": "Promotion",
     "time_left": "Time left",
     "timer": {

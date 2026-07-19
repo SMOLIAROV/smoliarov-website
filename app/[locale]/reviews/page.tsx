@@ -9,7 +9,7 @@ export default async function ReviewsPage() {
   const reviews = await getAllReviews()
 
   return (
-    <div className="min-h-screen bg-black text-white">
+    <div className="min-h-screen bg-black text-white mb-10">
       <PageContainer className="pt-24">
         <div className="flex items-center justify-between w-full mb-10">
           <BackHomeButton />
