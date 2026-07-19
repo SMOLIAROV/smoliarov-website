@@ -5,6 +5,7 @@ import { contactFormServerSchema } from "@/lib/validation/contactForm"
 import { headers } from "next/headers"
 import { contactFormLimiter } from "../rate-limit"
 import { sendContactNotification } from "../telegram/sendContactNotification"
+import { sendContactEmail } from "../email/services/sendContactEmail"
 
 export async function submitContactForm(data: unknown) {
   const headersList = await headers()
@@ -56,6 +57,8 @@ export async function submitContactForm(data: unknown) {
       budget: validated.data.budget,
       message: validated.data.message,
     })
+
+    await sendContactEmail(validated.data.email)
 
     return {
       success: true,
