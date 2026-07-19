@@ -1,7 +1,7 @@
 import { LEGAL_SLUGS } from '@/constants/legal/legal'
 import type { MetadataRoute } from 'next'
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://localhost:3000'
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL!
 const locales = ['ru', 'en'] as const
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {

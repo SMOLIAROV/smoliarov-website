@@ -14,6 +14,6 @@ export function getFooterLegalDocs(dict: Dictionary) {
   return getLegalDocs(dict).filter((doc) => doc.showInFooter)
 }
 
-export function getLegalDoc(dict: Dictionary, slug: string) {
-  return getLegalDocs(dict).find((doc) => doc.slug === (slug as LegalSlug))
+export function getLegalDoc(dict: Dictionary, slug: LegalSlug) {
+  return getLegalDocs(dict).find((doc) => doc.slug === slug)
 }
