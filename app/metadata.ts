@@ -1,18 +1,17 @@
 import type { Metadata } from "next"
 
-const siteUrl = process.env.SITE_URL || 'https://localhost:3000'
-
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://localhost:3000"
 
 export const siteMetadata: Metadata = {
   metadataBase: new URL(siteUrl),
 
   title: {
-    default: "Разработка сайтов, CRM, веб-приложений и автоматизация бизнеса",
+    default: "Разработка сайтов, CRM, Telegram-ботов и автоматизация бизнеса",
     template: "%s | SMOLIAROV",
   },
 
   description:
-    "Разрабатываем сайты, CRM-системы, веб-приложения, Telegram-ботов и цифровые решения для бизнеса. Автоматизируем продажи, обработку заявок, документооборот и внутренние процессы. Индивидуальная разработка под ключ.",
+    "Разрабатываем сайты, CRM-системы, веб-приложения, Telegram-ботов и цифровые решения для бизнеса. Автоматизируем продажи, обработку заявок, документооборот и внутренние процессы. Разработка под ключ.",
 
   keywords: [
     "разработка сайтов",
@@ -26,37 +25,23 @@ export const siteMetadata: Metadata = {
     "веб-приложения",
     "разработка веб-приложений",
     "веб-сервисы",
-    "разработка веб-сервисов",
-    "цифровые решения",
     "цифровые решения для бизнеса",
-    "разработка ПО",
-    "создание CRM",
     "личный кабинет",
-    "SaaS",
+    "SaaS разработка",
     "AI чат-бот",
     "автоматизация продаж",
   ],
 
-  authors: [
-    {
-      name: "Денис Смоляров",
-    },
-  ],
-
+  authors: [{ name: "Денис Смоляров" }],
   creator: "Денис Смоляров",
-
   publisher: "SMOLIAROV",
-
-  category: "Software Development",
-
   applicationName: "SMOLIAROV",
-
+  category: "Software Development",
   classification: "Разработка программного обеспечения",
 
   robots: {
     index: true,
     follow: true,
-
     googleBot: {
       index: true,
       follow: true,
@@ -68,65 +53,47 @@ export const siteMetadata: Metadata = {
 
   alternates: {
     canonical: siteUrl,
+    languages: {
+      "ru-RU": `${siteUrl}/ru`,
+      "en-US": `${siteUrl}/en`,
+    },
   },
 
   icons: {
-    icon: [
-      {
-        url: "images/metadata/favicon.ico",
-      },
-    ],
-
-    apple: [
-      {
-        url: "images/metadata/apple-touch-icon.png",
-      },
-    ],
+    icon: [{ url: "/images/metadata/favicon.ico" }],
+    apple: [{ url: "/images/metadata/apple-touch-icon.png" }],
   },
 
   openGraph: {
     type: "website",
-
     locale: "ru_RU",
-
+    alternateLocale: ["en_US"],
     url: siteUrl,
-
     siteName: "SMOLIAROV",
-
-    title: "Разработка сайтов, CRM, веб-приложений и автоматизация бизнеса",
-
+    title: "Разработка сайтов, CRM, Telegram-ботов и автоматизация бизнеса",
     description:
-      "Создаем сайты, CRM-системы, веб-приложения, Telegram-ботов и цифровые сервисы для бизнеса. Помогаем автоматизировать процессы и увеличить эффективность компании.",
-
+      "Создаём сайты, CRM-системы, веб-приложения и Telegram-ботов. Автоматизируем продажи, заявки и бизнес-процессы. Разработка под ключ.",
     images: [
       {
-        url: "images/metadata/og-image.jpg",
-
+        url: "/images/metadata/og-image.jpg",
         width: 1200,
-
         height: 630,
-
-        alt: "Разработка сайтов и автоматизация бизнеса",
+        alt: "SMOLIAROV — Разработка сайтов и автоматизация бизнеса",
       },
     ],
   },
 
   twitter: {
     card: "summary_large_image",
-
-    title: "Разработка сайтов, CRM, веб-приложений и автоматизация бизнеса",
-
+    title: "Разработка сайтов, CRM, Telegram-ботов и автоматизация бизнеса",
     description:
       "Сайты, CRM, Telegram-боты, веб-приложения и автоматизация процессов под ключ.",
-
-    images: ["images/metadata/og-image.jpg"],
+    images: ["/images/metadata/og-image.jpg"],
   },
 
   appleWebApp: {
     capable: true,
-
     title: "SMOLIAROV",
-
     statusBarStyle: "default",
   },
 

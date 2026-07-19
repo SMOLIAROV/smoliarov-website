@@ -1,4 +1,3 @@
-// app/sitemap.ts
 import { LEGAL_SLUGS } from '@/constants/legal/legal'
 import type { MetadataRoute } from 'next'
 
