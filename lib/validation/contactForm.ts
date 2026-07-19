@@ -68,6 +68,44 @@ export const createContactFormSchema = (dict: Dictionary) => {
   })
 }
 
+export const contactFormServerSchema = z.object({
+  name: z
+    .string()
+    .min(2)
+    .max(100)
+    .regex(/^[a-zA-Zа-яА-ЯёЁіІўЎ\s'-]+$/),
+
+  email: z.string().email().max(255),
+
+  phone: z
+    .string()
+    .max(30)
+    .optional()
+    .or(z.literal(""))
+    .refine((value) => {
+      if (!value || value.trim() === "") return true
+      return /^\+?375\s?\d{2}\s?\d{3}\s?\d{2}\s?\d{2}$/.test(value)
+    }),
+
+  project_type: z
+    .string()
+    .min(1)
+    .refine((value) => (PROJECT_TYPE_VALUES as string[]).includes(value)),
+
+  budget: z.string().max(50).optional().or(z.literal("")),
+
+  message: z
+    .string()
+    .max(1000)
+    .refine((value) => {
+      const lengthWithoutSpaces = value.replace(/\s/g, "").length
+      return lengthWithoutSpaces >= 10
+    }),
+
+  consent_privacy: z.literal(true),
+  consent_offer: z.literal(true),
+})
+
 export type ContactFormValues = z.infer<
   ReturnType<typeof createContactFormSchema>
 >

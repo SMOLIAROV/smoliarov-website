@@ -3,6 +3,9 @@ import "@/styles/global.css"
 import { fontVariables } from "@/styles/fonts"
 
 import React from "react"
+import { siteMetadata } from "./metadata"
+
+export const metadata = siteMetadata
 
 export default async function RootLayout({
   children,

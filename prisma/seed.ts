@@ -12,7 +12,7 @@ async function main() {
         position: "CEO, TechStart",
         message:
           "Отличная работа! Сайт был готов точно в срок, все правки учтены. Рекомендую!",
-        avatar: "/images/reviews/anna.jpg",
+        avatar: "/images/reviews/anna.jpeg",
         date: new Date("2026-06-15"),
       },
       {
@@ -20,7 +20,7 @@ async function main() {
         position: "Основатель, StartupHub",
         message:
           "Очень доволен результатом. Профессиональный подход, понятные сроки и отличная коммуникация.",
-        avatar: "/images/reviews/maxim.jpg",
+        avatar: "/images/reviews/maxim.jpeg",
         date: new Date("2026-06-20"),
       },
       {
@@ -28,7 +28,7 @@ async function main() {
         position: "Маркетолог, RetailPro",
         message:
           "Сделали именно то, что нужно. Сайт получился современным и удобным. Спасибо!",
-        avatar: "/images/reviews/elena.jpg",
+        avatar: "/images/reviews/elena.jpeg",
         date: new Date("2026-07-01"),
       },
     ],

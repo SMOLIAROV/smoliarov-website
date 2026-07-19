@@ -1,36 +1,36 @@
 "use server"
 
 import { prisma } from "@/lib/prisma/prisma"
-import { createContactFormSchema } from "@/lib/validation/contactForm"
+import { contactFormServerSchema } from "@/lib/validation/contactForm"
 import { headers } from "next/headers"
 import { contactFormLimiter } from "../rate-limit"
-import { Dictionary } from "../i18n/dictionaries"
+import { sendContactNotification } from "../telegram/sendContactNotification"
 
-export async function submitContactForm(data: unknown, dict: Dictionary) {
+export async function submitContactForm(data: unknown) {
   const headersList = await headers()
   const ip =
     headersList.get("x-forwarded-for")?.split(",")[0]?.trim() ||
     headersList.get("x-real-ip") ||
     "unknown"
-    
+
   if (contactFormLimiter) {
     try {
       await contactFormLimiter.consume(ip)
     } catch {
       return {
         success: false,
-        error: dict.contact_form.message.errors.rate_limit,
+        error: "rate_limit",
       }
     }
   }
 
-  const schema = createContactFormSchema(dict)
+  const schema = contactFormServerSchema
   const validated = schema.safeParse(data)
 
   if (!validated.success) {
     return {
       success: false,
-      error: dict.contact_form.message.errors.invalid,
+      error: "invalid",
     }
   }
 
@@ -48,6 +48,15 @@ export async function submitContactForm(data: unknown, dict: Dictionary) {
       },
     })
 
+    void sendContactNotification({
+      name: validated.data.name,
+      email: validated.data.email,
+      phone: validated.data.phone,
+      projectType: validated.data.project_type,
+      budget: validated.data.budget,
+      message: validated.data.message,
+    })
+
     return {
       success: true,
       id: submission.id,
@@ -56,7 +65,7 @@ export async function submitContactForm(data: unknown, dict: Dictionary) {
     console.error("Error creating contact submission:", error)
     return {
       success: false,
-      error: dict.contact_form.message.errors.iternal,
+      error: "iternal",
     }
   }
 }

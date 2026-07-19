@@ -30,7 +30,7 @@ export function ContactFormFields({ control, register, errors }: Props) {
           control={control}
           error={errors.project_type}
         />
-        <ContactFormFieldBudget />
+        <ContactFormFieldBudget control={control} />
       </div>
 
       <ContactFormFieldMessage control={control} error={errors.message} />

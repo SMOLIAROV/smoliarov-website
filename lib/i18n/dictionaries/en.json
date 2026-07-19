@@ -3,7 +3,7 @@
     "name": "Smoliarov Denis Nikolaevich",
     "loading": "Loading",
     "slogan": "A reliable foundation for your business",
-    "discuss_task": "Discuss the task",
+    "discuss_task": "Discuss the project",
     "legal": {
       "privacy": "Privacy policy",
       "cookies": "Cookie policy",
@@ -37,10 +37,9 @@
     "faq": "FAQ"
   },
   "hero": {
-    "title": "Simple solutions for your business",
-    "subtitle": "Ready‑to‑use services and automation — no confusion, clear deadlines",
-    "description": "Describe your task in your own words — get a working tool that eliminates routine.",
-    "view_solutions": "View solutions"
+    "subtitle": "We remove the routine. We automate the processes. We create products that work for your business.",
+    "description": "We develop websites, CRM, web applications, Telegram bots, and automation systems so that employees spend less time on routine tasks and the business grows faster.",
+    "view_solutions": "Our solutions"
   },
   "solutions": {
     "title": "Solutions",
@@ -48,90 +47,98 @@
     "items": {
       "websites": {
         "title": "Websites",
-        "description": "Modern, fast, and responsive business cards, landing pages, and corporate websites."
+        "description": "Modern websites that attract customers and help businesses grow."
       },
       "web_apps": {
         "title": "Services and Web applications",
-        "description": "Custom user portals, e-commerce platforms, complex business logic, and system integrations."
+        "description": "Personal accounts, web services, and CRM for business automation."
       },
       "telegram_bots": {
         "title": "Telegram bots",
-        "description": "Sales, Notification, Support, and Business Management Automation."
+        "description": "They accept applications, help customers, and automate sales."
       },
       "automation": {
         "title": "Workflow Automation",
-        "description": "Eliminate the routine: integrations, parsing, reporting, and document flow."
+        "description": "We eliminate routine through integrations and automation."
       },
       "custom": {
         "title": "Custom development",
-        "description": "API, complex integrations, and custom business solutions."
+        "description": "We create software for unique business objectives."
       }
     }
   },
-  "cta": "Ready to bring order to your business and remove routine work.",
+  "cta": "We will analyze the current processes, propose a solution and develop a system for the tasks of your business.",
   "workflow": {
     "title": "Workflow",
-    "subtitle": "How we work",
-    "description": "We bring a transparent and structured approach to every project, keeping you fully informed at every stage of development.",
+    "subtitle": "What awaits you at each stage",
+    "description": "Without chaos and unexpected surprises. We coordinate each stage with you and regularly show the result.",
     "steps": {
       "analysis": {
-        "title": "Analysis",
-        "description": "We dive deep into your challenge to find the best solution.",
+        "title": "Discussing the task",
+        "description": "We're figuring out how the processes work now, what problems there are, and what kind of result you want to achieve.",
         "details": [
-          "Analyzing the business and its objectives",
-          "Competitor analysis",
-          "Hypothesis generation"
+          "We are studying business problems",
+          "We offer solutions",
+          "Estimating deadlines and budget"
         ]
       },
       "design": {
-        "title": "Design",
-        "description": "Detailed technical specifications, structure, and project estimation.",
+        "title": "Designing a solution",
+        "description": "We are thinking over the structure of the future product, user scenarios and technical architecture.",
         "details": [
-          "Drafting the scope of work",
-          "Architectural design",
-          "Accurate project estimation"
+          "Creating a prototype",
+          "Drawing up the terms of reference",
+          "Planning the development stages"
         ]
       },
       "development": {
-        "title": "Development",
-        "description": "Coding with regular progress updates.",
+        "title": "Developing",
+        "description": "We create the product in stages and regularly show the intermediate result.",
         "details": [
-          "Sprint-based development",
-          "Bi-weekly demos",
-          "Full process transparency"
+          "Work on sprints",
+          "Demonstration of progress",
+          "Feedback"
         ]
       },
       "testing": {
-        "title": "Testing",
-        "description": "We perform comprehensive testing to ensure system stability.",
-        "details": ["Manual Testing", "Automated Testing", "Bug Fixing"]
+        "title": "Checking it out",
+        "description": "We are testing all the functions, fixing errors and preparing the project for launch.",
+        "details": [
+          "Functionality check",
+          "Bug fixing",
+          "Final testing"
+        ]
       },
       "deploy": {
-        "title": "Deploy",
-        "description": "We deploy the project and hand over all access credentials.",
+        "title": "Launching",
+        "description": "We host the project on the server, connect the necessary services and transfer access rights.",
         "details": [
-          "Pre-launch Preparation",
-          "Team Training",
-          "Documentation Handover"
+          "Project publication",
+          "Configuring Integrations",
+          "Transfer of documentation"
         ]
       },
       "support": {
-        "title": "Support",
-        "description": "We stay in touch and provide ongoing assistance after the launch.",
-        "details": ["Warranty Support", "Consulting", "Minor Enhancements"]
+        "title": "Evolve",
+        "description": "After the launch, we stay in touch, help develop the product and add new functionality.",
+        "details": [
+          "Warranty Support", 
+          "Consulting", 
+          "Project evolve"
+        ]
       }
     }
   },
   "reviews": {
     "title": "Reviews",
-    "subtitle": "What our clients say",
-    "description": "Real Success Stories from Our Partners",
+    "subtitle": "What they say about working with us",
+    "description": "The real success stories of our clients",
     "all_reviews": "View all reviews"
   },
   "contact_form": {
-    "title": "Submit a request",
-    "subtitle": "One step away from getting started",
-    "description": "Even if you don't know the right name for it, describe it in your own words. We'll figure it out and offer a clear solution with real deadlines.",
+    "title": "Tell us what task you want to solve",
+    "subtitle": "Let's discuss your project",
+    "description": "Describe the task in your own words. We will understand the details, propose the optimal solution, and estimate the time and cost of the project.",
     "optional": "Optional",
     "fields": {
       "name": {
@@ -171,7 +178,7 @@
       },
       "message": {
         "label": "Describe the task",
-        "placeholder": "What problem do you want to solve and what should happen in the end...",
+        "placeholder": "Describe the task, the current problem, or the idea of the project. The more detailed the description, the more accurately we will be able to estimate the time and cost.",
         "errors": {
           "required": "Write a message",
           "min": "Minimum 10 characters",
@@ -200,37 +207,41 @@
         "rate_limit": "Too many requests. Please try again later.",
         "invalid": "Invalid form data"
       }
+    },
+    "notice": {
+      "title": "Bonus with your website",
+      "description": "Free domain and 1 month of hosting when you order a website"
     }
   },
   "faq": {
     "title": "Frequently Asked Questions",
-    "subtitle": "Clear answers in plain language",
-    "description": "Straightforward answers to what clients usually care about",
+    "subtitle": "Everything that is important to know before starting work",
+    "description": "It's all about the development process, deadlines, and collaboration.",
     "image_caption": "// step by step to the goal",
     "items": {
       "timeline": {
-        "question": "I don't understand programming — how do I explain what I need?",
-        "answer": "Just describe the problem you want to solve and what the final result should look like. We'll turn it into a plan. No technical terms required."
+        "question": "I do not know what exactly I need. Is this a problem?",
+        "answer": "No. Tell us what task you want to solve or what is currently inconvenient. We will help you identify the right solution, whether it's a website, CRM, web application, Telegram bot, or automation system."
       },
       "payment": {
-        "question": "How will I know the project is actually moving?",
-        "answer": "Once a week you get a live demonstration: you open a link and see what's ready. We don't expect payment without it."
+        "question": "How much does development cost?",
+        "answer": "The cost depends on the tasks, the complexity of the project and the necessary integrations. After the discussion, we will prepare a clear assessment with the stages, deadlines and cost of each of them."
       },
       "tech": {
-        "question": "What if I want to change something along the way?",
-        "answer": "Small tweaks we apply right away. A major expansion we discuss separately — no conflicts, just a new phase."
+        "question": "How long does development take?",
+        "answer": "Small projects can be implemented in a few weeks, more complex services — in a few months. Before starting work, we will coordinate the deadlines and will regularly show the result."
       },
       "communication": {
-        "question": "How much of my time will this take?",
-        "answer": "About an hour for the initial discussion and 15–20 minutes per week to review progress. We take care of the rest, you don't have to manage the process."
+        "question": "Is it possible to change requirements during development?",
+        "answer": "Yes. Small changes can usually be made in the process. If new functions appear or the scope of work changes, we discuss this in advance and agree on a new stage."
       },
       "support_after": {
-        "question": "What happens after delivery?",
-        "answer": "A month of free fixes and adjustments. If something goes wrong due to our fault, we fix it. After that, support is by separate agreement."
+        "question": "What happens after the launch of the project?",
+        "answer": "After the launch, we correct possible errors, consult on working with the system and, if necessary, continue to develop the project. You will not be left alone with the finished product."
       },
       "confidentiality": {
-        "question": "Do you guarantee confidentiality?",
-        "answer": "Yes. We sign a non‑disclosure agreement. All data, ideas, and developments belong to you and are not used anywhere else."
+        "question": "Who owns the project and the source code?",
+        "answer": "After completion of the work, you get access, the source code and all rights to the developed product."
       }
     }
   },

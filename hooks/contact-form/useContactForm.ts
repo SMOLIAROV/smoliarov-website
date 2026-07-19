@@ -46,11 +46,17 @@ export function useContactForm() {
     setStatus("idle")
     setErrorMessage(null)
 
-    const result = await submitContactForm(data, dict)
+    const result = await submitContactForm(data)
 
     if (!result.success) {
       setStatus("error")
-      setErrorMessage(result.error || dict.contact_form.message.errors.iternal)
+
+      const errorKey =
+        result.error as keyof typeof dict.contact_form.message.errors
+      setErrorMessage(
+        dict.contact_form.message.errors[errorKey] ||
+          dict.contact_form.message.errors.iternal
+      )
       return
     }
 

@@ -9,8 +9,10 @@ import { SelectValue } from "@/components/ui/select/SelectValue"
 import { budgets } from "@/constants/budget/budget"
 import { useDict } from "@/lib/i18n/hooks/useDict"
 import { Wallet } from "lucide-react"
+import { Controller } from "react-hook-form"
+import { FieldControlProps } from "./types"
 
-export function ContactFormFieldBudget() {
+export function ContactFormFieldBudget({ control }: FieldControlProps) {
   const dict = useDict()
 
   return (
@@ -23,21 +25,26 @@ export function ContactFormFieldBudget() {
         </span>
       </Label>
 
-      <Select>
-        <SelectTrigger>
-          <SelectValue
-            placeholder={dict.contact_form.fields.budget.placeholder}
-          />
-        </SelectTrigger>
-
-        <SelectContent>
-          {budgets(dict).map(({ slug, label }) => (
-            <SelectItem key={slug} value={slug}>
-              {label}
-            </SelectItem>
-          ))}
-        </SelectContent>
-      </Select>
+      <Controller
+        name="budget"
+        control={control}
+        render={({ field }) => (
+          <Select onValueChange={field.onChange} value={field.value}>
+            <SelectTrigger>
+              <SelectValue
+                placeholder={dict.contact_form.fields.budget.placeholder}
+              />
+            </SelectTrigger>
+            <SelectContent>
+              {budgets(dict).map(({ slug, label }) => (
+                <SelectItem key={slug} value={slug}>
+                  {label}
+                </SelectItem>
+              ))}
+            </SelectContent>
+          </Select>
+        )}
+      />
     </div>
   )
 }

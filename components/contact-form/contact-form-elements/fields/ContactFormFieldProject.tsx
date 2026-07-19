@@ -7,12 +7,13 @@ import { SelectItem } from "@/components/ui/select/SelectItem"
 import { SelectTrigger } from "@/components/ui/select/SelectTrigger"
 import { SelectValue } from "@/components/ui/select/SelectValue"
 import { FORM_PARAMS } from "@/constants/form/form"
-import { projects } from "@/constants/project/projects"
+import { PROJECT_TYPES, projects } from "@/constants/project/projects"
 import { useDict } from "@/lib/i18n/hooks/useDict"
 import { Briefcase } from "lucide-react"
 import { useSearchParams } from "next/navigation"
 import { Controller } from "react-hook-form"
 import { FieldControlProps } from "./types"
+import { SitePromoNotice } from "../notice/SitePromoNotice"
 
 export function ContactFormFieldProject({ control, error }: FieldControlProps) {
   const dict = useDict()
@@ -66,6 +67,8 @@ export function ContactFormFieldProject({ control, error }: FieldControlProps) {
                   {error.message}
                 </p>
               )}
+
+              {field.value === PROJECT_TYPES.WEBSITE && <SitePromoNotice />}
             </>
           )
         }}
