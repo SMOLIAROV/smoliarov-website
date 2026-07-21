@@ -9,6 +9,7 @@ import {
   type ContactFormValues,
 } from "@/lib/validation/contactForm"
 import { submitContactForm } from "@/lib/actions/contact"
+import { contactFormGoal } from "@/lib/yandex-metrics-goals/goals/contact_form"
 
 type SubmitStatus = "idle" | "success" | "error"
 
@@ -61,6 +62,7 @@ export function useContactForm() {
     }
 
     setStatus("success")
+    contactFormGoal()
     reset(
       {
         name: "",
