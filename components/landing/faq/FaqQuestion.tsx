@@ -17,7 +17,7 @@ export function FaqQuestion({ index, item }: FaqItemProps) {
       <div className="group relative overflow-hidden border border-foreground/15 bg-card/30 backdrop-blur-sm rounded-xl transition-all duration-100">
         <button
           type="button"
-          className="w-full p-4 md:p-5 text-left flex items-center gap-3 md:gap-4"
+          className="w-full p-4 md:p-5 text-left flex items-center gap-3 md:gap-4 cursor-pointer"
           onClick={toggleOpen}
         >
           <div className="shrink-0 flex items-center gap-2.5">

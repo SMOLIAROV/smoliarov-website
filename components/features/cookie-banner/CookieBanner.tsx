@@ -56,14 +56,14 @@ export function CookieBanner() {
             <Button
               variant="outline"
               size="sm"
-              className="rounded-lg"
+              className="rounded-lg cursor-pointer"
               onClick={() => setConsent("declined")}
             >
               {dict.cookie_banner.decline}
             </Button>
             <Button
               size="sm"
-              className="rounded-lg bg-foreground text-background hover:bg-foreground/90"
+              className="rounded-lg bg-foreground text-background hover:bg-foreground/90 cursor-pointer"
               onClick={() => setConsent("accepted")}
             >
               {dict.cookie_banner.accept}

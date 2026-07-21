@@ -10,7 +10,7 @@ export function ContactFormSendButton({ disabled = false }) {
     <button
       type="submit"
       disabled={disabled}
-      className="group relative w-full h-11 md:h-12 bg-transparent border border-foreground/15 hover:border-foreground text-foreground rounded-xl overflow-hidden transition-all duration-300"
+      className="group relative w-full h-11 md:h-12 bg-transparent border border-foreground/15 hover:border-foreground text-foreground rounded-xl overflow-hidden transition-all duration-300 cursor-pointer"
     >
       <span className="absolute inset-0 bg-foreground translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-out" />
       <span className="relative z-10 flex items-center justify-center gap-2 group-hover:text-background transition-colors duration-300 font-mono text-sm uppercase tracking-wide">

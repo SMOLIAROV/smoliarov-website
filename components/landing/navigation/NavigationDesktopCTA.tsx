@@ -17,6 +17,7 @@ export function NavigationDesktopCTA() {
       <Button
         size="sm"
         className="rounded-lg bg-foreground hover:bg-foreground/90 text-background px-4 h-8 text-xs"
+        asChild
       >
         <a href={useNavLink(NAVIGATION.CONTACT_FORM).href}>
           {dict.common.discuss_task}
