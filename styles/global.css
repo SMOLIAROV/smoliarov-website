@@ -319,3 +319,8 @@
 .overflow-x-auto::-webkit-scrollbar {
   display: none;
 }
+
+img,
+svg {
+  pointer-events: none;
+}
