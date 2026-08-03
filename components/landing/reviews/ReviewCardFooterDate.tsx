@@ -8,7 +8,7 @@ export function ReviewCardFooterDate({ review }: ReviewCardProps) {
     day: "numeric",
     month: "long",
     year: "numeric",
-  }).format(new Date(review.date))
+  }).format(new Date(review.created_at))
 
   return (
     <div className="min-w-0 flex-1">

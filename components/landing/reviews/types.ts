@@ -4,7 +4,7 @@ export interface Review {
   position: string | null
   message: string
   avatar: string | null
-  date: Date | string
+  created_at: Date | string
 }
 
 export interface ReviewCardProps {

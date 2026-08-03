@@ -12,22 +12,36 @@ export async function cache<T>(
 
   const { ttl = 300 } = options
 
-  const cached = await redis.get(key)
-  if (cached) {
-    return JSON.parse(cached) as T
+  try {
+      const cached = await redis.get(key)
+
+      if (cached) {
+          return JSON.parse(cached) as T
+      }
+  } catch {
+      await redis.del(key)
   }
 
   const result = await fn()
   await redis.setex(key, ttl, JSON.stringify(result))
-
   return result
 }
 
 export async function invalidateCache(pattern: string) {
   if (!redis) return
 
-  const keys = await redis.keys(pattern)
-  if (keys.length > 0) {
-    await redis.del(...keys)
+  const stream = redis.scanStream({
+    match: pattern,
+    count: 100,
+  })
+
+  const pipeline = redis.pipeline();
+
+  for await (const keys of stream) {
+    for (const key of keys) {
+      pipeline.del(key)
+    }
   }
+
+  await pipeline.exec()
 }

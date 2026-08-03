@@ -21,9 +21,10 @@ export function ContactFormFieldMessage({ control, error }: FieldControlProps) {
         name="message"
         control={control}
         render={({ field }) => {
-          const charCount = (field.value || "").replace(/\s/g, "").length
-          const isTooShort = charCount > 0 && charCount < 10
-          const isTooLong = (field.value || "").length > 1000
+          const value = field.value || ""
+          const length = value.length
+          const isTooShort = length > 0 && length < 10
+          const isTooLong = length > 1000
 
           return (
             <>
@@ -47,7 +48,7 @@ export function ContactFormFieldMessage({ control, error }: FieldControlProps) {
                       : "text-muted-foreground"
                   }`}
                 >
-                  {charCount} / 1000
+                  {length} / 1000
                 </span>
               </div>
             </>

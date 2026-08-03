@@ -1,5 +1,5 @@
+import { getLatestReviews } from "@/lib/api/endpoints/reviews"
 import { ReviewCard } from "./ReviewCard"
-import { getLatestReviews } from "@/lib/reviews/getLatestReviews"
 
 export async function ReviewsCards() {
   const reviews = await getLatestReviews()
