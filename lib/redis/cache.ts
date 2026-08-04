@@ -13,13 +13,13 @@ export async function cache<T>(
   const { ttl = 300 } = options
 
   try {
-      const cached = await redis.get(key)
+    const cached = await redis.get(key)
 
-      if (cached) {
-          return JSON.parse(cached) as T
-      }
+    if (cached) {
+      return JSON.parse(cached) as T
+    }
   } catch {
-      await redis.del(key)
+    await redis.del(key)
   }
 
   const result = await fn()
@@ -35,7 +35,7 @@ export async function invalidateCache(pattern: string) {
     count: 100,
   })
 
-  const pipeline = redis.pipeline();
+  const pipeline = redis.pipeline()
 
   for await (const keys of stream) {
     for (const key of keys) {
