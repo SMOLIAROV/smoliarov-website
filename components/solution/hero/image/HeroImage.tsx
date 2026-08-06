@@ -1,10 +1,11 @@
 import Image from "next/image"
 
-export function HeroImage() {
+// {image}: {image: string}
+export function HeroImage({ image }: { image: string }) {
   return (
-    <div className="relative w-full aspect-[4/3] rounded-2xl overflow-hidden">
+    <div className="relative w-full aspect-[3/2] rounded-2xl overflow-hidden">
       <Image
-        src="/images/solutions/sites.webp"
+        src={image}
         alt=""
         fill
         className="object-cover object-center"

@@ -1,11 +1,10 @@
 import Image from "next/image"
-import ImagePromo from "@/public/images/promo.webp"
 
-export function PromoImage() {
+export function PromoImage({ image }: { image: string }) {
   return (
     <div className="relative aspect-[16/9] w-full rounded-3xl overflow-hidden border border-white/15 lg:aspect-auto lg:h-full">
       <Image
-        src={ImagePromo}
+        src={image}
         alt="PromoImage"
         fill
         className="object-cover"

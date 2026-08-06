@@ -7,17 +7,18 @@ import { SelectItem } from "@/components/ui/select/SelectItem"
 import { SelectTrigger } from "@/components/ui/select/SelectTrigger"
 import { SelectValue } from "@/components/ui/select/SelectValue"
 import { FORM_PARAMS } from "@/constants/form/form"
-import { PROJECT_TYPES, projects } from "@/constants/project/projects"
+import { projects } from "@/constants/project/projects"
 import { useDict } from "@/lib/i18n/hooks/useDict"
 import { Briefcase } from "lucide-react"
 import { useSearchParams } from "next/navigation"
 import { Controller } from "react-hook-form"
 import { FieldControlProps } from "./types"
-import { SitePromoNotice } from "../notice/SitePromoNotice"
+import { PromoNotice } from "../notice/PromoNotice"
+import { getPromo } from "@/constants/promo/promo.data"
 
 export function ContactFormFieldProject({ control, error }: FieldControlProps) {
   const dict = useDict()
-
+  const promotions = getPromo(dict)
   const projectFromUrl = useSearchParams().get(FORM_PARAMS.PROJECT_TYPE)
   const urlValue = projects(dict).some((p) => p.slug === projectFromUrl)
     ? projectFromUrl
@@ -37,6 +38,12 @@ export function ContactFormFieldProject({ control, error }: FieldControlProps) {
           if (urlValue && !field.value) {
             field.onChange(urlValue)
           }
+
+          const promo = field.value
+            ? Object.values(promotions).find(
+                (p) => p.project_type === field.value
+              )
+            : null
 
           return (
             <>
@@ -68,7 +75,7 @@ export function ContactFormFieldProject({ control, error }: FieldControlProps) {
                 </p>
               )}
 
-              {field.value === PROJECT_TYPES.WEBSITE && <SitePromoNotice />}
+              {promo && <PromoNotice promo={promo} />}
             </>
           )
         }}

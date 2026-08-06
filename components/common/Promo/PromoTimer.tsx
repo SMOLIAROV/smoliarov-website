@@ -1,18 +1,15 @@
 "use client"
 
-import { PROMO_DATES } from "@/constants/promo/promo"
 import { useTimer } from "@/hooks/timer/useTimer"
 import { useDict } from "@/lib/i18n/hooks/useDict"
 
-export function PromoTimer() {
+export function PromoTimer({ date_expired }: { date_expired: string }) {
   const dict = useDict()
 
-  const { days, hours, minutes, seconds, isExpired } = useTimer(
-    PROMO_DATES.free_domain_and_hosting
-  )
+  const { days, hours, minutes, seconds, isExpired } = useTimer(date_expired)
 
   if (isExpired) {
-    return <div className="text-white/70">Акция закончилась</div>
+    return <div className="text-white/70">{dict.promo.promo_is_over}</div>
   }
 
   return (

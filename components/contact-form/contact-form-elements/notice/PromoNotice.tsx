@@ -1,13 +1,9 @@
-"use client"
-
 import { Gift } from "lucide-react"
 import { useTimer } from "@/hooks/timer/useTimer"
-import { PROMO_DATES } from "@/constants/promo/promo"
-import { useDict } from "@/lib/i18n/hooks/useDict"
+import { Promotion } from "@/constants/promo/promo.data"
 
-export function SitePromoNotice() {
-  const dict = useDict()
-  const { isExpired } = useTimer(PROMO_DATES.free_domain_and_hosting)
+export function PromoNotice({ promo }: { promo: Promotion }) {
+  const { isExpired } = useTimer(promo.date_expired)
 
   if (isExpired) return null
 
@@ -16,9 +12,9 @@ export function SitePromoNotice() {
       <div className="flex items-start gap-2">
         <Gift className="mt-0.5 h-4 w-4 flex-shrink-0" />
         <div>
-          <p className="font-medium">{dict.contact_form.notice.title}</p>
+          <p className="font-medium">{promo.content.notice.title}</p>
           <p className="mt-0.5 text-xs text-emerald-500/90">
-            {dict.contact_form.notice.description}
+            {promo.content.notice.description}
           </p>
         </div>
       </div>

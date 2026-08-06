@@ -1,3 +1,7 @@
+"uce client"
+
+import { useDict } from "@/lib/i18n/hooks/useDict"
+
 export function HeroCTAMinPrice({
   price,
   currency,
@@ -5,15 +9,15 @@ export function HeroCTAMinPrice({
   price: number
   currency: string
 }) {
+  const dict = useDict()
+
   return (
     <div>
       <p className="text-xs text-foreground/40 uppercase tracking-widest font-mono mb-1">
-        {/* Добавить в словарь */}
-        Стоимость
+        {dict.common.price}
       </p>
       <p className="text-2xl font-display font-medium text-white">
-        {/* Добавить в словарь */}
-        от {price}
+        {dict.common.from.toLowerCase()} {price}
         <span className="text-foreground/50 text-lg"> {currency}</span>
       </p>
     </div>

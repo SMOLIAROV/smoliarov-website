@@ -8,7 +8,7 @@ import { ReviewsSection } from "@/components/landing/reviews/ReviewsSection"
 import { HandsSection } from "@/components/landing/hands/HandsSection"
 import { ContactFormSection } from "@/components/contact-form/ContactFormSection"
 import { FaqSection } from "@/components/landing/faq/FaqSection"
-import { PromoSection } from "@/components/landing/promo/PromoSection"
+import { HomePromo } from "@/components/landing/promo/PromoSections"
 
 export default function HomePage() {
   return (
@@ -17,7 +17,7 @@ export default function HomePage() {
 
       <main className="relative min-h-screen">
         <HeroSection />
-        <PromoSection />
+        <HomePromo />
         <SolutionsSection />
         <CtaSection />
         <WorkflowSection />

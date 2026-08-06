@@ -1,6 +1,11 @@
+"use client"
+
+import { useDict } from "@/lib/i18n/hooks/useDict"
 import { Zap, Shield } from "lucide-react"
 
 export function HeroImageBadge() {
+  const dict = useDict()
+
   return (
     <>
       <div className="absolute -bottom-4 -left-4 z-20 flex items-center gap-3 px-4 py-3 bg-black border border-foreground/20 backdrop-blur-md rounded-2xl">
@@ -9,12 +14,10 @@ export function HeroImageBadge() {
         </div>
         <div>
           <p className="text-[10px] text-foreground/40 font-mono uppercase tracking-wider">
-            {/* Добавить в словарь */}
-            Скорость
+            {dict.common.speed}
           </p>
           <p className="text-sm font-display text-white font-medium">
-            {/* Добавить в словарь */}
-            Открывается мгновенно
+            {dict.common.open_instantly}
           </p>
         </div>
       </div>
@@ -26,12 +29,10 @@ export function HeroImageBadge() {
 
         <div>
           <p className="text-[10px] text-foreground/40 font-mono uppercase tracking-wider">
-            {/* Добавить в словарь */}
-            Безопасность
+            {dict.common.security}
           </p>
           <p className="text-sm font-display text-white font-medium">
-            {/* Добавить в словарь */}
-            Данные защищены
+            {dict.common.protected_data}
           </p>
         </div>
       </div>

@@ -1,5 +1,6 @@
 import { Globe, Zap, MessageSquare, Settings, Code2 } from "lucide-react"
 import React from "react"
+import { PROJECT_TYPES } from "../project/projects"
 
 export type Solution = {
   key: string
@@ -23,35 +24,35 @@ type SolutionsDict = {
 
 export const getSolutions = (dict: SolutionsDict): Solution[] => [
   {
-    key: "websites",
+    key: PROJECT_TYPES.WEBSITE,
     icon: Globe,
     title: dict.solutions.items.websites.title,
     description: dict.solutions.items.websites.description,
-    image: "/images/solutions/sites.webp",
+    image: "/images/solutions/site.png",
   },
   {
-    key: "web-apps",
+    key: PROJECT_TYPES.SERVICE,
     icon: Zap,
     title: dict.solutions.items.web_apps.title,
     description: dict.solutions.items.web_apps.description,
     image: "/images/solutions/services.webp",
   },
   {
-    key: "telegram-bots",
+    key: PROJECT_TYPES.BOT,
     icon: MessageSquare,
     title: dict.solutions.items.telegram_bots.title,
     description: dict.solutions.items.telegram_bots.description,
     image: "/images/solutions/bots.webp",
   },
   {
-    key: "automation",
+    key: PROJECT_TYPES.AUTOMATION,
     icon: Settings,
     title: dict.solutions.items.automation.title,
     description: dict.solutions.items.automation.description,
     image: "/images/solutions/automation.webp",
   },
   {
-    key: "custom",
+    key: PROJECT_TYPES.CUSTOM,
     icon: Code2,
     title: dict.solutions.items.custom.title,
     description: dict.solutions.items.custom.description,
