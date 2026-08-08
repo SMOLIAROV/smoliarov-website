@@ -1,5 +1,8 @@
+import { Locale } from "@/lib/i18n/config"
+
 export const ROUTES = {
-  home: (locale: string) => `/${locale}`,
-  legal: (locale: string, slug: string) => `/${locale}/legal/${slug}`,
-  reviews: (locale: string) => `/${locale}/reviews`,
+  home: (locale: Locale) => `/${locale}`,
+  legal: (locale: Locale, slug: string) => `/${locale}/legal/${slug}`,
+  reviews: (locale: Locale) => `/${locale}/reviews`,
+  solutions: (locale: Locale, slug: string) => `/${locale}/solutions/${slug}`,
 } as const

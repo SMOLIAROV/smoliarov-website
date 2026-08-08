@@ -1,11 +1,11 @@
-import { DescribeButton } from "@/components/common/Buttons/DescribeButton"
+import { DescribeWhiteButton } from "@/components/common/Buttons/DescribeWhiteButton"
 import { HeroCTAMinPrice } from "./HeroCTAMinPrice"
 
-export function HeroCTA() {
+export function HeroCTA({ min_price }: { min_price: number }) {
   return (
     <div className="flex flex-col sm:flex-row items-start sm:items-center gap-5">
-      <HeroCTAMinPrice price={500} currency="BYN" />
-      <DescribeButton />
+      <HeroCTAMinPrice min_price={min_price} currency="BYN" />
+      <DescribeWhiteButton />
     </div>
   )
 }

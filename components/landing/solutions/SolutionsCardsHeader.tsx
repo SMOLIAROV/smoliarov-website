@@ -1,4 +1,4 @@
-import { Solution } from "@/constants/solutions/solutions.data"
+import { Solution } from "@/constants/solution/solutions.data"
 
 export function SolutionsCardsHeader({ solution }: { solution: Solution }) {
   const Icon = solution.icon

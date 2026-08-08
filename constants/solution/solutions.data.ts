@@ -1,6 +1,6 @@
 import { Globe, Zap, MessageSquare, Settings, Code2 } from "lucide-react"
 import React from "react"
-import { PROJECT_TYPES } from "../project/projects"
+import { SOLUTION_TYPES } from "../solution/solutions"
 
 export type Solution = {
   key: string
@@ -8,6 +8,7 @@ export type Solution = {
   title: string
   description: string
   image: string
+  price?: number
 }
 
 type SolutionsDict = {
@@ -24,35 +25,39 @@ type SolutionsDict = {
 
 export const getSolutions = (dict: SolutionsDict): Solution[] => [
   {
-    key: PROJECT_TYPES.WEBSITE,
+    key: SOLUTION_TYPES.WEBSITE,
     icon: Globe,
     title: dict.solutions.items.websites.title,
     description: dict.solutions.items.websites.description,
     image: "/images/solutions/site.png",
+    price: 200,
   },
   {
-    key: PROJECT_TYPES.SERVICE,
+    key: SOLUTION_TYPES.SERVICE,
     icon: Zap,
     title: dict.solutions.items.web_apps.title,
     description: dict.solutions.items.web_apps.description,
     image: "/images/solutions/services.webp",
+    price: 1000,
   },
   {
-    key: PROJECT_TYPES.BOT,
+    key: SOLUTION_TYPES.BOT,
     icon: MessageSquare,
     title: dict.solutions.items.telegram_bots.title,
     description: dict.solutions.items.telegram_bots.description,
     image: "/images/solutions/bots.webp",
+    price: 300,
   },
   {
-    key: PROJECT_TYPES.AUTOMATION,
+    key: SOLUTION_TYPES.AUTOMATION,
     icon: Settings,
     title: dict.solutions.items.automation.title,
     description: dict.solutions.items.automation.description,
     image: "/images/solutions/automation.webp",
+    price: 500,
   },
   {
-    key: PROJECT_TYPES.CUSTOM,
+    key: SOLUTION_TYPES.CUSTOM,
     icon: Code2,
     title: dict.solutions.items.custom.title,
     description: dict.solutions.items.custom.description,

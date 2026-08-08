@@ -6,7 +6,7 @@ import { useNavLink } from "@/hooks/navigation/useNavLink"
 import { NAVIGATION } from "@/constants/navigation/navigation"
 import { Button } from "../../ui/button"
 
-export function DescribeButton() {
+export function DescribeWhiteButton() {
   const dict = useDict()
 
   return (

@@ -1,4 +1,4 @@
-import { Solution } from "@/constants/solutions/solutions.data"
+import { Solution } from "@/constants/solution/solutions.data"
 import Image from "next/image"
 
 export function SolutionCardImage({ solution }: { solution: Solution }) {

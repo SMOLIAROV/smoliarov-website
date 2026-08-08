@@ -4,6 +4,20 @@ import { ReviewsHeader } from "@/components/landing/reviews/ReviewsHeader"
 import { PageContainer } from "@/components/common/PageContainer"
 import { SwitchLocaleButton } from "@/components/common/Buttons/SwitchLocaleButton"
 import { getAllReviews } from "@/lib/api/endpoints/reviews"
+import { Metadata } from "next"
+import { getMetadata } from "@/lib/metadata"
+import { METADATA_PAGES } from "@/constants/metadata/metadata"
+import { Locale } from "@/lib/i18n/config"
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: Locale }>
+}): Promise<Metadata> {
+  const { locale } = await params
+
+  return getMetadata(METADATA_PAGES.REVIEWS, locale)
+}
 
 export default async function ReviewsPage() {
   const reviews = await getAllReviews()

@@ -6,8 +6,8 @@ import { HeroGridLines } from "@/components/landing/hero/HeroGridLines"
 import { HeroCTA } from "./cta/HeroCTA"
 import { HeroImage } from "./image/HeroImage"
 import { HeroImageBadge } from "./image/HeroImageBadge"
-import { getSolutions } from "@/constants/solutions/solutions.data"
 import { useDict } from "@/lib/i18n/hooks/useDict"
+import { getSolutions } from "@/constants/solution/solutions.data"
 
 export function HeroSection({ solution_type }: { solution_type: string }) {
   const dict = useDict()
@@ -25,7 +25,7 @@ export function HeroSection({ solution_type }: { solution_type: string }) {
               subtitle={solution.description}
             />
 
-            <HeroCTA />
+            <HeroCTA min_price={solution.price} />
           </div>
 
           <div className="relative hidden lg:flex items-center justify-center">

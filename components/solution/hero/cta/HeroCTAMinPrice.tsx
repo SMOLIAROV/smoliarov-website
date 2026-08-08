@@ -3,10 +3,10 @@
 import { useDict } from "@/lib/i18n/hooks/useDict"
 
 export function HeroCTAMinPrice({
-  price,
+  min_price,
   currency,
 }: {
-  price: number
+  min_price: number
   currency: string
 }) {
   const dict = useDict()
@@ -17,7 +17,7 @@ export function HeroCTAMinPrice({
         {dict.common.price}
       </p>
       <p className="text-2xl font-display font-medium text-white">
-        {dict.common.from.toLowerCase()} {price}
+        {dict.common.from.toLowerCase()} {min_price}
         <span className="text-foreground/50 text-lg"> {currency}</span>
       </p>
     </div>

@@ -1,8 +1,8 @@
 "use client"
 
-import { getSolutions } from "@/constants/solutions/solutions.data"
 import { useDict } from "@/lib/i18n/hooks/useDict"
 import { SolutionsCard } from "./SolutionsCard"
+import { getSolutions } from "@/constants/solution/solutions.data"
 
 export function SolutionsCards() {
   const dict = useDict()

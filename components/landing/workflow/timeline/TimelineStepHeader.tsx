@@ -13,8 +13,8 @@ export function TimelineStepHeader({
 
   return (
     <div className="flex-1 lg:max-w-[520px]">
-      <span className="font-mono text-sm tracking-[2px] text-white/50">
-        {dict.common.step.toUpperCase()} {String(index + 1).padStart(2, "0")}
+      <span className="font-mono text-sm uppercase tracking-[2px] text-white/50">
+        {dict.common.step} {String(index + 1).padStart(2, "0")}
       </span>
 
       <h3 className="text-3xl md:text-4xl font-display tracking-tight mb-5">

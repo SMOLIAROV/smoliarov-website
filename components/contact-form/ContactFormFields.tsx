@@ -6,7 +6,7 @@ import { ContactFormFieldEmail } from "./contact-form-elements/fields/ContactFor
 import { ContactFormFieldMessage } from "./contact-form-elements/fields/ContactFormFieldMessage"
 import { ContactFormFieldName } from "./contact-form-elements/fields/ContactFormFieldName"
 import { ContactFormFieldPhone } from "./contact-form-elements/fields/ContactFormFieldPhone"
-import { ContactFormFieldProject } from "./contact-form-elements/fields/ContactFormFieldProject"
+import { ContactFormFieldSolution } from "./contact-form-elements/fields/ContactFormFieldSolution"
 import { ContactFormValues } from "./types"
 
 interface Props {
@@ -26,9 +26,9 @@ export function ContactFormFields({ control, register, errors }: Props) {
       <ContactFormFieldPhone register={register} error={errors.phone} />
 
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-        <ContactFormFieldProject
+        <ContactFormFieldSolution
           control={control}
-          error={errors.project_type}
+          error={errors.solution_type}
         />
         <ContactFormFieldBudget control={control} />
       </div>

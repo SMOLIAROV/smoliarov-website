@@ -1,4 +1,32 @@
 {
+  "metadata": {
+    "home": {
+      "title": "Website, CRM, Telegram Bot Development & Business Automation",
+      "description": "We develop websites, CRM systems, web applications, Telegram bots, and digital solutions for businesses. We automate sales, lead management, and business processes."
+    },
+    "reviews": {
+      "title": "Client Reviews",
+      "description": "Client reviews of our website, web application, Telegram bot, and business automation development services."
+    },
+    "legal": {
+      "privacy": {
+        "title": "Privacy Policy",
+        "description": "Privacy Policy of the SMOLIAROV website."
+      },
+      "cookies": {
+        "title": "Cookie Policy",
+        "description": "Cookie Policy of the SMOLIAROV website."
+      },
+      "offer": {
+        "title": "Public Offer",
+        "description": "Public Offer of the SMOLIAROV website."
+      },
+      "free_domain_and_hosting": {
+        "title": "Promotion Terms: Free Domain and Hosting for One Month with Website Development",
+        "description": "Terms of the promotion offering a free domain and one month of hosting with a website development order."
+      }
+    }
+  },
   "common": {
     "name": "Smoliarov Denis Nikolaevich",
     "loading": "Loading",
@@ -12,7 +40,7 @@
     "avaliable": "Available for projects",
     "back_home": "Go to homepage",
     "step": "Step",
-    "project_types": {
+    "solution_type": {
       "website": "Website",
       "service": "Service / Web application",
       "bot": "Telegram bot",
@@ -73,7 +101,13 @@
       }
     }
   },
-  "cta": "We will analyze the current processes, propose a solution and develop a system for the tasks of your business.",
+  "cta": {
+    "title": "Tell Us About Your Project — We’ll Find the Right Solution",
+    "description": "Tell us what you need. We’ll provide a free estimate of the cost and timeline, with no obligations — we’ll simply get in touch.",
+    "consultation": "Consultation",
+    "free": "Free",
+    "negotiable": "Negotiable"
+  },
   "workflow": {
     "title": "Workflow",
     "subtitle": "What awaits you at each stage",
@@ -140,7 +174,8 @@
         "placeholder": "John Doe",
         "errors": {
           "required": "Enter your name",
-          "invalid": "Name can only contain letters"
+          "invalid": "Name can only contain letters",
+          "max": "Maximum 15 characters"
         }
       },
       "email": {
@@ -158,7 +193,7 @@
           "invalid": "Enter a valid phone number in the format +375 XX XXX XX XX"
         }
       },
-      "project_type": {
+      "solution_type": {
         "label": "What needs to be done",
         "placeholder": "Choose project",
         "errors": {

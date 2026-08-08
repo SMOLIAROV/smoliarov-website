@@ -2,7 +2,7 @@ export interface ContactSubmissionPayload {
   name: string
   email: string
   phone?: string
-  project_type: string
+  solution_type: string
   budget?: string
   message: string
   consent_privacy: boolean

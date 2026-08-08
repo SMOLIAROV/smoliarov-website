@@ -18,15 +18,15 @@ export function PromoSection({ promo }: { promo: Promotion }) {
   const { isExpired } = useTimer(promo.date_expired)
 
   const searchParams = useSearchParams()
-  const project = searchParams.get(FORM_PARAMS.PROJECT_TYPE)
+  const solution = searchParams.get(FORM_PARAMS.SOLUTION_TYPE)
 
   const { scrollToForm } = useContactFormNavigation()
 
   useEffect(() => {
-    if (!project) return
+    if (!solution) return
 
     scrollToForm()
-  }, [project, scrollToForm])
+  }, [solution, scrollToForm])
 
   if (isExpired) {
     return null
@@ -44,7 +44,7 @@ export function PromoSection({ promo }: { promo: Promotion }) {
             />
             <PromoTimer date_expired={promo.date_expired} />
             <PromoCTA
-              project_type={promo.project_type}
+              solution_type={promo.solution_type}
               slug={promo.slug}
               order={promo.content.order}
               remark={promo.content.remark}

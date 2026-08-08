@@ -13,11 +13,23 @@ import { PageContainer } from "@/components/common/PageContainer"
 import { ROUTES } from "@/constants/routes"
 import { BackHomeButton } from "@/components/common/Buttons/BackHomeButton"
 import { SwitchLocaleButton } from "@/components/common/Buttons/SwitchLocaleButton"
+import { Metadata } from "next"
+import { getMetadata } from "@/lib/metadata"
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: Locale; slug: string }>
+}): Promise<Metadata> {
+  const { locale, slug } = await params
+
+  return getMetadata(`legal/${slug}`, locale)
+}
 
 export default async function LegalPage({
   params,
 }: {
-  params: Promise<{ locale: string; slug: string }>
+  params: Promise<{ locale: Locale; slug: string }>
 }) {
   const { locale, slug } = await params
 

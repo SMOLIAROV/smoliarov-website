@@ -1,8 +1,8 @@
 import { LEGAL_SLUGS } from "../legal/legal"
-import { PROJECT_TYPES } from "../project/projects"
+import { SOLUTION_TYPES } from "../solution/solutions"
 
 export type Promotion = {
-  project_type: string
+  solution_type: string
   slug: {}
   date_start: string
   date_expired: string
@@ -42,7 +42,7 @@ type PromoDict = {
 
 export const getPromo = (dict: PromoDict): Record<string, Promotion> => ({
   free_domain_and_hosting: {
-    project_type: PROJECT_TYPES.WEBSITE,
+    solution_type: SOLUTION_TYPES.WEBSITE,
     slug: LEGAL_SLUGS.PROMO__FREE_DOMAIN_AND_HOSTING,
     date_start: "2026-05-31",
     date_expired: "2026-08-31",

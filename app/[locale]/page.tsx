@@ -9,6 +9,20 @@ import { HandsSection } from "@/components/landing/hands/HandsSection"
 import { ContactFormSection } from "@/components/contact-form/ContactFormSection"
 import { FaqSection } from "@/components/landing/faq/FaqSection"
 import { HomePromo } from "@/components/landing/promo/PromoSections"
+import { Metadata } from "next"
+import { getMetadata } from "@/lib/metadata"
+import { METADATA_PAGES } from "@/constants/metadata/metadata"
+import { Locale } from "@/lib/i18n/config"
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: Locale }>
+}): Promise<Metadata> {
+  const { locale } = await params
+
+  return getMetadata(METADATA_PAGES.HOME, locale)
+}
 
 export default function HomePage() {
   return (
