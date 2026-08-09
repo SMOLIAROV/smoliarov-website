@@ -7,25 +7,31 @@ import { SelectItem } from "@/components/ui/select/SelectItem"
 import { SelectTrigger } from "@/components/ui/select/SelectTrigger"
 import { SelectValue } from "@/components/ui/select/SelectValue"
 import { FORM_PARAMS } from "@/constants/form/form"
-import { solutions } from "@/constants/solution/solutions"
 import { useDict } from "@/lib/i18n/hooks/useDict"
 import { Briefcase } from "lucide-react"
 import { useSearchParams } from "next/navigation"
 import { Controller } from "react-hook-form"
 import { FieldControlProps } from "./types"
 import { PromoNotice } from "../notice/PromoNotice"
-import { getPromo } from "@/constants/promo/promo.data"
+import { PROMOS } from "@/constants/promo/promo.data"
+import { getSolution, SOLUTIONS } from "@/constants/solution/solution.data"
 
 export function ContactFormFieldSolution({
   control,
   error,
 }: FieldControlProps) {
   const dict = useDict()
-  const promotions = getPromo(dict)
+  const promotions = PROMOS(dict)
   const solutionFromUrl = useSearchParams().get(FORM_PARAMS.SOLUTION_TYPE)
-  const urlValue = solutions(dict).some((p) => p.slug === solutionFromUrl)
-    ? solutionFromUrl
-    : ""
+
+  const solution = getSolution({
+    dict,
+    solution_type: solutionFromUrl,
+  })
+
+  const solutions = Object.values(SOLUTIONS(dict))
+
+  const urlValue = solution?.slug ?? ""
 
   return (
     <div className="space-y-1.5">
@@ -64,9 +70,12 @@ export function ContactFormFieldSolution({
                 </SelectTrigger>
 
                 <SelectContent>
-                  {solutions(dict).map(({ slug, label }) => (
-                    <SelectItem key={slug} value={slug}>
-                      {label}
+                  {solutions.map((solution) => (
+                    <SelectItem
+                      key={solution.solution_type}
+                      value={solution.solution_type}
+                    >
+                      {solution.content.title}
                     </SelectItem>
                   ))}
                 </SelectContent>

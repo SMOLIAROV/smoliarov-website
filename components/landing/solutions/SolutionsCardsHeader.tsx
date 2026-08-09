@@ -1,4 +1,4 @@
-import { Solution } from "@/constants/solution/solutions.data"
+import { Solution } from "@/constants/solution/types"
 
 export function SolutionsCardsHeader({ solution }: { solution: Solution }) {
   const Icon = solution.icon
@@ -12,11 +12,11 @@ export function SolutionsCardsHeader({ solution }: { solution: Solution }) {
       </div>
 
       <h3 className="font-display text-xl md:text-2xl mb-3 leading-tight">
-        {solution.title}
+        {solution.content.title}
       </h3>
 
       <p className="text-muted-foreground text-[15px] leading-relaxed flex-1">
-        {solution.description}
+        {solution.content.description}
       </p>
     </div>
   )

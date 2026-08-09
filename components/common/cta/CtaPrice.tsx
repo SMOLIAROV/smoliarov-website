@@ -1,15 +1,13 @@
 "use client"
 
-import { getSolutions } from "@/constants/solution/solutions.data"
+import { getSolution } from "@/constants/solution/solution.data"
+import { Solution } from "@/constants/solution/types"
 import { useDict } from "@/lib/i18n/hooks/useDict"
 
 export function CtaPrice({ solution_type }: { solution_type?: string }) {
   const dict = useDict()
-  const solution = solution_type
-    ? getSolutions(dict).find((s) => s.key === solution_type)
-    : null
 
-  if (!solution) {
+  if (!solution_type) {
     return (
       <div className="lg:text-right">
         <p className="text-sm text-black/50 font-mono mb-1 uppercase tracking-widest">
@@ -23,16 +21,18 @@ export function CtaPrice({ solution_type }: { solution_type?: string }) {
     )
   }
 
+  const solution: Solution = getSolution({ dict, solution_type })
+
   return (
     <div className="lg:text-right">
       <p className="text-sm text-black/50 font-mono mb-1 uppercase tracking-widest">
-        {solution.title}
+        {solution.content.title}
 
-        {solution.price ? ` - ${dict.common.from}` : ""}
+        {solution.pricing.min ? ` - ${dict.common.from}` : ""}
       </p>
-      {solution.price != null ? (
+      {solution.pricing.min != null ? (
         <p className="font-display text-[clamp(2rem,4vw,3.5rem)] text-black leading-none">
-          {solution.price}
+          {solution.pricing.min}
           <span className="ml-1.5 text-xl text-black/40">BYN</span>
         </p>
       ) : (

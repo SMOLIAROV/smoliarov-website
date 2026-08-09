@@ -1,5 +1,7 @@
+import { Dictionary } from "@/lib/i18n/dictionaries"
 import { LEGAL_SLUGS } from "../legal/legal"
-import { SOLUTION_TYPES } from "../solution/solutions"
+import { SOLUTION_TYPES } from "../solution/solution.data"
+import PromoImage from "@/public/images/promo.webp"
 
 export type Promotion = {
   solution_type: string
@@ -40,7 +42,7 @@ type PromoDict = {
   }
 }
 
-export const getPromo = (dict: PromoDict): Record<string, Promotion> => ({
+export const PROMOS = (dict: PromoDict): Record<string, Promotion> => ({
   free_domain_and_hosting: {
     solution_type: SOLUTION_TYPES.WEBSITE,
     slug: LEGAL_SLUGS.PROMO__FREE_DOMAIN_AND_HOSTING,
@@ -53,7 +55,7 @@ export const getPromo = (dict: PromoDict): Record<string, Promotion> => ({
       },
       order: dict.promo.items.websites.order,
       remark: dict.promo.items.websites.remark,
-      image: "/images/promo.webp",
+      image: PromoImage.src,
       notice: {
         title: dict.promo.items.websites.notice.title,
         description: dict.promo.items.websites.notice.description,
@@ -61,3 +63,15 @@ export const getPromo = (dict: PromoDict): Record<string, Promotion> => ({
     },
   },
 })
+
+export function getPromo({
+  dict,
+  solution_type,
+}: {
+  dict: Dictionary
+  solution_type: string
+}) {
+  const promos = Object.values(PROMOS(dict))
+
+  return promos.find((promo) => promo.solution_type === solution_type) ?? null
+}

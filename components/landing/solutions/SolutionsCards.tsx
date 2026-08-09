@@ -2,11 +2,11 @@
 
 import { useDict } from "@/lib/i18n/hooks/useDict"
 import { SolutionsCard } from "./SolutionsCard"
-import { getSolutions } from "@/constants/solution/solutions.data"
+import { SOLUTIONS } from "@/constants/solution/solution.data"
 
 export function SolutionsCards() {
   const dict = useDict()
-  const solutions = getSolutions(dict)
+  const solutions = Object.values(SOLUTIONS(dict))
 
   return (
     <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 md:gap-6">
@@ -16,7 +16,7 @@ export function SolutionsCards() {
 
         return (
           <SolutionsCard
-            key={solution.key}
+            key={solution.solution_type}
             solution={solution}
             index={index}
             className={isLast && isOddTotal ? "lg:col-span-2" : ""}

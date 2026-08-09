@@ -2,6 +2,7 @@ import { LEGAL_SLUGS } from "@/constants/legal/legal"
 import { ROUTES } from "@/constants/routes"
 import { Dictionary } from "../i18n/dictionaries"
 import { Locale } from "../i18n/config"
+import { SOLUTION_TYPES } from "@/constants/solution/solution.data"
 
 export const metadataConfigs = {
   home: {
@@ -36,6 +37,62 @@ export const metadataConfigs = {
       "отзывы SMOLIAROV",
       "разработка сайтов отзывы",
     ],
+  },
+
+  solution: {
+    website: {
+      route: (locale: Locale) =>
+        ROUTES.solution(locale, SOLUTION_TYPES.WEBSITE),
+
+      title: (dict: Dictionary) => dict.solutions.items.websites.title,
+
+      description: (dict: Dictionary) =>
+        dict.solutions.items.websites.description,
+
+      keywords: ["Сайты", "SMOLIAROV"],
+    },
+    service: {
+      route: (locale: Locale) =>
+        ROUTES.solution(locale, SOLUTION_TYPES.SERVICE),
+
+      title: (dict: Dictionary) => dict.solutions.items.web_apps.title,
+
+      description: (dict: Dictionary) =>
+        dict.solutions.items.web_apps.description,
+
+      keywords: ["Сервисы", "SMOLIAROV"],
+    },
+    bot: {
+      route: (locale: Locale) => ROUTES.solution(locale, SOLUTION_TYPES.BOT),
+
+      title: (dict: Dictionary) => dict.solutions.items.telegram_bots.title,
+
+      description: (dict: Dictionary) =>
+        dict.solutions.items.telegram_bots.description,
+
+      keywords: ["Telegram-боты", "SMOLIAROV"],
+    },
+    automation: {
+      route: (locale: Locale) =>
+        ROUTES.solution(locale, SOLUTION_TYPES.AUTOMATION),
+
+      title: (dict: Dictionary) => dict.solutions.items.automation.title,
+
+      description: (dict: Dictionary) =>
+        dict.solutions.items.automation.description,
+
+      keywords: ["Автоматизация", "SMOLIAROV"],
+    },
+    custom: {
+      route: (locale: Locale) => ROUTES.solution(locale, SOLUTION_TYPES.CUSTOM),
+
+      title: (dict: Dictionary) => dict.solutions.items.custom.title,
+
+      description: (dict: Dictionary) =>
+        dict.solutions.items.custom.description,
+
+      keywords: ["Индивидуальная разработка", "SMOLIAROV"],
+    },
   },
 
   legal: {

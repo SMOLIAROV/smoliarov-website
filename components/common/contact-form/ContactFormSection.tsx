@@ -1,7 +1,7 @@
 import { NAVIGATION } from "@/constants/navigation/navigation"
 import { ContactFormHeader } from "./ContactFormHeader"
 import { ContactForm } from "./ContactForm"
-import { PageContainer } from "../common/PageContainer"
+import { PageContainer } from "../PageContainer"
 
 export function ContactFormSection() {
   return (

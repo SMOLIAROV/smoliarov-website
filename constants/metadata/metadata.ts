@@ -2,6 +2,10 @@ export const METADATA_PAGES = {
   HOME: "home",
   REVIEWS: "reviews",
 
+  SOLUTION: {
+    WEBSITE: "solution/website",
+  },
+
   LEGAL: {
     PRIVACY: "legal/privacy",
     COOKIES: "legal/cookies",

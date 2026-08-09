@@ -1,6 +1,6 @@
 import { z } from "zod"
-import { SOLUTION_TYPE_VALUES } from "@/constants/solution/solutions"
 import { Dictionary } from "../i18n/dictionaries"
+import { SOLUTION_TYPE_VALUES } from "@/constants/solution/solution.data"
 
 export const createContactFormSchema = (dict: Dictionary) => {
   const messages = {
