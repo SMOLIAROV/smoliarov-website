@@ -1,4 +1,7 @@
+"use client"
+
 import { Solution } from "@/constants/solution/types"
+import { ArrowRight } from "lucide-react"
 
 export function SolutionsCardsHeader({ solution }: { solution: Solution }) {
   const Icon = solution.icon
@@ -18,6 +21,11 @@ export function SolutionsCardsHeader({ solution }: { solution: Solution }) {
       <p className="text-muted-foreground text-[15px] leading-relaxed flex-1">
         {solution.content.description}
       </p>
+
+      <div className="mt-6 inline-flex items-center gap-2 text-sm text-foreground/60 group">
+        <span>Подробнее</span>
+        <ArrowRight className="w-3.5 h-3.5 transition-transform group-hover:translate-x-1" />
+      </div>
     </div>
   )
 }

@@ -27,15 +27,6 @@ export const SOLUTIONS = (dict: Dictionary) => ({
     icon: Globe,
     image: WebsiteImage.src,
 
-    pricing: {
-      min: 200,
-      options: {
-        landing: 200,
-        corporate: 500,
-        onlineStore: 1000,
-      },
-    },
-
     content: {
       title: dict.solutions.items.websites.title,
       description: dict.solutions.items.websites.description,
@@ -45,10 +36,6 @@ export const SOLUTIONS = (dict: Dictionary) => ({
     solution_type: SOLUTION_TYPES.SERVICE,
     icon: Zap,
     image: ServiceImage.src,
-
-    pricing: {
-      min: 500,
-    },
 
     content: {
       title: dict.solutions.items.web_apps.title,
@@ -60,10 +47,6 @@ export const SOLUTIONS = (dict: Dictionary) => ({
     icon: MessageSquare,
     image: BotImage.src,
 
-    pricing: {
-      min: 300,
-    },
-
     content: {
       title: dict.solutions.items.telegram_bots.title,
       description: dict.solutions.items.telegram_bots.description,
@@ -74,10 +57,6 @@ export const SOLUTIONS = (dict: Dictionary) => ({
     icon: Settings,
     image: AutomationImage.src,
 
-    pricing: {
-      min: 400,
-    },
-
     content: {
       title: dict.solutions.items.automation.title,
       description: dict.solutions.items.automation.description,
@@ -87,10 +66,6 @@ export const SOLUTIONS = (dict: Dictionary) => ({
     solution_type: SOLUTION_TYPES.CUSTOM,
     icon: Code2,
     image: CustomImage.src,
-
-    pricing: {
-      min: 1500,
-    },
 
     content: {
       title: dict.solutions.items.custom.title,

@@ -16,7 +16,6 @@ export function SolutionsCards() {
 
         return (
           <SolutionsCard
-            key={solution.solution_type}
             solution={solution}
             index={index}
             className={isLast && isOddTotal ? "lg:col-span-2" : ""}

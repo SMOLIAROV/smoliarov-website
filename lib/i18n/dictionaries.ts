@@ -1,7 +1,7 @@
 import type { Locale } from "./config"
 
-import ru from "./dictionaries/ru.json"
-import en from "./dictionaries/en.json"
+import ru from "./dictionaries/ru"
+import en from "./dictionaries/en"
 import { ERRORS } from "../errors"
 
 const dictionaries = {

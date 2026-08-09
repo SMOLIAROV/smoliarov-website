@@ -4,6 +4,7 @@ import { Metadata } from "next"
 import { getMetadata } from "@/lib/metadata"
 import { isSolutionType } from "@/constants/solution/solution.data"
 import { notFound } from "next/navigation"
+import { getSolutionPackages } from "@/lib/api/endpoints/solutions"
 
 export async function generateMetadata({
   params,
@@ -22,13 +23,18 @@ export async function generateMetadata({
 export default async function Page({
   params,
 }: {
-  params: Promise<{ slug: string }>
+  params: Promise<{ locale: Locale; slug: string }>
 }) {
-  const { slug } = await params
+  const { locale, slug } = await params
 
   if (!isSolutionType(slug)) {
     return notFound()
   }
 
-  return <SolutionPage slug={slug} />
+  const solution_packages = await getSolutionPackages({
+    locale,
+    solution_types: slug,
+  })
+
+  return <SolutionPage slug={slug} solution_packages={solution_packages} />
 }

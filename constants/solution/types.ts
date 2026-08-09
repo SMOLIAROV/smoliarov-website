@@ -1,8 +1,13 @@
+import { SolutionPackagesResponse } from "@/lib/api/contracts/solutions"
 import { LucideIcon } from "lucide-react"
 
-export interface SolutionPricing {
-  min: number
-  options?: Record<string, number>
+export interface SolutionPricingPackage {
+  id: string
+  title: string
+  description: string
+  features: string[]
+  price: number
+  is_popular?: boolean
 }
 
 export interface Solution {
@@ -15,5 +20,5 @@ export interface Solution {
     description: string
   }
 
-  pricing: SolutionPricing
+  pricing?: SolutionPackagesResponse
 }

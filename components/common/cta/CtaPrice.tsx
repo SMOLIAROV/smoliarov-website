@@ -1,13 +1,13 @@
 "use client"
 
-import { getSolution } from "@/constants/solution/solution.data"
 import { Solution } from "@/constants/solution/types"
 import { useDict } from "@/lib/i18n/hooks/useDict"
+import { getMinPackagePrice } from "@/lib/utils/getMinPackagePrice"
 
-export function CtaPrice({ solution_type }: { solution_type?: string }) {
+export function CtaPrice({ solution }: { solution?: Solution }) {
   const dict = useDict()
 
-  if (!solution_type) {
+  if (!solution) {
     return (
       <div className="lg:text-right">
         <p className="text-sm text-black/50 font-mono mb-1 uppercase tracking-widest">
@@ -21,18 +21,20 @@ export function CtaPrice({ solution_type }: { solution_type?: string }) {
     )
   }
 
-  const solution: Solution = getSolution({ dict, solution_type })
+  const packages = solution.pricing?.packages ?? []
+
+  const minPrice = getMinPackagePrice(packages)
 
   return (
     <div className="lg:text-right">
       <p className="text-sm text-black/50 font-mono mb-1 uppercase tracking-widest">
         {solution.content.title}
 
-        {solution.pricing.min ? ` - ${dict.common.from}` : ""}
+        {minPrice != null ? ` - ${dict.common.from}` : ""}
       </p>
-      {solution.pricing.min != null ? (
+      {minPrice != null ? (
         <p className="font-display text-[clamp(2rem,4vw,3.5rem)] text-black leading-none">
-          {solution.pricing.min}
+          {minPrice}
           <span className="ml-1.5 text-xl text-black/40">BYN</span>
         </p>
       ) : (

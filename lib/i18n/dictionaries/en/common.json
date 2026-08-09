@@ -1,0 +1,38 @@
+{
+  "name": "Smoliarov Denis Nikolaevich",
+  "loading": "Loading",
+  "slogan": "A reliable foundation for your business",
+  "discuss": "Discuss",
+  "discuss_task": "Discuss the project",
+  "legal": {
+    "privacy": "Privacy policy",
+    "cookies": "Cookie policy",
+    "offer": "Public offer"
+  },
+  "avaliable": "Available for projects",
+  "back_home": "Go to homepage",
+  "step": "Step",
+  "solution_type": {
+    "website": "Website",
+    "service": "Service / Web application",
+    "bot": "Telegram bot",
+    "automation": "Workflow Automation",
+    "custom": "Custom development"
+  },
+  "up_to": "Up to",
+  "more_then": "More then",
+  "min": "min.",
+  "consent": {
+    "i_agree": "I agree to",
+    "privacy": "personal data processing",
+    "i_accept_terms": "I accept the terms of the",
+    "offer": "public offer"
+  },
+  "price": "Price",
+  "from": "From",
+  "speed": "Speed",
+  "open_instantly": "Opens instantly",
+  "security": "Security",
+  "protected_data": "The data is protected",
+  "popular": "Popular"
+}

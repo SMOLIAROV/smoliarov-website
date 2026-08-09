@@ -1,0 +1,49 @@
+{
+  "title": "Workflow",
+  "subtitle": "What awaits you at each stage",
+  "description": "Without chaos and unexpected surprises. We coordinate each stage with you and regularly show the result.",
+  "steps": {
+    "analysis": {
+      "title": "Discussing the task",
+      "description": "We're figuring out how the processes work now, what problems there are, and what kind of result you want to achieve.",
+      "details": [
+        "We are studying business problems",
+        "We offer solutions",
+        "Estimating deadlines and budget"
+      ]
+    },
+    "design": {
+      "title": "Designing a solution",
+      "description": "We are thinking over the structure of the future product, user scenarios and technical architecture.",
+      "details": [
+        "Creating a prototype",
+        "Drawing up the terms of reference",
+        "Planning the development stages"
+      ]
+    },
+    "development": {
+      "title": "Developing",
+      "description": "We create the product in stages and regularly show the intermediate result.",
+      "details": ["Work on sprints", "Demonstration of progress", "Feedback"]
+    },
+    "testing": {
+      "title": "Checking it out",
+      "description": "We are testing all the functions, fixing errors and preparing the project for launch.",
+      "details": ["Functionality check", "Bug fixing", "Final testing"]
+    },
+    "deploy": {
+      "title": "Launching",
+      "description": "We host the project on the server, connect the necessary services and transfer access rights.",
+      "details": [
+        "Project publication",
+        "Configuring Integrations",
+        "Transfer of documentation"
+      ]
+    },
+    "support": {
+      "title": "Evolve",
+      "description": "After the launch, we stay in touch, help develop the product and add new functionality.",
+      "details": ["Warranty Support", "Consulting", "Project evolve"]
+    }
+  }
+}

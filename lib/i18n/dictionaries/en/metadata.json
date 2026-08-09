@@ -1,0 +1,28 @@
+{
+  "home": {
+    "title": "Website, CRM, Telegram Bot Development & Business Automation",
+    "description": "We develop websites, CRM systems, web applications, Telegram bots, and digital solutions for businesses. We automate sales, lead management, and business processes."
+  },
+  "reviews": {
+    "title": "Client Reviews",
+    "description": "Client reviews of our website, web application, Telegram bot, and business automation development services."
+  },
+  "legal": {
+    "privacy": {
+      "title": "Privacy Policy",
+      "description": "Privacy Policy of the SMOLIAROV website."
+    },
+    "cookies": {
+      "title": "Cookie Policy",
+      "description": "Cookie Policy of the SMOLIAROV website."
+    },
+    "offer": {
+      "title": "Public Offer",
+      "description": "Public Offer of the SMOLIAROV website."
+    },
+    "free_domain_and_hosting": {
+      "title": "Promotion Terms: Free Domain and Hosting for One Month with Website Development",
+      "description": "Terms of the promotion offering a free domain and one month of hosting with a website development order."
+    }
+  }
+}

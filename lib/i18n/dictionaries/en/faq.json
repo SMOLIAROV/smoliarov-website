@@ -1,0 +1,32 @@
+{
+  "title": "Frequently Asked Questions",
+  "subtitle": "Everything that is important to know before starting work",
+  "description": "It's all about the development process, deadlines, and collaboration.",
+  "image_caption": "// step by step to the goal",
+  "items": {
+    "timeline": {
+      "question": "I do not know what exactly I need. Is this a problem?",
+      "answer": "No. Tell us what task you want to solve or what is currently inconvenient. We will help you identify the right solution, whether it's a website, CRM, web application, Telegram bot, or automation system."
+    },
+    "payment": {
+      "question": "How much does development cost?",
+      "answer": "The cost depends on the tasks, the complexity of the project and the necessary integrations. After the discussion, we will prepare a clear assessment with the stages, deadlines and cost of each of them."
+    },
+    "tech": {
+      "question": "How long does development take?",
+      "answer": "Small projects can be implemented in a few weeks, more complex services — in a few months. Before starting work, we will coordinate the deadlines and will regularly show the result."
+    },
+    "communication": {
+      "question": "Is it possible to change requirements during development?",
+      "answer": "Yes. Small changes can usually be made in the process. If new functions appear or the scope of work changes, we discuss this in advance and agree on a new stage."
+    },
+    "support_after": {
+      "question": "What happens after the launch of the project?",
+      "answer": "After the launch, we correct possible errors, consult on working with the system and, if necessary, continue to develop the project. You will not be left alone with the finished product."
+    },
+    "confidentiality": {
+      "question": "Who owns the project and the source code?",
+      "answer": "After completion of the work, you get access, the source code and all rights to the developed product."
+    }
+  }
+}
