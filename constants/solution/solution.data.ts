@@ -23,67 +23,67 @@ export const isSolutionType = (type: string): boolean =>
 
 export const SOLUTIONS = (dict: Dictionary) => ({
   website: {
-    solution_type: SOLUTION_TYPES.WEBSITE,
+    solutionType: SOLUTION_TYPES.WEBSITE,
     icon: Globe,
     image: WebsiteImage.src,
 
     content: {
-      title: dict.solutions.items.websites.title,
-      description: dict.solutions.items.websites.description,
+      title: dict.common.solution_type.website.title,
+      description: dict.common.solution_type.website.description,
     },
   },
   service: {
-    solution_type: SOLUTION_TYPES.SERVICE,
+    solutionType: SOLUTION_TYPES.SERVICE,
     icon: Zap,
     image: ServiceImage.src,
 
     content: {
-      title: dict.solutions.items.web_apps.title,
-      description: dict.solutions.items.web_apps.description,
+      title: dict.common.solution_type.service.title,
+      description: dict.common.solution_type.service.description,
     },
   },
   bot: {
-    solution_type: SOLUTION_TYPES.BOT,
+    solutionType: SOLUTION_TYPES.BOT,
     icon: MessageSquare,
     image: BotImage.src,
 
     content: {
-      title: dict.solutions.items.telegram_bots.title,
-      description: dict.solutions.items.telegram_bots.description,
+      title: dict.common.solution_type.bot.title,
+      description: dict.common.solution_type.bot.description,
     },
   },
   automation: {
-    solution_type: SOLUTION_TYPES.AUTOMATION,
+    solutionType: SOLUTION_TYPES.AUTOMATION,
     icon: Settings,
     image: AutomationImage.src,
 
     content: {
-      title: dict.solutions.items.automation.title,
-      description: dict.solutions.items.automation.description,
+      title: dict.common.solution_type.automation.title,
+      description: dict.common.solution_type.automation.description,
     },
   },
   custom: {
-    solution_type: SOLUTION_TYPES.CUSTOM,
+    solutionType: SOLUTION_TYPES.CUSTOM,
     icon: Code2,
     image: CustomImage.src,
 
     content: {
-      title: dict.solutions.items.custom.title,
-      description: dict.solutions.items.custom.description,
+      title: dict.common.solution_type.custom.title,
+      description: dict.common.solution_type.custom.description,
     },
   },
 })
 
 export function getSolution({
   dict,
-  solution_type,
+  solutionType,
 }: {
   dict: Dictionary
-  solution_type: string
+  solutionType: string
 }) {
   const solutions = SOLUTIONS(dict)
 
-  const solution = solution_type ? solutions[solution_type] : null
+  const solution = solutionType ? solutions[solutionType] : null
 
   return solution
 }

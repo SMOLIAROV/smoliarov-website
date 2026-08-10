@@ -18,7 +18,7 @@ export function SolutionsCard({
 
   return (
     <Link
-      href={ROUTES.solution(locale, solution.solution_type)}
+      href={ROUTES.solution(locale, solution.solutionType)}
       className={cn(
         "group relative overflow-hidden border border-foreground/15 bg-card/30 rounded-2xl h-full flex cursor-pointer transition-shadow hover:shadow-lg",
         className

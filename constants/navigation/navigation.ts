@@ -1,5 +1,5 @@
 export const NAVIGATION = {
-  HOME: "",
+  HOME: "/",
   SOLUTIONS: "solutions",
   WORKFLOW: "worklow",
   REVIEWS: "reviews",

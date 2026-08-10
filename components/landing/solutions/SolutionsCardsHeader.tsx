@@ -8,7 +8,7 @@ export function SolutionsCardsHeader({ solution }: { solution: Solution }) {
 
   return (
     <div className="flex-1 p-6 md:p-8 flex flex-col relative z-10">
-      <div className="flex items-start justify-between mb-6">
+      <div className="flex items-start justify-between mb-6 sm:hidden">
         <div className="w-12 h-12 flex items-center justify-center border border-foreground/20 rounded-xl">
           <Icon className="w-6 h-6 text-foreground/70" />
         </div>

@@ -15,7 +15,7 @@ import { useDict } from "@/lib/i18n/hooks/useDict"
 
 export function PromoSection({ promo }: { promo: Promotion }) {
   const dict = useDict()
-  const { isExpired } = useTimer(promo.date_expired)
+  const { isExpired } = useTimer(promo.dateExpired)
 
   const searchParams = useSearchParams()
   const solution = searchParams.get(FORM_PARAMS.SOLUTION_TYPE)
@@ -38,13 +38,13 @@ export function PromoSection({ promo }: { promo: Promotion }) {
         <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-start lg:items-stretch">
           <div className="space-y-6 pt-2">
             <PromoHeader
-              first_title={promo.content.title.first}
-              second_title={promo.content.title.second}
+              firstTitle={promo.content.title.first}
+              secondTitle={promo.content.title.second}
               subtittle={dict.promo.subtitle}
             />
-            <PromoTimer date_expired={promo.date_expired} />
+            <PromoTimer dateExpired={promo.dateExpired} />
             <PromoCTA
-              solution_type={promo.solution_type}
+              solutionType={promo.solutionType}
               slug={promo.slug}
               order={promo.content.order}
               remark={promo.content.remark}

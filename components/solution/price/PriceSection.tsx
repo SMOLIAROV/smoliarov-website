@@ -4,16 +4,15 @@ import { PriceSectionCards } from "./PriceSectionCards"
 import { SolutionPackagesResponse } from "@/lib/api/contracts/solutions"
 
 export function PriceSection({
-  solution_packages,
+  solutionPackages,
 }: {
-  solution_packages: SolutionPackagesResponse
+  solutionPackages: SolutionPackagesResponse
 }) {
   return (
     <section className="relative py-20 md:py-28 bg-black">
       <PageContainer>
         <PriceSectionHeader />
-
-        <PriceSectionCards packages={solution_packages} />
+        <PriceSectionCards packages={solutionPackages} />
       </PageContainer>
     </section>
   )

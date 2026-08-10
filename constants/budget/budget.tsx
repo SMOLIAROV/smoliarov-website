@@ -1,10 +1,10 @@
 import { Dictionary } from "@/lib/i18n/dictionaries"
 
 export const BUDGET_TYPES = {
-  SMALL: "100",
-  MEDIUM: "500",
-  LARGE: "1000",
-  EXTRA_LARGE: "5000",
+  SMALL: 100,
+  MEDIUM: 500,
+  LARGE: 1000,
+  EXTRA_LARGE: 5000,
 } as const
 
 export const budgets = (dict: Dictionary) => [

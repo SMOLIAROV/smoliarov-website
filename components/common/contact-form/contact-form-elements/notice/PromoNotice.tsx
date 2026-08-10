@@ -3,7 +3,7 @@ import { useTimer } from "@/hooks/timer/useTimer"
 import { Promotion } from "@/constants/promo/promo.data"
 
 export function PromoNotice({ promo }: { promo: Promotion }) {
-  const { isExpired } = useTimer(promo.date_expired)
+  const { isExpired } = useTimer(promo.dateExpired)
 
   if (isExpired) return null
 

@@ -44,10 +44,10 @@ export const metadataConfigs = {
       route: (locale: Locale) =>
         ROUTES.solution(locale, SOLUTION_TYPES.WEBSITE),
 
-      title: (dict: Dictionary) => dict.solutions.items.websites.title,
+      title: (dict: Dictionary) => dict.common.solution_type.website.title,
 
       description: (dict: Dictionary) =>
-        dict.solutions.items.websites.description,
+        dict.common.solution_type.website.description,
 
       keywords: ["Сайты", "SMOLIAROV"],
     },
@@ -55,20 +55,20 @@ export const metadataConfigs = {
       route: (locale: Locale) =>
         ROUTES.solution(locale, SOLUTION_TYPES.SERVICE),
 
-      title: (dict: Dictionary) => dict.solutions.items.web_apps.title,
+      title: (dict: Dictionary) => dict.common.solution_type.service.title,
 
       description: (dict: Dictionary) =>
-        dict.solutions.items.web_apps.description,
+        dict.common.solution_type.service.description,
 
       keywords: ["Сервисы", "SMOLIAROV"],
     },
     bot: {
       route: (locale: Locale) => ROUTES.solution(locale, SOLUTION_TYPES.BOT),
 
-      title: (dict: Dictionary) => dict.solutions.items.telegram_bots.title,
+      title: (dict: Dictionary) => dict.common.solution_type.bot.title,
 
       description: (dict: Dictionary) =>
-        dict.solutions.items.telegram_bots.description,
+        dict.common.solution_type.bot.description,
 
       keywords: ["Telegram-боты", "SMOLIAROV"],
     },
@@ -76,20 +76,20 @@ export const metadataConfigs = {
       route: (locale: Locale) =>
         ROUTES.solution(locale, SOLUTION_TYPES.AUTOMATION),
 
-      title: (dict: Dictionary) => dict.solutions.items.automation.title,
+      title: (dict: Dictionary) => dict.common.solution_type.automation.title,
 
       description: (dict: Dictionary) =>
-        dict.solutions.items.automation.description,
+        dict.common.solution_type.automation.description,
 
       keywords: ["Автоматизация", "SMOLIAROV"],
     },
     custom: {
       route: (locale: Locale) => ROUTES.solution(locale, SOLUTION_TYPES.CUSTOM),
 
-      title: (dict: Dictionary) => dict.solutions.items.custom.title,
+      title: (dict: Dictionary) => dict.common.solution_type.custom.title,
 
       description: (dict: Dictionary) =>
-        dict.solutions.items.custom.description,
+        dict.common.solution_type.custom.description,
 
       keywords: ["Индивидуальная разработка", "SMOLIAROV"],
     },

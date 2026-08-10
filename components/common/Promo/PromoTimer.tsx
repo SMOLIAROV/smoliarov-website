@@ -3,10 +3,10 @@
 import { useTimer } from "@/hooks/timer/useTimer"
 import { useDict } from "@/lib/i18n/hooks/useDict"
 
-export function PromoTimer({ date_expired }: { date_expired: string }) {
+export function PromoTimer({ dateExpired }: { dateExpired: string }) {
   const dict = useDict()
 
-  const { days, hours, minutes, seconds, isExpired } = useTimer(date_expired)
+  const { days, hours, minutes, seconds, isExpired } = useTimer(dateExpired)
 
   if (isExpired) {
     return <div className="text-white/70">{dict.promo.promo_is_over}</div>

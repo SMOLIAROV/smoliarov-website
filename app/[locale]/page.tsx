@@ -4,7 +4,7 @@ import { HeroSection } from "@/components/landing/hero/HeroSection"
 import { NavigationSection } from "@/components/landing/navigation/NavigationSectios"
 import { WorkflowSection } from "@/components/landing/workflow/WorkflowSection"
 import { SolutionsSection } from "@/components/landing/solutions/SolutionsSection"
-import { ReviewsSection } from "@/components/landing/reviews/ReviewsSection"
+import { ReviewsSection } from "@/components/common/reviews/ReviewsSection"
 import { HandsSection } from "@/components/landing/hands/HandsSection"
 import { ContactFormSection } from "@/components/common/contact-form/ContactFormSection"
 import { FaqSection } from "@/components/landing/faq/FaqSection"
@@ -13,6 +13,7 @@ import { Metadata } from "next"
 import { getMetadata } from "@/lib/metadata"
 import { METADATA_PAGES } from "@/constants/metadata/metadata"
 import { Locale } from "@/lib/i18n/config"
+import { getLatestReviews } from "@/lib/api/endpoints/reviews"
 
 export async function generateMetadata({
   params,
@@ -24,7 +25,9 @@ export async function generateMetadata({
   return getMetadata(METADATA_PAGES.HOME, locale)
 }
 
-export default function HomePage() {
+export default async function HomePage() {
+  const reviews = await getLatestReviews()
+
   return (
     <>
       <NavigationSection />
@@ -36,7 +39,7 @@ export default function HomePage() {
         <CtaSection />
         <WorkflowSection />
         <HandsSection />
-        <ReviewsSection />
+        <ReviewsSection reviews={reviews} />
         <ContactFormSection />
         <FaqSection />
       </main>

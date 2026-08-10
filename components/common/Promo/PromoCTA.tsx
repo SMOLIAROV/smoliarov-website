@@ -9,11 +9,11 @@ import { useLocale } from "@/lib/i18n/hooks/useLocale"
 import { ArrowRight } from "lucide-react"
 import Link from "next/link"
 
-export function PromoCTA({ solution_type, slug, order, remark }) {
+export function PromoCTA({ solutionType, slug, order, remark }) {
   const dict = useDict()
   const locale = useLocale()
 
-  const href = getContactFormHref(solution_type)
+  const href = getContactFormHref(solutionType)
   const { handleLinkClick } = useContactFormNavigation()
 
   return (
@@ -25,7 +25,7 @@ export function PromoCTA({ solution_type, slug, order, remark }) {
         >
           <Link
             href={href}
-            onClick={handleLinkClick(solution_type)}
+            onClick={handleLinkClick(solutionType)}
 
             className="inline-flex items-center gap-2 px-6 md:px-8 py-3 md:py-4 bg-foreground text-background font-medium hover:bg-foreground/90 transition-all rounded-lg group shrink-0"
           >

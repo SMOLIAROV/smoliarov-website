@@ -3,12 +3,12 @@
 import { NAVIGATION } from "@/constants/navigation/navigation"
 
 export function PromoHeader({
-  first_title,
-  second_title,
+  firstTitle,
+  secondTitle,
   subtittle,
 }: {
-  first_title: string
-  second_title: string
+  firstTitle: string
+  secondTitle: string
   subtittle: string
 }) {
   return (
@@ -18,9 +18,9 @@ export function PromoHeader({
         {subtittle}
       </span>
       <h2 className="font-display uppercase text-3xl tracking-tight text-white md:text-5xl">
-        {first_title}
+        {firstTitle}
         <br />
-        {second_title}
+        {secondTitle}
       </h2>
     </div>
   )

@@ -11,7 +11,7 @@ export interface SolutionPricingPackage {
 }
 
 export interface Solution {
-  solution_type: string
+  solutionType: string
   icon: LucideIcon
   image: string
 

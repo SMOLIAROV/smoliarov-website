@@ -15,6 +15,7 @@ import { FieldControlProps } from "./types"
 import { PromoNotice } from "../notice/PromoNotice"
 import { PROMOS } from "@/constants/promo/promo.data"
 import { getSolution, SOLUTIONS } from "@/constants/solution/solution.data"
+import { Solution } from "@/constants/solution/types"
 
 export function ContactFormFieldSolution({
   control,
@@ -24,14 +25,14 @@ export function ContactFormFieldSolution({
   const promotions = PROMOS(dict)
   const solutionFromUrl = useSearchParams().get(FORM_PARAMS.SOLUTION_TYPE)
 
-  const solution = getSolution({
+  const solution: Solution = getSolution({
     dict,
-    solution_type: solutionFromUrl,
+    solutionType: solutionFromUrl,
   })
 
   const solutions = Object.values(SOLUTIONS(dict))
 
-  const urlValue = solution?.slug ?? ""
+  const urlValue = solution?.solutionType ?? ""
 
   return (
     <div className="space-y-1.5">
@@ -50,7 +51,7 @@ export function ContactFormFieldSolution({
 
           const promo = field.value
             ? Object.values(promotions).find(
-                (p) => p.solution_type === field.value
+                (p) => p.solutionType === field.value
               )
             : null
 
@@ -72,8 +73,8 @@ export function ContactFormFieldSolution({
                 <SelectContent>
                   {solutions.map((solution) => (
                     <SelectItem
-                      key={solution.solution_type}
-                      value={solution.solution_type}
+                      key={solution.solutionType}
+                      value={solution.solutionType}
                     >
                       {solution.content.title}
                     </SelectItem>

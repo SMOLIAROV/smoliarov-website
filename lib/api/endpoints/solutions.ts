@@ -6,16 +6,16 @@ import { CacheTTL } from "@/constants/cache/ttl"
 
 export const getSolutionPackages = ({
   locale,
-  solution_types,
+  solutionTypes,
 }: {
   locale: string
-  solution_types: string
+  solutionTypes: string
 }) =>
   cache(
-    CacheKeys.solutions.packages(solution_types, locale),
+    CacheKeys.solutions.packages(solutionTypes, locale),
     () =>
       api<SolutionPackagesResponse>(
-        `/api/v1/solutions/package/${solution_types}/${locale}`,
+        `/api/v1/solutions/package/${solutionTypes}/${locale}`,
         {
           method: "GET",
         }

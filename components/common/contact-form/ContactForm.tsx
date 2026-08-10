@@ -5,7 +5,11 @@ import { ContactFormSendButton } from "./contact-form-elements/buttons/ContactFo
 import { ContactFormFields } from "./ContactFormFields"
 import { ContactFormMessage } from "./ContactFormMessage"
 
-export function ContactForm() {
+export function ContactForm({
+  defaultSolutionType,
+}: {
+  defaultSolutionType?: string
+}) {
   const {
     handleSubmit,
     control,
@@ -14,7 +18,7 @@ export function ContactForm() {
     isSubmitting,
     status,
     errorMessage,
-  } = useContactForm()
+  } = useContactForm(defaultSolutionType)
 
   return (
     <div className="transition-all duration-1000 delay-200">

@@ -31,10 +31,16 @@ export default async function Page({
     return notFound()
   }
 
-  const solution_packages = await getSolutionPackages({
+  const solutionPackages = await getSolutionPackages({
     locale,
-    solution_types: slug,
+    solutionTypes: slug,
   })
 
-  return <SolutionPage slug={slug} solution_packages={solution_packages} />
+  return (
+    <SolutionPage
+      locale={locale}
+      slug={slug}
+      solutionPackages={solutionPackages}
+    />
+  )
 }

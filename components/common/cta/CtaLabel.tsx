@@ -11,7 +11,7 @@ export function CtaLabel() {
     <div className="inline-flex items-center gap-2 px-3 py-1.5 bg-black text-white rounded-full mb-6">
       <MessageCircle className="w-3.5 h-3.5" />
       <span className="text-xs font-mono uppercase tracking-widest">
-        {dict.cta.free} {dict.cta.consultation}
+        {dict.cta.free_consultation}
       </span>
     </div>
   )

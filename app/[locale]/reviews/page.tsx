@@ -1,6 +1,6 @@
-import { ReviewCard } from "@/components/landing/reviews/ReviewCard"
+import { ReviewCard } from "@/components/common/reviews/ReviewCard"
 import { BackHomeButton } from "@/components/common/Buttons/BackHomeButton"
-import { ReviewsHeader } from "@/components/landing/reviews/ReviewsHeader"
+import { ReviewsHeader } from "@/components/common/reviews/ReviewsHeader"
 import { PageContainer } from "@/components/common/PageContainer"
 import { SwitchLocaleButton } from "@/components/common/Buttons/SwitchLocaleButton"
 import { getAllReviews } from "@/lib/api/endpoints/reviews"

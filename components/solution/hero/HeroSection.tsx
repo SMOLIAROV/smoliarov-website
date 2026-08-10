@@ -5,7 +5,6 @@ import { PageContainer } from "@/components/common/PageContainer"
 import { HeroGridLines } from "@/components/landing/hero/HeroGridLines"
 import { HeroCTA } from "./cta/HeroCTA"
 import { HeroImage } from "./image/HeroImage"
-import { HeroImageBadge } from "./image/HeroImageBadge"
 import { Solution } from "@/constants/solution/types"
 
 export function HeroSection({ solution }: { solution: Solution }) {
@@ -24,9 +23,8 @@ export function HeroSection({ solution }: { solution: Solution }) {
             <HeroCTA solution={solution} />
           </div>
 
-          <div className="relative hidden lg:flex items-center justify-center">
+          <div className="relative h-[300px] flex items-center justify-center lg:h-auto lg:order-2">
             <HeroImage image={solution.image} />
-            <HeroImageBadge />
           </div>
         </div>
       </PageContainer>

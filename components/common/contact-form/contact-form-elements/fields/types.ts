@@ -7,6 +7,7 @@ export interface FieldRegisterProps {
 }
 
 export interface FieldControlProps {
+  defaultSolutionType?: string
   control: any
   error?: FieldError
 }

@@ -13,11 +13,26 @@
   "back_home": "Go to homepage",
   "step": "Step",
   "solution_type": {
-    "website": "Website",
-    "service": "Service / Web application",
-    "bot": "Telegram bot",
-    "automation": "Workflow Automation",
-    "custom": "Custom development"
+    "website": {
+      "title": "Website",
+      "description": "Modern website that attract customers and help you grow."
+    },
+    "service": {
+      "title": "Service / Web Application",
+      "description": "Services, CRM, personal accounts, and much more to automate your business."
+    },
+    "bot": {
+      "title": "Telegram Bot",
+      "description": "Accepts requests, assists customers, and automates your sales."
+    },
+    "automation": {
+      "title": "Process Automation",
+      "description": "We free you from routine with integrations and automation."
+    },
+    "custom": {
+      "title": "Custom Development",
+      "description": "We create software tailored to your unique requirements."
+    }
   },
   "up_to": "Up to",
   "more_then": "More then",

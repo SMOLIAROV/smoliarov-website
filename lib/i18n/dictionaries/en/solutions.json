@@ -1,26 +1,4 @@
 {
   "title": "Solutions",
-  "subtitle": "What we do",
-  "items": {
-    "websites": {
-      "title": "Websites",
-      "description": "Modern websites that attract customers and help businesses grow."
-    },
-    "web_apps": {
-      "title": "Services and Web applications",
-      "description": "Personal accounts, web services, and CRM for business automation."
-    },
-    "telegram_bots": {
-      "title": "Telegram bots",
-      "description": "They accept applications, help customers, and automate sales."
-    },
-    "automation": {
-      "title": "Workflow Automation",
-      "description": "We eliminate routine through integrations and automation."
-    },
-    "custom": {
-      "title": "Custom development",
-      "description": "We create software for unique business objectives."
-    }
-  }
+  "subtitle": "What we do"
 }
