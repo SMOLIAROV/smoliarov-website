@@ -1,6 +1,6 @@
 import { ReviewCard } from "./ReviewCard"
 
-export async function ReviewsCards({ reviews }) {
+export function ReviewsCards({ reviews }) {
   if (reviews.length === 0) return null
 
   return (

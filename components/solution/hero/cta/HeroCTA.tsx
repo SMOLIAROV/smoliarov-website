@@ -8,7 +8,7 @@ export function HeroCTA({ solution }: { solution: Solution }) {
   const minPrice = getMinPackagePrice(packages)
 
   return (
-    <div className="flex flex-col sm:flex-row items-start sm:items-center gap-5">
+    <div className="flex flex-col items-start gap-5 lg:flex-row lg:items-center">
       {minPrice && <HeroCTAMinPrice minPrice={minPrice} currency="BYN" />}
       <DescribeWhiteButton />
     </div>

@@ -7,7 +7,7 @@ export function CtaHeadline() {
 
   return (
     <>
-      <h2 className="font-display text-[clamp(1.75rem,3.5vw,3rem)] text-black leading-tight text-balance mb-4">
+      <h2 className="mb-4 font-display text-[clamp(1.75rem,3.5vw,3rem)] leading-tight text-black text-balance">
         {dict.cta.title}
       </h2>
       <p className="text-black/60 text-[15px] leading-relaxed">

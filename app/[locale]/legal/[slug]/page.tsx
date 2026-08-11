@@ -46,27 +46,25 @@ export default async function LegalPage({
   const source = await fs.readFile(filePath, "utf-8")
 
   return (
-    <div className="min-h-screen bg-background">
-      <PageContainer>
-        <div className="max-w-3xl mx-auto py-10 md:py-14">
-          <div className="flex items-center justify-between w-full mb-10">
-            <BackHomeButton />
-            <SwitchLocaleButton />
-          </div>
-
-          <article className="mt-10">
-            <MDXRemote source={source} components={legalComponents} />
-          </article>
-
-          <Link
-            href={ROUTES.home(locale)}
-            className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors"
-          >
-            <ArrowLeft className="w-4 h-4" />
-            {dict.common.back_home}
-          </Link>
+    <PageContainer>
+      <div className="max-w-3xl mx-auto py-10 md:py-14">
+        <div className="flex items-center justify-between w-full mb-10">
+          <BackHomeButton />
+          <SwitchLocaleButton />
         </div>
-      </PageContainer>
-    </div>
+
+        <article className="mt-10">
+          <MDXRemote source={source} components={legalComponents} />
+        </article>
+
+        <Link
+          href={ROUTES.home(locale)}
+          className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors"
+        >
+          <ArrowLeft className="w-4 h-4" />
+          {dict.common.back_home}
+        </Link>
+      </div>
+    </PageContainer>
   )
 }

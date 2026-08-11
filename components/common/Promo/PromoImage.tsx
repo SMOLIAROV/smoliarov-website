@@ -2,13 +2,26 @@ import Image from "next/image"
 
 export function PromoImage({ image }: { image: string }) {
   return (
-    <div className="relative aspect-[16/9] w-full rounded-3xl overflow-hidden border border-white/15 lg:aspect-auto lg:h-full">
+    <div
+      className="
+        relative
+        h-[280px]
+        w-full
+        overflow-hidden
+        rounded-3xl
+        border
+        border-white/15
+        sm:h-[320px]
+        md:h-[360px]
+        lg:h-full
+      "
+    >
       <Image
         src={image}
         alt="PromoImage"
         fill
         className="object-cover"
-        sizes="(max-width: 1024px) 100vw, 50vw"
+        sizes="(max-width: 1023px) 100vw, 50vw"
       />
 
       <div className="absolute inset-0 bg-gradient-to-b from-black via-transparent to-black" />

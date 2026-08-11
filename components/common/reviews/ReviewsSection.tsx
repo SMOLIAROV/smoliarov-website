@@ -1,19 +1,27 @@
+"use client"
+
 import { ReviewsAllButton } from "./ReviewsAllButton"
-import { ReviewsHeader } from "./ReviewsHeader"
 import { NAVIGATION } from "@/constants/navigation/navigation"
 import { ReviewsCards } from "./ReviewsCards"
-import { PageContainer } from "@/components/common/PageContainer"
+import { SectionHeader } from "../SectionHeader/SectionHeader"
+import { useDict } from "@/lib/i18n/hooks/useDict"
+import { SectionContainer } from "../SectionContainer"
 
 export function ReviewsSection({ reviews }) {
+  const dict = useDict()
+
   return (
-    <section className="relative py-12 md:py-20 lg:py-24">
-      <PageContainer>
-        <div id={NAVIGATION.REVIEWS}>
-          <ReviewsHeader />
-          <ReviewsCards reviews={reviews} />
-          <ReviewsAllButton />
-        </div>
-      </PageContainer>
-    </section>
+    <SectionContainer>
+      <div id={NAVIGATION.REVIEWS}>
+        <SectionHeader
+          navigation_id={NAVIGATION.REVIEWS}
+          title={dict.reviews.title}
+          subtitle={dict.reviews.subtitle}
+          description={dict.reviews.description}
+        />
+        <ReviewsCards reviews={reviews} />
+        <ReviewsAllButton />
+      </div>
+    </SectionContainer>
   )
 }

@@ -13,9 +13,7 @@ import { FooterBottom } from "./FooterBottom"
 export function FooterSection() {
   const dict = useDict()
   return (
-    <footer className="relative bg-black">
-      <div className="absolute inset-x-0 top-0 h-32 md:h-48 bg-gradient-to-b from-black to-transparent pointer-events-none z-20" />
-
+    <footer className="relative">
       <div className="relative w-full h-[150px] md:h-[250px] lg:h-[320px] overflow-hidden">
         <Image
           src={FooterImage}

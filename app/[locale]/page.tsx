@@ -14,6 +14,7 @@ import { getMetadata } from "@/lib/metadata"
 import { METADATA_PAGES } from "@/constants/metadata/metadata"
 import { Locale } from "@/lib/i18n/config"
 import { getLatestReviews } from "@/lib/api/endpoints/reviews"
+import { PageContainer } from "@/components/common/PageContainer"
 
 export async function generateMetadata({
   params,
@@ -34,14 +35,21 @@ export default async function HomePage() {
 
       <main className="relative min-h-screen">
         <HeroSection />
-        <HomePromo />
-        <SolutionsSection />
-        <CtaSection />
-        <WorkflowSection />
+
+        <PageContainer>
+          <HomePromo />
+          <SolutionsSection />
+          <CtaSection />
+          <WorkflowSection />
+        </PageContainer>
+
         <HandsSection />
-        <ReviewsSection reviews={reviews} />
-        <ContactFormSection />
-        <FaqSection />
+
+        <PageContainer>
+          <ReviewsSection reviews={reviews} />
+          <ContactFormSection />
+          <FaqSection />
+        </PageContainer>
       </main>
 
       <FooterSection />

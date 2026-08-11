@@ -13,6 +13,7 @@ import { ReviewsSection } from "@/components/common/reviews/ReviewsSection"
 import { Locale } from "@/lib/i18n/config"
 import { getDictionary } from "@/lib/i18n/dictionaries"
 import { getLatestReviews } from "@/lib/api/endpoints/reviews"
+import { PageContainer } from "@/components/common/PageContainer"
 
 export default async function SolutionPage({
   locale,
@@ -38,13 +39,16 @@ export default async function SolutionPage({
       <NavigationSection />
       <main className="relative min-h-screen">
         <HeroSection solution={solutionWithPricing} />
-        {promo && <PromoSection promo={promo} />}
-        {solutionPackages?.packages?.length > 0 && (
-          <PriceSection solutionPackages={solutionPackages} />
-        )}
-        <CtaSection solution={solutionWithPricing} />
-        {reviews.length > 0 && <ReviewsSection reviews={reviews} />}
-        <ContactFormSection defaultSolutionType={slug} />
+
+        <PageContainer>
+          {solutionPackages?.packages?.length > 0 && (
+            <PriceSection solutionPackages={solutionPackages} />
+          )}
+          {promo && <PromoSection promo={promo} />}
+          <CtaSection solution={solutionWithPricing} />
+          {reviews.length > 0 && <ReviewsSection reviews={reviews} />}
+          <ContactFormSection defaultSolutionType={slug} />
+        </PageContainer>
       </main>
 
       <FooterSection />
