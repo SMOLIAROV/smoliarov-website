@@ -13,7 +13,7 @@ export default async function ReviewsPage({ locale }: { locale: Locale }) {
   const dict = getDictionary(locale)
 
   return (
-    <PageContainer className="pt-24">
+    <PageContainer className="pt-24 pb-24">
       <div className="flex items-center justify-between w-full mb-10">
         <BackHomeButton />
         <SwitchLocaleButton />

@@ -11,6 +11,7 @@ export function PriceSectionCard({
   solutionPackage: SolutionPricingPackage
 }) {
   const dict = useDict()
+  const currency = process.env.NEXT_PUBLIC_CURRENCY!
 
   return (
     <>
@@ -37,7 +38,7 @@ export function PriceSectionCard({
             solutionPackage.is_popular ? "text-black/50" : "text-foreground/40"
           }`}
         >
-          BYN
+          {currency}
         </span>
       </div>
 

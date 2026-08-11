@@ -1,12 +1,5 @@
-export interface Review {
-  id: string
-  name: string
-  position: string | null
-  message: string
-  avatar: string | null
-  created_at: Date | string
-}
+import { ReviewResponse } from "@/lib/api/contracts/reviews"
 
 export interface ReviewCardProps {
-  review: Review
+  review: ReviewResponse
 }

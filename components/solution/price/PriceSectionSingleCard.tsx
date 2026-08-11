@@ -11,6 +11,7 @@ export function PriceSectionSingleCard({
   solutionPackage: SolutionPricingPackage
 }) {
   const dict = useDict()
+  const currency = process.env.NEXT_PUBLIC_CURRENCY!
 
   return (
     <div
@@ -107,7 +108,7 @@ export function PriceSectionSingleCard({
                     : "text-foreground/40"
                 }`}
               >
-                BYN
+                {currency}
               </span>
             </div>
           </div>
