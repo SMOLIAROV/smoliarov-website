@@ -5,15 +5,18 @@ import { WorkflowMobileSliderImage } from "./WorkflowMobileSliderImage"
 export function WorkflowMobileSliderSteps({
   steps,
 }: WorkflowMobileSliderProps) {
-  return steps.map((step, index) => (
-    <div
-      key={step.key}
-      data-step
-      data-index={index}
-      className="snap-center shrink-0 w-[85%] w-[calc(100%-12px)] flex-shrink-0 snap-center rounded-2xl overflow-hidden border border-white/10"
-    >
-      <WorkflowMobileSliderImage image={step.image} title={step.title} />
-      <WorkflowMobileSliderHeader index={index} step={step} />
-    </div>
-  ))
+  return (
+    <>
+      {steps.map((step, index) => (
+        <div
+          key={step.key}
+          data-index={index}
+          className="shrink-0 w-[calc(100vw-32px)] rounded-2xl overflow-hidden border border-white/10 sm:w-[520px] md:w-[560px]"
+        >
+          <WorkflowMobileSliderImage image={step.image} title={step.title} />
+          <WorkflowMobileSliderHeader index={index} step={step} />
+        </div>
+      ))}
+    </>
+  )
 }
