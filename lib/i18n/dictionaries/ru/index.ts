@@ -12,6 +12,7 @@ import footer from "./footer.json"
 import cookie_banner from "./cookie_banner.json"
 import promo from "./promo.json"
 import solution_packages from "./solution_packages.json"
+import not_found from "./not_found.json"
 
 const dictionary = {
   metadata,
@@ -28,6 +29,7 @@ const dictionary = {
   cookie_banner,
   promo,
   solution_packages,
+  not_found,
 } as const
 
 export default dictionary

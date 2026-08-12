@@ -1,10 +1,17 @@
 import { Code2, Globe, MessageSquare, Settings, Zap } from "lucide-react"
-import WebsiteImage from "@/public/images/solutions/sites.webp"
-import ServiceImage from "@/public/images/solutions/services.webp"
-import BotImage from "@/public/images/solutions/bots.webp"
-import AutomationImage from "@/public/images/solutions/automation.webp"
-import CustomImage from "@/public/images/solutions/custom.webp"
 import { Dictionary } from "@/lib/i18n/dictionaries"
+
+import WebsitePreview from "@/public/images/solutions/previews/sites.webp"
+import ServicePreview from "@/public/images/solutions/previews/services.webp"
+import BotPreview from "@/public/images/solutions/previews/bots.webp"
+import AutomationPreview from "@/public/images/solutions/previews/automation.webp"
+import CustomPreview from "@/public/images/solutions/previews/custom.webp"
+
+import WebsiteImage from "@/public/images/solutions/hero/sites.png"
+import ServiceImage from "@/public/images/solutions/hero/services.png"
+import BotImage from "@/public/images/solutions/hero/bots.png"
+import AutomationImage from "@/public/images/solutions/hero/automation.png"
+import CustomImage from "@/public/images/solutions/hero/custom.png"
 
 export const SOLUTION_TYPES = {
   WEBSITE: "website",
@@ -25,6 +32,7 @@ export const SOLUTIONS = (dict: Dictionary) => ({
   website: {
     solutionType: SOLUTION_TYPES.WEBSITE,
     icon: Globe,
+    preview: WebsitePreview.src,
     image: WebsiteImage.src,
 
     content: {
@@ -35,6 +43,7 @@ export const SOLUTIONS = (dict: Dictionary) => ({
   service: {
     solutionType: SOLUTION_TYPES.SERVICE,
     icon: Zap,
+    preview: ServicePreview.src,
     image: ServiceImage.src,
 
     content: {
@@ -45,6 +54,7 @@ export const SOLUTIONS = (dict: Dictionary) => ({
   bot: {
     solutionType: SOLUTION_TYPES.BOT,
     icon: MessageSquare,
+    preview: BotPreview.src,
     image: BotImage.src,
 
     content: {
@@ -55,6 +65,7 @@ export const SOLUTIONS = (dict: Dictionary) => ({
   automation: {
     solutionType: SOLUTION_TYPES.AUTOMATION,
     icon: Settings,
+    preview: AutomationPreview.src,
     image: AutomationImage.src,
 
     content: {
@@ -65,6 +76,7 @@ export const SOLUTIONS = (dict: Dictionary) => ({
   custom: {
     solutionType: SOLUTION_TYPES.CUSTOM,
     icon: Code2,
+    preview: CustomPreview.src,
     image: CustomImage.src,
 
     content: {

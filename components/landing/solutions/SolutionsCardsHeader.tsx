@@ -1,9 +1,11 @@
 "use client"
 
 import { Solution } from "@/constants/solution/types"
+import { useDict } from "@/lib/i18n/hooks/useDict"
 import { ArrowRight } from "lucide-react"
 
 export function SolutionsCardsHeader({ solution }: { solution: Solution }) {
+  const dict = useDict()
   const Icon = solution.icon
 
   return (
@@ -23,7 +25,7 @@ export function SolutionsCardsHeader({ solution }: { solution: Solution }) {
       </p>
 
       <div className="mt-6 inline-flex items-center gap-2 text-sm text-foreground/60 group">
-        <span>Подробнее</span>
+        <span>{dict.common.learn_more}</span>
         <ArrowRight className="w-3.5 h-3.5 transition-transform group-hover:translate-x-1" />
       </div>
     </div>

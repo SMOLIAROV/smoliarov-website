@@ -3,9 +3,9 @@ import Image from "next/image"
 
 export function SolutionCardImage({ solution }: { solution: Solution }) {
   return (
-    <div className="relative w-2/5 md:w-5/12 lg:w-[42%] hidden sm:block overflow-hidden rounded-r-3xl">
+    <div className="relative w-2/5 md:w-5/12 lg:w-[42%] hidden sm:block overflow-hidden rounded-r-2xl">
       <Image
-        src={solution.image}
+        src={solution.preview}
         alt={solution.content.title}
         fill
         className="object-cover"

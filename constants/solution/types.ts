@@ -13,6 +13,7 @@ export interface SolutionPricingPackage {
 export interface Solution {
   solutionType: string
   icon: LucideIcon
+  preview: string
   image: string
 
   content: {

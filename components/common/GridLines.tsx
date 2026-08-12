@@ -1,4 +1,4 @@
-export function HeroGridLines() {
+export function GridLines() {
   return (
     <div className="absolute inset-0 z-[2] overflow-hidden pointer-events-none opacity-20">
       {[...Array(8)].map((_, i) => (

@@ -1,9 +1,12 @@
-import { NAVIGATION } from "@/constants/navigation/navigation"
+"use client"
+import { ROUTES } from "@/constants/routes"
+import { useLocale } from "@/lib/i18n/hooks/useLocale"
 
 export function Logo() {
+  const locale = useLocale()
   return (
     <a
-      href={NAVIGATION.HOME}
+      href={ROUTES.home(locale)}
       className="inline-flex items-center gap-3 group whitespace-nowrap"
     >
       <div className="relative flex items-center justify-center border w-9 h-9 border-foreground/20 group-hover:border-foreground/40">
