@@ -4,11 +4,13 @@ import { MobileMenuLinksProps } from "./types"
 import { getNavLinks } from "@/constants/navigation/getNavLinks"
 
 export function NavigationMobileMenuLinks({
+  navigationType,
+  sections,
   isOpen,
   onClose,
 }: MobileMenuLinksProps) {
   const dict = useDict()
-  const navLinks = getNavLinks(dict)
+  const navLinks = getNavLinks({ dict, navigationType, sections })
 
   return (
     <div className="flex-1 flex flex-col justify-center gap-4 sm:gap-6">

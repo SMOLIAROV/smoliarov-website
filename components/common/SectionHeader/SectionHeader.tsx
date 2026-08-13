@@ -1,16 +1,16 @@
 export function SectionHeader({
-  navigation_id,
+  navigationId,
   title,
   subtitle,
   description,
 }: {
-  navigation_id: string
+  navigationId: string
   title: string
   subtitle?: string
   description?: string
 }) {
   return (
-    <div id={navigation_id} className="mb-6 md:mb-10">
+    <div id={navigationId} className="mb-6 md:mb-10">
       {subtitle && (
         <span className="inline-flex items-center gap-2 md:gap-3 text-xs md:text-sm font-mono text-muted-foreground mb-3 md:mb-6">
           <span className="w-6 md:w-12 h-px bg-foreground/30" />

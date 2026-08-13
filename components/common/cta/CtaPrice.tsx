@@ -1,6 +1,6 @@
 "use client"
 
-import { SolutionPackagesResponse } from "@/lib/api/contracts/solutions"
+import { SolutionPricingPackage } from "@/constants/solution/types"
 import { useDict } from "@/lib/i18n/hooks/useDict"
 import { getMinPackagePrice } from "@/lib/utils/getMinPackagePrice"
 
@@ -9,11 +9,11 @@ export function CtaPrice({
   solutionPackages,
 }: {
   title?: string
-  solutionPackages?: SolutionPackagesResponse
+  solutionPackages?: SolutionPricingPackage[]
 }) {
   const dict = useDict()
   const currency = process.env.NEXT_PUBLIC_CURRENCY!
-  const packages = solutionPackages?.packages ?? []
+  const packages = solutionPackages ?? []
   const minPrice = getMinPackagePrice(packages)
   const hasPackageAndPrice = solutionPackages && minPrice
 

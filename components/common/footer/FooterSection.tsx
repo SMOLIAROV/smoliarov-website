@@ -10,7 +10,13 @@ import { FooterNavigation } from "./FooterNavigation"
 import { FooterLegal } from "./FooterLegal"
 import { FooterBottom } from "./FooterBottom"
 
-export function FooterSection() {
+export function FooterSection({
+  navigationType,
+  sections,
+}: {
+  navigationType: string
+  sections: string[]
+}) {
   const dict = useDict()
   return (
     <footer className="relative">
@@ -40,7 +46,10 @@ export function FooterSection() {
               <FooterSocial />
             </div>
 
-            <FooterNavigation />
+            <FooterNavigation
+              navigationType={navigationType}
+              sections={sections}
+            />
             <FooterLegal />
           </div>
         </div>

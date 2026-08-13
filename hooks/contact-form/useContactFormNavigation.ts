@@ -4,7 +4,7 @@ import React, { useCallback } from "react"
 import { usePathname, useRouter, useSearchParams } from "next/navigation"
 
 import { FORM_PARAMS } from "@/constants/form/form"
-import { NAVIGATION } from "@/constants/navigation/navigation"
+import { NAVIGATION_SLUG } from "@/constants/navigation/navigation"
 
 export function useContactFormNavigation() {
   const router = useRouter()
@@ -12,7 +12,7 @@ export function useContactFormNavigation() {
   const searchParams = useSearchParams()
 
   const scrollToForm = useCallback(() => {
-    document.getElementById(NAVIGATION.CONTACT_FORM)?.scrollIntoView({
+    document.getElementById(NAVIGATION_SLUG.CONTACT_FORM)?.scrollIntoView({
       behavior: "smooth",
       block: "start",
     })

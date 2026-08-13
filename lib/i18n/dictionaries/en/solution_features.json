@@ -1,0 +1,123 @@
+{
+  "title": "What's Included",
+  "subtitle": "About the Solution",
+  "features": {
+    "website": {
+      "description": "We build custom solutions for unique business needs when ready-made services and standard solutions are not enough.",
+      "items": {
+        "responsive": {
+          "title": "Responsive Design",
+          "description": "The website works seamlessly across smartphones, tablets, and desktop devices."
+        },
+        "design": {
+          "title": "Modern Design",
+          "description": "We carefully plan the visual presentation, structure, and user journey around your business goals."
+        },
+        "performance": {
+          "title": "High Performance",
+          "description": "We optimize page loading and interface performance for a smooth and comfortable user experience."
+        },
+        "seo": {
+          "title": "SEO Foundation",
+          "description": "We build a solid technical foundation with proper page structure and metadata to support search engine optimization."
+        },
+        "backend": {
+          "title": "Backend & Integrations",
+          "description": "When needed, we connect backend services, databases, forms, external APIs, and other systems."
+        }
+      }
+    },
+    "service": {
+      "description": "We build web applications for process automation, data management, and solving business challenges — from small internal tools to full-scale services.",
+      "items": {
+        "interface": {
+          "title": "Intuitive Interface",
+          "description": "We design clear and intuitive interfaces that are convenient for users to work with every day."
+        },
+        "data": {
+          "title": "Data Management",
+          "description": "We design data storage, processing, and management according to the logic and requirements of your application."
+        },
+        "auth": {
+          "title": "Authentication & Access",
+          "description": "We implement registration, authentication, and role-based access control for different users."
+        },
+        "integrations": {
+          "title": "Integrations",
+          "description": "We connect third-party APIs, payment systems, CRMs, email, messengers, and other services."
+        },
+        "scalability": {
+          "title": "Scalable Architecture",
+          "description": "We build applications that can evolve and expand alongside your business."
+        }
+      }
+    },
+    "bot": {
+      "description": "We develop Telegram bots to automate customer communication, process requests, and handle routine tasks.",
+      "items": {
+        "scenarios": {
+          "title": "Interaction Scenarios",
+          "description": "We design convenient user interaction flows and automate the actions required by your business."
+        },
+        "data": {
+          "title": "Data Management",
+          "description": "We store requests, users, and other necessary information in a database."
+        },
+        "integrations": {
+          "title": "Integrations",
+          "description": "We connect CRMs, APIs, payment systems, notifications, and other external services."
+        },
+        "automation": {
+          "title": "Automation",
+          "description": "The bot can automatically process requests, send notifications, and handle routine operations."
+        }
+      }
+    },
+    "automation": {
+      "description": "We automate repetitive processes to reduce manual work, minimize errors, and save time.",
+      "items": {
+        "processes": {
+          "title": "Process Automation",
+          "description": "We turn repetitive manual operations into automated workflows."
+        },
+        "integrations": {
+          "title": "Service Integration",
+          "description": "We connect CRMs, spreadsheets, email, messengers, APIs, and other tools you use."
+        },
+        "notifications": {
+          "title": "Notifications",
+          "description": "We automatically send messages and notifications when specific events occur."
+        },
+        "timeSaving": {
+          "title": "Time Savings",
+          "description": "We reduce manual operations and free up your team's time for more important tasks."
+        }
+      }
+    },
+    "custom": {
+      "description": "We develop custom solutions for unique business needs when ready-made services and standard solutions are not enough.",
+      "items": {
+        "customLogic": {
+          "title": "Custom Business Logic",
+          "description": "We design solutions around your specific processes, requirements, and business needs."
+        },
+        "fromScratch": {
+          "title": "Built from Scratch",
+          "description": "We create the required functionality without the limitations of ready-made platforms and templates."
+        },
+        "integrations": {
+          "title": "Integrations",
+          "description": "We connect existing systems, APIs, and third-party services to bring your processes together."
+        },
+        "backend": {
+          "title": "Backend & Infrastructure",
+          "description": "We design the backend, databases, and infrastructure required to run your solution."
+        },
+        "scalability": {
+          "title": "Room to Grow",
+          "description": "We build the architecture with the ability to add new features and scale the solution in the future."
+        }
+      }
+    }
+  }
+}

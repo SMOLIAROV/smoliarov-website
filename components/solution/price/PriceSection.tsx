@@ -5,7 +5,7 @@ import { SolutionPackagesResponse } from "@/lib/api/contracts/solutions"
 import { SectionHeader } from "@/components/common/SectionHeader/SectionHeader"
 import { useDict } from "@/lib/i18n/hooks/useDict"
 import { SectionContainer } from "@/components/common/SectionContainer"
-import { NAVIGATION } from "@/constants/navigation/navigation"
+import { NAVIGATION_SLUG } from "@/constants/navigation/navigation"
 
 export function PriceSection({
   solutionPackages,
@@ -17,7 +17,7 @@ export function PriceSection({
   return (
     <SectionContainer>
       <SectionHeader
-        navigation_id={NAVIGATION.SOLUTIONS}
+        navigationId={NAVIGATION_SLUG.PRICE}
         title={dict.solution_packages.title}
         subtitle={dict.solution_packages.description}
       />

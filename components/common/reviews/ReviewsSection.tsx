@@ -1,7 +1,7 @@
 "use client"
 
 import { ReviewsAllButton } from "./ReviewsAllButton"
-import { NAVIGATION } from "@/constants/navigation/navigation"
+import { NAVIGATION_SLUG } from "@/constants/navigation/navigation"
 import { ReviewsCards } from "./ReviewsCards"
 import { SectionHeader } from "../SectionHeader/SectionHeader"
 import { useDict } from "@/lib/i18n/hooks/useDict"
@@ -12,9 +12,9 @@ export function ReviewsSection({ reviews }) {
 
   return (
     <SectionContainer>
-      <div id={NAVIGATION.REVIEWS}>
+      <div id={NAVIGATION_SLUG.REVIEWS}>
         <SectionHeader
-          navigation_id={NAVIGATION.REVIEWS}
+          navigationId={NAVIGATION_SLUG.REVIEWS}
           title={dict.reviews.title}
           subtitle={dict.reviews.subtitle}
           description={dict.reviews.description}

@@ -4,9 +4,15 @@ import { getNavLinks } from "@/constants/navigation/getNavLinks"
 
 import { useDict } from "@/lib/i18n/hooks/useDict"
 
-export function NavigationDesktop() {
-  const i18n = useDict()
-  const navLinks = getNavLinks(i18n)
+export function NavigationDesktop({
+  navigationType,
+  sections,
+}: {
+  navigationType: string
+  sections: string[]
+}) {
+  const dict = useDict()
+  const navLinks = getNavLinks({ dict, navigationType, sections })
 
   return (
     <div className="hidden xl:flex items-center gap-6 xl:gap-8">

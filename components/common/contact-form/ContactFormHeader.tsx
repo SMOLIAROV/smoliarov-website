@@ -4,7 +4,7 @@ import { useDict } from "@/lib/i18n/hooks/useDict"
 import Image from "next/image"
 import WhaleImage from "@/public/images/whale.webp"
 import { SectionHeader } from "../SectionHeader/SectionHeader"
-import { NAVIGATION } from "@/constants/navigation/navigation"
+import { NAVIGATION_SLUG } from "@/constants/navigation/navigation"
 
 export function ContactFormHeader() {
   const dict = useDict()
@@ -12,7 +12,7 @@ export function ContactFormHeader() {
   return (
     <div className="flex flex-col">
       <SectionHeader
-        navigation_id={NAVIGATION.CONTACT_FORM}
+        navigationId={NAVIGATION_SLUG.CONTACT_FORM}
         title={dict.contact_form.title}
         subtitle={dict.contact_form.subtitle}
         description={dict.contact_form.description}

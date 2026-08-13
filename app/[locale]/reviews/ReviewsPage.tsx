@@ -1,12 +1,13 @@
 import { ReviewCard } from "@/components/common/reviews/ReviewCard"
-import { BackHomeButton } from "@/components/common/Buttons/BackHomeButton"
 import { PageContainer } from "@/components/common/PageContainer"
-import { SwitchLocaleButton } from "@/components/common/Buttons/SwitchLocaleButton"
+import { SwitchLocaleButton } from "@/components/ui/Buttons/SwitchLocaleButton"
 import { getAllReviews } from "@/lib/api/endpoints/reviews"
 import { Locale } from "@/lib/i18n/config"
 import { SectionHeader } from "@/components/common/SectionHeader/SectionHeader"
-import { NAVIGATION } from "@/constants/navigation/navigation"
+import { NAVIGATION_SLUG } from "@/constants/navigation/navigation"
 import { getDictionary } from "@/lib/i18n/dictionaries"
+import { BackLink } from "@/components/ui/Buttons/BackLink"
+import { ROUTES } from "@/constants/routes"
 
 export default async function ReviewsPage({ locale }: { locale: Locale }) {
   const reviews = await getAllReviews()
@@ -15,12 +16,12 @@ export default async function ReviewsPage({ locale }: { locale: Locale }) {
   return (
     <PageContainer className="pt-24 pb-24">
       <div className="flex items-center justify-between w-full mb-10">
-        <BackHomeButton />
+        <BackLink href={ROUTES.home(locale)} title={dict.common.back_home} />
         <SwitchLocaleButton />
       </div>
 
       <SectionHeader
-        navigation_id={NAVIGATION.REVIEWS}
+        navigationId={NAVIGATION_SLUG.REVIEWS}
         title={dict.reviews.title}
         subtitle={dict.reviews.subtitle}
         description={dict.reviews.description}
@@ -36,7 +37,7 @@ export default async function ReviewsPage({ locale }: { locale: Locale }) {
         <p className="py-20 text-center text-white/50">Пока нет отзывов.</p>
       )}
 
-      <BackHomeButton />
+      <BackLink href={ROUTES.home(locale)} title={dict.common.back_home} />
     </PageContainer>
   )
 }

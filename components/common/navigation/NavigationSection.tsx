@@ -10,7 +10,13 @@ import { NavigationDesktopCTA } from "./NavigationDesktopCTA"
 import { NavigationMobileMenu } from "./NavigationMobileMenu"
 import { NavigationMobileMenuButton } from "./NavigationMobileMenuButton"
 
-export function NavigationSection() {
+export function NavigationSection({
+  navigationType,
+  sections,
+}: {
+  navigationType: string
+  sections: string[]
+}) {
   const { isOpen, toggle, close } = useMobileMenu()
 
   return (
@@ -19,14 +25,22 @@ export function NavigationSection() {
         <nav className="bg-background/80 backdrop-blur-xl border border-foreground/15 rounded-xl shadow-lg">
           <div className="flex items-center justify-between px-4 md:px-6 h-14">
             <Logo />
-            <NavigationDesktop />
+            <NavigationDesktop
+              navigationType={navigationType}
+              sections={sections}
+            />
             <NavigationDesktopCTA />
             <NavigationMobileMenuButton isOpen={isOpen} onClick={toggle} />
           </div>
         </nav>
       </PageContainer>
 
-      <NavigationMobileMenu isOpen={isOpen} onClose={close} />
+      <NavigationMobileMenu
+        navigationType={navigationType}
+        sections={sections}
+        isOpen={isOpen}
+        onClose={close}
+      />
     </header>
   )
 }

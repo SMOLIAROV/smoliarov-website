@@ -5,6 +5,7 @@ import { HeroCTA } from "./cta/HeroCTA"
 import { Solution } from "@/constants/solution/types"
 import { HeroBackground } from "@/components/common/Hero/HeroBackground"
 import { SectionContainer } from "@/components/common/SectionContainer"
+import { getMinPackagePrice } from "@/lib/utils/getMinPackagePrice"
 
 export function HeroSection({ solution }: { solution: Solution }) {
   return (
@@ -19,7 +20,9 @@ export function HeroSection({ solution }: { solution: Solution }) {
               title={solution.content.title}
               subtitle={solution.content.description}
             />
-            <HeroCTA solution={solution} />
+            <HeroCTA
+              min_price_package={getMinPackagePrice(solution.pricing.packages)}
+            />
           </div>
         </div>
       </PageContainer>

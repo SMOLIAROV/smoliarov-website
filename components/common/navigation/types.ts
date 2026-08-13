@@ -4,6 +4,8 @@ export interface MobileMenuButtonProps {
 }
 
 export interface MobileMenuProps {
+  navigationType
+  sections: string[]
   isOpen: boolean
   onClose: () => void
 }
@@ -13,6 +15,8 @@ export interface MobileMenuCloseButtonProps {
 }
 
 export interface MobileMenuLinksProps {
+  navigationType: string
+  sections: string[]
   isOpen: boolean
   onClose: () => void
 }

@@ -13,6 +13,7 @@ import cookie_banner from "./cookie_banner.json"
 import promo from "./promo.json"
 import solution_packages from "./solution_packages.json"
 import not_found from "./not_found.json"
+import solution_features from "./solution_features.json"
 
 const dictionary = {
   metadata,
@@ -30,6 +31,7 @@ const dictionary = {
   promo,
   solution_packages,
   not_found,
+  solution_features,
 } as const
 
 export default dictionary

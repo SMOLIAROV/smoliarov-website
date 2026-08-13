@@ -24,9 +24,9 @@ export function SolutionsCardsHeader({ solution }: { solution: Solution }) {
         {solution.content.description}
       </p>
 
-      <div className="mt-6 inline-flex items-center gap-2 text-sm text-foreground/60 group">
+      <div className="group mt-6 inline-flex items-center gap-2 text-sm text-foreground/60">
         <span>{dict.common.learn_more}</span>
-        <ArrowRight className="w-3.5 h-3.5 transition-transform group-hover:translate-x-1" />
+        <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-1" />
       </div>
     </div>
   )

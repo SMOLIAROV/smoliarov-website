@@ -1,7 +1,7 @@
 import { CtaSection } from "@/components/common/cta/CtaSection"
-import { FooterSection } from "@/components/landing/footer/FooterSection"
+import { FooterSection } from "@/components/common/footer/FooterSection"
 import { HeroSection } from "@/components/landing/hero/HeroSection"
-import { NavigationSection } from "@/components/landing/navigation/NavigationSectios"
+import { NavigationSection } from "@/components/common/navigation/NavigationSection"
 import { WorkflowSection } from "@/components/landing/workflow/WorkflowSection"
 import { SolutionsSection } from "@/components/landing/solutions/SolutionsSection"
 import { ReviewsSection } from "@/components/common/reviews/ReviewsSection"
@@ -15,6 +15,10 @@ import { METADATA_PAGES } from "@/constants/metadata/metadata"
 import { Locale } from "@/lib/i18n/config"
 import { getLatestReviews } from "@/lib/api/endpoints/reviews"
 import { PageContainer } from "@/components/common/PageContainer"
+import {
+  NAVIGATION_SLUG,
+  NAVIGATION_TYPE,
+} from "@/constants/navigation/navigation"
 
 export async function generateMetadata({
   params,
@@ -28,10 +32,20 @@ export async function generateMetadata({
 
 export default async function HomePage() {
   const reviews = await getLatestReviews()
+  const sections = [
+    NAVIGATION_SLUG.SOLUTIONS,
+    NAVIGATION_SLUG.WORKFLOW,
+    ...(reviews.length > 0 ? [NAVIGATION_SLUG.REVIEWS] : []),
+    NAVIGATION_SLUG.CONTACT_FORM,
+    NAVIGATION_SLUG.FAQ,
+  ]
 
   return (
     <>
-      <NavigationSection />
+      <NavigationSection
+        navigationType={NAVIGATION_TYPE.HOME}
+        sections={sections}
+      />
 
       <main className="relative min-h-screen">
         <HeroSection />
@@ -52,7 +66,10 @@ export default async function HomePage() {
         </PageContainer>
       </main>
 
-      <FooterSection />
+      <FooterSection
+        navigationType={NAVIGATION_TYPE.HOME}
+        sections={sections}
+      />
     </>
   )
 }

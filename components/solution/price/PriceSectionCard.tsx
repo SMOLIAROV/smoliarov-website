@@ -1,8 +1,11 @@
 "use client"
 
-import { NAVIGATION } from "@/constants/navigation/navigation"
+import { BaseLinkButton } from "@/components/ui/Buttons/BaseLinkButton"
+import { NAVIGATION_SLUG } from "@/constants/navigation/navigation"
 import { SolutionPricingPackage } from "@/constants/solution/types"
+import { useNavLink } from "@/hooks/navigation/useNavLink"
 import { useDict } from "@/lib/i18n/hooks/useDict"
+import { cn } from "@/lib/utils/cn"
 import { ArrowRight, Check } from "lucide-react"
 
 export function PriceSectionCard({
@@ -72,17 +75,19 @@ export function PriceSectionCard({
         ))}
       </ul>
 
-      <a
-        href={`#${NAVIGATION.CONTACT_FORM}`}
-        className={`inline-flex items-center justify-center gap-2 px-5 py-3 rounded-xl text-sm font-medium transition-all group ${
+      <BaseLinkButton
+        href={useNavLink(NAVIGATION_SLUG.CONTACT_FORM).href}
+        className={cn(
+          "group inline-flex items-center justify-center gap-2 rounded-xl px-5 py-3 text-sm font-medium transition-all",
           solutionPackage.is_popular
             ? "bg-black text-white hover:bg-black/80"
             : "bg-white text-black hover:bg-white/80"
-        }`}
+        )}
       >
         {dict.common.discuss_task}
-        <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
-      </a>
+
+        <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+      </BaseLinkButton>
     </>
   )
 }

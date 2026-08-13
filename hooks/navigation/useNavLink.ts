@@ -1,7 +1,7 @@
 "use client"
 
 import { useDict } from "@/lib/i18n/hooks/useDict"
-import { NAVIGATION } from "../../constants/navigation/navigation"
+import { NAVIGATION_SLUG } from "../../constants/navigation/navigation"
 
 export function useNavLink(key: string) {
   const dict = useDict()
@@ -9,15 +9,21 @@ export function useNavLink(key: string) {
   const config = {
     solutions: {
       name: dict.navigation.solutions,
-      href: `#${NAVIGATION.SOLUTIONS}`,
+      href: `#${NAVIGATION_SLUG.SOLUTIONS}`,
     },
-    worklow: { name: dict.navigation.worflow, href: `#${NAVIGATION.WORKFLOW}` },
-    reviews: { name: dict.navigation.reviews, href: `#${NAVIGATION.REVIEWS}` },
+    worklow: {
+      name: dict.navigation.worflow,
+      href: `#${NAVIGATION_SLUG.WORKFLOW}`,
+    },
+    reviews: {
+      name: dict.navigation.reviews,
+      href: `#${NAVIGATION_SLUG.REVIEWS}`,
+    },
     contact_form: {
       name: dict.navigation.contact,
-      href: `#${NAVIGATION.CONTACT_FORM}`,
+      href: `#${NAVIGATION_SLUG.CONTACT_FORM}`,
     },
-    faq: { name: dict.navigation.faq, href: `#${NAVIGATION.FAQ}` },
+    faq: { name: dict.navigation.faq, href: `#${NAVIGATION_SLUG.FAQ}` },
   } as const
 
   return config[key]

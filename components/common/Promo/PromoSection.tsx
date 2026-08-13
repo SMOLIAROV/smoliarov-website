@@ -10,7 +10,7 @@ import { FORM_PARAMS } from "@/constants/form/form"
 import { useContactFormNavigation } from "@/hooks/contact-form/useContactFormNavigation"
 import { Promotion } from "@/constants/promo/promo.data"
 import { SectionHeader } from "../SectionHeader/SectionHeader"
-import { NAVIGATION } from "@/constants/navigation/navigation"
+import { NAVIGATION_SLUG } from "@/constants/navigation/navigation"
 import { SectionContainer } from "../SectionContainer"
 
 export function PromoSection({ promo }: { promo: Promotion }) {
@@ -36,7 +36,7 @@ export function PromoSection({ promo }: { promo: Promotion }) {
       <div className="grid gap-8 lg:grid-cols-2 lg:items-center lg:gap-16">
         <div className="space-y-6 pt-2">
           <SectionHeader
-            navigation_id={NAVIGATION.PROMO}
+            navigationId={NAVIGATION_SLUG.PROMO}
             title={`${promo.content.title.first.toUpperCase()} \n ${promo.content.title.second.toUpperCase()}`}
           />
           <PromoTimer dateExpired={promo.dateExpired} />

@@ -10,6 +10,12 @@ export interface SolutionPricingPackage {
   is_popular?: boolean
 }
 
+export interface SolutionFeature {
+  icon: LucideIcon
+  title: string
+  description: string
+}
+
 export interface Solution {
   solutionType: string
   icon: LucideIcon
@@ -19,6 +25,11 @@ export interface Solution {
   content: {
     title: string
     description: string
+  }
+
+  feature?: {
+    description: string
+    items: SolutionFeature[]
   }
 
   pricing?: SolutionPackagesResponse

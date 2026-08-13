@@ -1,6 +1,6 @@
 "use client"
 
-import { NAVIGATION } from "@/constants/navigation/navigation"
+import { NAVIGATION_SLUG } from "@/constants/navigation/navigation"
 import { SolutionPricingPackage } from "@/constants/solution/types"
 import { useDict } from "@/lib/i18n/hooks/useDict"
 import { ArrowRight, Check } from "lucide-react"
@@ -114,7 +114,7 @@ export function PriceSectionSingleCard({
           </div>
 
           <a
-            href={`#${NAVIGATION.CONTACT_FORM}`}
+            href={`#${NAVIGATION_SLUG.CONTACT_FORM}`}
             className="inline-flex items-center justify-center gap-2 px-6 md:px-8 py-3.5 bg-black text-white rounded-xl text-sm font-medium transition-all hover:bg-black/90 group"
           >
             {dict.common.discuss_task}

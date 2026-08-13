@@ -1,4 +1,26 @@
-import { Code2, Globe, MessageSquare, Settings, Zap } from "lucide-react"
+import {
+  BarChart3,
+  Bell,
+  Clock,
+  Code2,
+  Database,
+  Gauge,
+  Globe,
+  LayoutDashboard,
+  MessageCircle,
+  MessageSquare,
+  Palette,
+  Plug,
+  Puzzle,
+  Search,
+  Server,
+  Settings,
+  ShieldCheck,
+  Smartphone,
+  TrendingUp,
+  Workflow,
+  Zap,
+} from "lucide-react"
 import { Dictionary } from "@/lib/i18n/dictionaries"
 
 import WebsitePreview from "@/public/images/solutions/previews/sites.webp"
@@ -36,8 +58,33 @@ export const SOLUTIONS = (dict: Dictionary) => ({
     image: WebsiteImage.src,
 
     content: {
-      title: dict.common.solution_type.website.title,
-      description: dict.common.solution_type.website.description,
+      ...dict.common.solution_type.website,
+    },
+
+    feature: {
+      description: dict.solution_features.features.website.description,
+      items: [
+        {
+          icon: Smartphone,
+          ...dict.solution_features.features.website.items.responsive,
+        },
+        {
+          icon: Palette,
+          ...dict.solution_features.features.website.items.design,
+        },
+        {
+          icon: Gauge,
+          ...dict.solution_features.features.website.items.performance,
+        },
+        {
+          icon: Search,
+          ...dict.solution_features.features.website.items.seo,
+        },
+        {
+          icon: Server,
+          ...dict.solution_features.features.website.items.backend,
+        },
+      ],
     },
   },
   service: {
@@ -47,8 +94,33 @@ export const SOLUTIONS = (dict: Dictionary) => ({
     image: ServiceImage.src,
 
     content: {
-      title: dict.common.solution_type.service.title,
-      description: dict.common.solution_type.service.description,
+      ...dict.common.solution_type.service,
+    },
+
+    feature: {
+      description: dict.solution_features.features.service.description,
+      items: [
+        {
+          icon: LayoutDashboard,
+          ...dict.solution_features.features.service.items.interface,
+        },
+        {
+          icon: Database,
+          ...dict.solution_features.features.service.items.data,
+        },
+        {
+          icon: ShieldCheck,
+          ...dict.solution_features.features.service.items.auth,
+        },
+        {
+          icon: Plug,
+          ...dict.solution_features.features.service.items.integrations,
+        },
+        {
+          icon: BarChart3,
+          ...dict.solution_features.features.service.items.scalability,
+        },
+      ],
     },
   },
   bot: {
@@ -58,8 +130,29 @@ export const SOLUTIONS = (dict: Dictionary) => ({
     image: BotImage.src,
 
     content: {
-      title: dict.common.solution_type.bot.title,
-      description: dict.common.solution_type.bot.description,
+      ...dict.common.solution_type.bot,
+    },
+
+    feature: {
+      description: dict.solution_features.features.bot.description,
+      items: [
+        {
+          icon: MessageCircle,
+          ...dict.solution_features.features.bot.items.scenarios,
+        },
+        {
+          icon: Database,
+          ...dict.solution_features.features.bot.items.data,
+        },
+        {
+          icon: Plug,
+          ...dict.solution_features.features.bot.items.integrations,
+        },
+        {
+          icon: Zap,
+          ...dict.solution_features.features.bot.items.automation,
+        },
+      ],
     },
   },
   automation: {
@@ -69,8 +162,29 @@ export const SOLUTIONS = (dict: Dictionary) => ({
     image: AutomationImage.src,
 
     content: {
-      title: dict.common.solution_type.automation.title,
-      description: dict.common.solution_type.automation.description,
+      ...dict.common.solution_type.automation,
+    },
+
+    feature: {
+      description: dict.solution_features.features.automation.description,
+      items: [
+        {
+          icon: Workflow,
+          ...dict.solution_features.features.automation.items.processes,
+        },
+        {
+          icon: Plug,
+          ...dict.solution_features.features.automation.items.integrations,
+        },
+        {
+          icon: Bell,
+          ...dict.solution_features.features.automation.items.notifications,
+        },
+        {
+          icon: Clock,
+          ...dict.solution_features.features.automation.items.timeSaving,
+        },
+      ],
     },
   },
   custom: {
@@ -80,8 +194,33 @@ export const SOLUTIONS = (dict: Dictionary) => ({
     image: CustomImage.src,
 
     content: {
-      title: dict.common.solution_type.custom.title,
-      description: dict.common.solution_type.custom.description,
+      ...dict.common.solution_type.custom,
+    },
+
+    feature: {
+      description: dict.solution_features.features.custom.description,
+      items: [
+        {
+          icon: Puzzle,
+          ...dict.solution_features.features.custom.items.fromScratch,
+        },
+        {
+          icon: Code2,
+          ...dict.solution_features.features.custom.items.customLogic,
+        },
+        {
+          icon: Plug,
+          ...dict.solution_features.features.custom.items.integrations,
+        },
+        {
+          icon: Server,
+          ...dict.solution_features.features.custom.items.backend,
+        },
+        {
+          icon: TrendingUp,
+          ...dict.solution_features.features.custom.items.scalability,
+        },
+      ],
     },
   },
 })

@@ -3,7 +3,7 @@
 import { SectionContainer } from "@/components/common/SectionContainer"
 import { SolutionsCards } from "./SolutionsCards"
 import { SectionHeader } from "@/components/common/SectionHeader/SectionHeader"
-import { NAVIGATION } from "@/constants/navigation/navigation"
+import { NAVIGATION_SLUG } from "@/constants/navigation/navigation"
 import { useDict } from "@/lib/i18n/hooks/useDict"
 
 export function SolutionsSection() {
@@ -12,7 +12,7 @@ export function SolutionsSection() {
   return (
     <SectionContainer>
       <SectionHeader
-        navigation_id={NAVIGATION.SOLUTIONS}
+        navigationId={NAVIGATION_SLUG.SOLUTIONS}
         title={dict.solutions.title}
         subtitle={dict.solutions.subtitle}
       />

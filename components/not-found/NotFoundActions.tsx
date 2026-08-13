@@ -5,7 +5,7 @@ import { ArrowLeft, ArrowRight } from "lucide-react"
 import { useDict } from "@/lib/i18n/hooks/useDict"
 import { useLocale } from "@/lib/i18n/hooks/useLocale"
 import { ROUTES } from "@/constants/routes"
-import { NAVIGATION } from "@/constants/navigation/navigation"
+import { NAVIGATION_SLUG } from "@/constants/navigation/navigation"
 import { Button } from "@/components/ui/button"
 
 export function NotFoundActions() {
@@ -26,11 +26,11 @@ export function NotFoundActions() {
 
       <Button
         variant="outline"
-        className="rounded-xl border-white/15 bg-transparent hover:bg-white/5 text-white px-6 md:px-8 h-11 md:h-12 text-sm"
+        className="rounded-xl border-white/15 bg-black hover:bg-white/5 text-white px-6 md:px-8 h-11 md:h-12 text-sm"
         asChild
       >
         <a
-          href={`${ROUTES.home(locale)}#${NAVIGATION.CONTACT_FORM}`}
+          href={`${ROUTES.home(locale)}#${NAVIGATION_SLUG.CONTACT_FORM}`}
           className="group inline-flex items-center gap-2"
         >
           {dict.common.discuss_task}
