@@ -1,54 +1,54 @@
 {
-  "name": "Smoliarov Denis Nikolaevich",
+  "name": "Denis Smoliarov",
   "loading": "Loading",
-  "slogan": "A reliable foundation for your business",
   "discuss": "Discuss",
-  "discuss_task": "Discuss the project",
+  "discuss_task": "Discuss your project",
+  "slogan": "A reliable foundation for your business",
   "legal": {
-    "privacy": "Privacy policy",
-    "cookies": "Cookie policy",
-    "offer": "Public offer"
+    "privacy": "Privacy Policy",
+    "cookies": "Cookie Policy",
+    "offer": "Public Offer"
   },
   "avaliable": "Available for projects",
-  "back_home": "Go to homepage",
+  "back_home": "Back to home",
   "step": "Step",
   "solution_type": {
     "website": {
       "title": "Website",
-      "description": "Modern website that attract customers and help you grow."
+      "description": "A website that presents your business, helps attract customers, and turns visitors into leads."
     },
     "service": {
-      "title": "Service / Web Application",
-      "description": "Services, CRM, personal accounts, and much more to automate your business."
+      "title": "Web Service",
+      "description": "A client portal, CRM, online platform, or internal service for managing customers and data."
     },
     "bot": {
       "title": "Telegram Bot",
-      "description": "Accepts requests, assists customers, and automates your sales."
+      "description": "Accepts requests, responds to customers, sends notifications, and automates repetitive tasks."
     },
     "automation": {
-      "title": "Process Automation",
-      "description": "We free you from routine with integrations and automation."
+      "title": "Automation",
+      "description": "Connect your tools and automate processes that your employees currently handle manually."
     },
     "custom": {
-      "title": "Custom Development",
-      "description": "We create software tailored to your unique requirements."
+      "title": "Custom Solution",
+      "description": "We build a custom digital product when off-the-shelf solutions are not enough for your business needs."
     }
   },
   "up_to": "Up to",
-  "more_then": "More then",
+  "more_then": "More than",
   "min": "min.",
   "consent": {
-    "i_agree": "I agree to",
-    "privacy": "personal data processing",
-    "i_accept_terms": "I accept the terms of the",
-    "offer": "public offer"
+    "i_agree": "I agree to the",
+    "privacy": "processing of personal data",
+    "i_accept_terms": "I accept the",
+    "offer": "Public Offer"
   },
   "price": "Price",
   "from": "From",
   "speed": "Speed",
-  "open_instantly": "Opens instantly",
+  "open_instantly": "Loads instantly",
   "security": "Security",
-  "protected_data": "The data is protected",
+  "protected_data": "Your data is protected",
   "popular": "Popular",
   "learn_more": "Learn more"
 }

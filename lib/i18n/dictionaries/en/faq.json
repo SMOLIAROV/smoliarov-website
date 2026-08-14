@@ -1,32 +1,32 @@
 {
   "title": "Frequently Asked Questions",
-  "subtitle": "Everything that is important to know before starting work",
-  "description": "It's all about the development process, deadlines, and collaboration.",
-  "image_caption": "// step by step to the goal",
+  "subtitle": "What you should know before we start",
+  "description": "From the first idea to launch: how we work, how long development takes, and what happens after launch.",
+  "image_caption": "// step by step to the result",
   "items": {
     "timeline": {
-      "question": "I do not know what exactly I need. Is this a problem?",
-      "answer": "No. Tell us what task you want to solve or what is currently inconvenient. We will help you identify the right solution, whether it's a website, CRM, web application, Telegram bot, or automation system."
+      "question": "What if I don't know what solution I need?",
+      "answer": "That's completely fine. Tell us what problem you want to solve, what currently doesn't work well, and what result you want to achieve. We'll help you choose the right solution — a website, web service, Telegram bot, automation, or custom development."
     },
     "payment": {
       "question": "How much does development cost?",
-      "answer": "The cost depends on the tasks, the complexity of the project and the necessary integrations. After the discussion, we will prepare a clear assessment with the stages, deadlines and cost of each of them."
+      "answer": "The cost depends on the scope, number of features, integrations, and project complexity. Before we start, we review your requirements and provide a clear estimate of the cost and timeline."
     },
     "tech": {
       "question": "How long does development take?",
-      "answer": "Small projects can be implemented in a few weeks, more complex services — in a few months. Before starting work, we will coordinate the deadlines and will regularly show the result."
+      "answer": "The timeline depends on the project's scope. A small website or bot can be launched within a few weeks, while a full-featured web service may take several months. We agree on specific timelines and milestones before development starts."
     },
     "communication": {
-      "question": "Is it possible to change requirements during development?",
-      "answer": "Yes. Small changes can usually be made in the process. If new functions appear or the scope of work changes, we discuss this in advance and agree on a new stage."
+      "question": "Can requirements change during development?",
+      "answer": "Yes. We work in stages, so changes can be discussed throughout the development process. If a new request significantly increases the project scope, we'll discuss its impact on the timeline and cost in advance."
     },
     "support_after": {
-      "question": "What happens after the launch of the project?",
-      "answer": "After the launch, we correct possible errors, consult on working with the system and, if necessary, continue to develop the project. You will not be left alone with the finished product."
+      "question": "What happens after launch?",
+      "answer": "After launch, we help make sure everything works correctly, fix any potential issues, and remain available for support. If needed, we can continue developing the project and adding new features."
     },
     "confidentiality": {
-      "question": "Who owns the project and the source code?",
-      "answer": "After completion of the work, you get access, the source code and all rights to the developed product."
+      "question": "Who owns the project and source code?",
+      "answer": "After the project is completed, you receive the necessary access credentials, source code, and rights to the developed product in accordance with the agreement."
     }
   }
 }

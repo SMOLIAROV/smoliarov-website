@@ -7,7 +7,7 @@ import { NotFoundCode } from "./NotFoundCode"
 import { NotFoundHeadline } from "./NotFoundHeadline"
 import { NotFoundActions } from "./NotFoundActions"
 import { HeroBackground } from "../common/Hero/HeroBackground"
-import NotFoundImage from "@/public/images/not-found-portal.png"
+import NotFoundImage from "@/public/images/not-found-portal.webp"
 
 export function NotFoundSection() {
   return (

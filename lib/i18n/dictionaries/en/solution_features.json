@@ -1,121 +1,121 @@
 {
   "title": "What's Included",
-  "subtitle": "About the Solution",
+  "subtitle": "About the solution",
   "features": {
     "website": {
-      "description": "We build custom solutions for unique business needs when ready-made services and standard solutions are not enough.",
+      "description": "We create websites that clearly present your business, help attract customers, and turn visitors into leads.",
       "items": {
         "responsive": {
           "title": "Responsive Design",
-          "description": "The website works seamlessly across smartphones, tablets, and desktop devices."
+          "description": "The website works correctly across smartphones, tablets, and desktop computers."
         },
         "design": {
-          "title": "Modern Design",
-          "description": "We carefully plan the visual presentation, structure, and user journey around your business goals."
+          "title": "Purpose-Built Design",
+          "description": "We design the structure, visual presentation, and user journey around your business goals."
         },
         "performance": {
-          "title": "High Performance",
-          "description": "We optimize page loading and interface performance for a smooth and comfortable user experience."
+          "title": "Fast Loading",
+          "description": "We optimize pages, images, and the interface so users can quickly find the information they need."
         },
         "seo": {
           "title": "SEO Foundation",
-          "description": "We build a solid technical foundation with proper page structure and metadata to support search engine optimization."
+          "description": "We set up page structure, headings, metadata, and the technical foundation for future search engine optimization."
         },
         "backend": {
-          "title": "Backend & Integrations",
-          "description": "When needed, we connect backend services, databases, forms, external APIs, and other systems."
+          "title": "Integrations",
+          "description": "We connect forms, CRM systems, analytics, external services, APIs, and other tools your business needs."
         }
       }
     },
     "service": {
-      "description": "We build web applications for process automation, data management, and solving business challenges — from small internal tools to full-scale services.",
+      "description": "We build web applications for process automation, customer management, and data handling — from internal tools to full-featured online services.",
       "items": {
         "interface": {
-          "title": "Intuitive Interface",
-          "description": "We design clear and intuitive interfaces that are convenient for users to work with every day."
+          "title": "Clear Interface",
+          "description": "We design intuitive interfaces that help users quickly find information and complete the actions they need."
         },
         "data": {
-          "title": "Data Management",
-          "description": "We design data storage, processing, and management according to the logic and requirements of your application."
+          "title": "Centralized Data",
+          "description": "We bring the necessary information together in one place so employees can quickly find, process, and manage data."
         },
         "auth": {
-          "title": "Authentication & Access",
-          "description": "We implement registration, authentication, and role-based access control for different users."
+          "title": "Access & Roles",
+          "description": "We implement registration, authentication, and different access levels for employees, customers, and other users."
         },
         "integrations": {
           "title": "Integrations",
-          "description": "We connect third-party APIs, payment systems, CRMs, email, messengers, and other services."
+          "description": "We connect CRM systems, payment services, email, messengers, external APIs, and other services you already use."
         },
         "scalability": {
-          "title": "Scalable Architecture",
-          "description": "We build applications that can evolve and expand alongside your business."
+          "title": "Built to Grow",
+          "description": "We design the system so new features, users, and integrations can be added over time."
         }
       }
     },
     "bot": {
-      "description": "We develop Telegram bots to automate customer communication, process requests, and handle routine tasks.",
+      "description": "We develop Telegram bots for customer communication, lead processing, notifications, and automation of repetitive tasks.",
       "items": {
         "scenarios": {
-          "title": "Interaction Scenarios",
-          "description": "We design convenient user interaction flows and automate the actions required by your business."
+          "title": "Customer Workflows",
+          "description": "We create clear interaction flows for requests, consultations, bookings, orders, notifications, and other customer actions."
         },
         "data": {
           "title": "Data Management",
-          "description": "We store requests, users, and other necessary information in a database."
+          "description": "We store requests, user data, and other necessary information within your system."
         },
         "integrations": {
           "title": "Integrations",
-          "description": "We connect CRMs, APIs, payment systems, notifications, and other external services."
+          "description": "We connect CRM systems, APIs, payment services, notifications, and other external tools."
         },
         "automation": {
-          "title": "Automation",
-          "description": "The bot can automatically process requests, send notifications, and handle routine operations."
+          "title": "Automated Processing",
+          "description": "The bot can accept requests, send notifications, collect data, and perform predefined actions automatically."
         }
       }
     },
     "automation": {
-      "description": "We automate repetitive processes to reduce manual work, minimize errors, and save time.",
+      "description": "We automate repetitive processes to reduce manual work, minimize errors, and speed up task processing.",
       "items": {
         "processes": {
-          "title": "Process Automation",
-          "description": "We turn repetitive manual operations into automated workflows."
+          "title": "Reduce Manual Work",
+          "description": "We identify repetitive operations and move them from manual workflows into automated processes."
         },
         "integrations": {
-          "title": "Service Integration",
-          "description": "We connect CRMs, spreadsheets, email, messengers, APIs, and other tools you use."
+          "title": "Connect Your Tools",
+          "description": "We connect CRM systems, spreadsheets, email, messengers, APIs, and other tools into a unified workflow."
         },
         "notifications": {
-          "title": "Notifications",
-          "description": "We automatically send messages and notifications when specific events occur."
+          "title": "Automated Notifications",
+          "description": "The system automatically sends messages and notifications when specific events occur, without employee involvement."
         },
         "timeSaving": {
-          "title": "Time Savings",
-          "description": "We reduce manual operations and free up your team's time for more important tasks."
+          "title": "Save Time",
+          "description": "Employees spend less time on routine tasks and more time focusing on customers and work that requires their involvement."
         }
       }
     },
     "custom": {
-      "description": "We develop custom solutions for unique business needs when ready-made services and standard solutions are not enough.",
+      "description": "We develop custom digital solutions for unique business needs when off-the-shelf services are not enough.",
       "items": {
         "customLogic": {
-          "title": "Custom Business Logic",
-          "description": "We design solutions around your specific processes, requirements, and business needs."
+          "title": "Built Around Your Business",
+          "description": "We design the solution around your specific processes, requirements, and business needs."
         },
         "fromScratch": {
           "title": "Built from Scratch",
-          "description": "We create the required functionality without the limitations of ready-made platforms and templates."
+          "description": "We create the required functionality without the limitations of ready-made platforms and template-based solutions."
         },
         "integrations": {
           "title": "Integrations",
-          "description": "We connect existing systems, APIs, and third-party services to bring your processes together."
+          "description": "We connect existing systems, APIs, and third-party services to bring the necessary processes together."
         },
         "backend": {
-          "title": "Backend & Infrastructure",
-          "description": "We design the backend, databases, and infrastructure required to run your solution."
+          "title": "Complete System",
+          "description": "We build the backend, databases, and required integrations so the solution works as a unified product."
         },
         "scalability": {
-          "title": "Room to Grow",
-          "description": "We build the architecture with the ability to add new features and scale the solution in the future."
+          "title": "Built to Evolve",
+          "description": "We lay the foundation for adding new features, integrations, and scaling the project in the future."
         }
       }
     }

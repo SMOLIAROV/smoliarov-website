@@ -1,15 +1,15 @@
 {
-  "title": "Tell us what task you want to solve",
+  "title": "Tell us what you want to solve",
   "subtitle": "Let's discuss your project",
-  "description": "Describe the task in your own words. We will understand the details, propose the optimal solution, and estimate the time and cost of the project.",
+  "description": "Describe your task in your own words. We'll understand the details, suggest the right solution, and estimate the project timeline and cost.",
   "optional": "Optional",
   "fields": {
     "name": {
       "label": "Name",
-      "placeholder": "John Doe",
+      "placeholder": "John Smith",
       "errors": {
         "required": "Enter your name",
-        "invalid": "Name can only contain letters",
+        "invalid": "Name can contain letters only",
         "max": "Maximum 15 characters"
       }
     },
@@ -23,28 +23,28 @@
     },
     "phone": {
       "label": "Phone",
-      "placeholder": "+375 12 345 67 89",
+      "placeholder": "+1 555 123 4567",
       "errors": {
-        "invalid": "Enter a valid phone number in the format +375 XX XXX XX XX"
+        "invalid": "Enter a valid phone number"
       }
     },
     "solution_type": {
-      "label": "What needs to be done",
-      "placeholder": "Choose project",
+      "label": "What do you need?",
+      "placeholder": "Select a project type",
       "errors": {
         "required": "Select a project type",
-        "invalid": "The selected project does not exist"
+        "invalid": "The selected project type does not exist"
       }
     },
     "budget": {
       "label": "Budget",
-      "placeholder": "Choose budget"
+      "placeholder": "Select your budget"
     },
     "message": {
-      "label": "Describe the task",
-      "placeholder": "Describe the task, the current problem, or the idea of the project. The more detailed the description, the more accurately we will be able to estimate the time and cost.",
+      "label": "Describe your task",
+      "placeholder": "Describe the task, current problem, or project idea. The more details you provide, the more accurately we can estimate the timeline and cost.",
       "errors": {
-        "required": "Write a message",
+        "required": "Enter your message",
         "min": "Minimum 10 characters",
         "max": "Maximum 1000 characters"
       }
@@ -56,18 +56,18 @@
     },
     "consent_offer": {
       "errors": {
-        "required": "You must accept the Terms and Conditions"
+        "required": "You must accept the Public Offer"
       }
     }
   },
   "send": "Send",
   "message": {
     "success": {
-      "request_created": "Thank you! Your message has been sent successfully. We will contact you shortly.",
-      "confirmation_sent": "We have sent a confirmation to your email"
+      "request_created": "Thank you! Your message has been sent successfully. We'll get back to you shortly.",
+      "confirmation_sent": "We've sent a confirmation to your email"
     },
     "errors": {
-      "iternal": "An error occurred while sending. Please try again later.",
+      "iternal": "Something went wrong while sending your message. Please try again later.",
       "rate_limit": "Too many requests. Please try again later.",
       "invalid": "Invalid form data"
     }

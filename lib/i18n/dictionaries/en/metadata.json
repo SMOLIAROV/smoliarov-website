@@ -1,32 +1,32 @@
 {
   "home": {
-    "title": "Website Development, Business Services & Automation",
-    "description": "We build websites, web services, CRM systems and Telegram bots for businesses. Automate sales, lead management and business processes with solutions tailored to your needs."
+    "title": "Website Development, Web Services & Business Automation",
+    "description": "We build websites, web services, CRM systems, and Telegram bots for businesses. Automate sales, lead processing, and workflows around your company's needs."
   },
   "reviews": {
     "title": "Client Reviews",
-    "description": "Client reviews of our website development, web services, CRM, Telegram bot and business automation projects."
+    "description": "Client reviews of our websites, web services, CRM systems, Telegram bots, and business process automation."
   },
   "solution": {
     "website": {
       "title": "Website Development for Businesses",
-      "description": "We build business websites from scratch, including corporate websites, landing pages and catalogs. We focus on structure, responsive design and a reliable launch."
+      "description": "We build business websites from the ground up, including corporate websites, landing pages, and catalogs. We handle structure, design, responsiveness, and launch."
     },
     "service": {
-      "title": "Service and WEB-Application Development",
-      "description": "We develop custom web services for business processes, including client portals, dashboards, online platforms and internal business systems."
+      "title": "Web Service & Application Development",
+      "description": "We develop web services around your business processes, including client portals, online platforms, internal systems, and customer-facing applications."
     },
     "bot": {
-      "title": "Telegram Bot Development for Businesses",
-      "description": "We build Telegram bots for leads, sales, customer support and business automation. Integrate your bot with CRM systems, websites and other services."
+      "title": "Telegram Bot Development for Business",
+      "description": "We build Telegram bots for lead generation, sales, customer support, and process automation. Bots can be integrated with CRM systems, websites, and other services."
     },
     "automation": {
       "title": "Business Process Automation",
-      "description": "We automate repetitive business processes such as lead management, sales, employee workflows, notifications and data exchange between services."
+      "description": "We automate repetitive business processes, including lead processing, sales, employee workflows, notifications, and data exchange between services."
     },
     "custom": {
-      "title": "Custom Software Development for Businesses",
-      "description": "We develop custom digital solutions for complex business needs, including internal systems, software, web services and process automation."
+      "title": "Custom Software Development for Business",
+      "description": "We build digital solutions for unique business needs, including internal systems, custom software, web services, and process automation."
     }
   },
   "legal": {
@@ -40,7 +40,7 @@
     },
     "offer": {
       "title": "Public Offer",
-      "description": "Terms of the public offer for website development, business services and digital solutions by SMOLIAROV."
+      "description": "Terms of the public offer for website, web service, and digital solution development by SMOLIAROV."
     },
     "free_domain_and_hosting": {
       "title": "Free Domain & Hosting — Promotion Terms",
