@@ -20,17 +20,16 @@ export function FooterSection({
   const dict = useDict()
   return (
     <footer className="relative">
-      <div className="relative w-full h-[150px] md:h-[250px] lg:h-[320px] overflow-hidden">
-        <Image
-          src={FooterImage}
-          alt="Footer image"
-          fill
-          sizes="(max-width: 768px) 100vw, 100vw"
-          className="object-cover object-center"
-        />
-
-        <div className="absolute inset-0 bg-gradient-to-b from-black via-transparent to-black" />
-        <div className="absolute inset-0 bg-gradient-to-r from-black/50 via-transparent to-black/50" />
+      <div className="relative w-full overflow-hidden bg-black">
+        <div className="relative mx-auto aspect-[1920/600] w-full max-w-[1600px]">
+          <Image
+            src={FooterImage}
+            alt="Footer image"
+            priority
+            className="h-auto w-full"
+          />
+          <div className="pointer-events-none absolute inset-0 bg-gradient-to-r from-black via-transparent to-black" />
+        </div>
       </div>
 
       <PageContainer className="relative z-10">

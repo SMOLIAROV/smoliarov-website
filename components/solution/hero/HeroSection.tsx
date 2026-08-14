@@ -9,9 +9,12 @@ import { getMinPackagePrice } from "@/lib/utils/getMinPackagePrice"
 
 export function HeroSection({ solution }: { solution: Solution }) {
   return (
-    <SectionContainer className="min-h-screen flex flex-col justify-center">
+    <SectionContainer className="relative flex min-h-[100svh] flex-col justify-center min-[1920px]:min-h-[800px] min-[1920px]:h-[900px] min-[1920px]:max-h-[900px]">
+      <div className="absolute inset-x-0 top-0 z-0">
+        <HeroBackground image_url={solution.image} />
+      </div>
+
       <GridLines />
-      <HeroBackground image_url={solution.image} />
 
       <PageContainer>
         <div className="relative z-10 flex flex-col gap-8 pt-28 pb-0 min-[700px]:grid min-[700px]:grid-cols-2 min-[700px]:items-center min-[700px]:gap-8 lg:gap-12 lg:py-24 xl:gap-16 xl:py-28">

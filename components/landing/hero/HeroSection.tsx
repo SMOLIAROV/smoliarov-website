@@ -13,14 +13,14 @@ export function HeroSection() {
   const dict = useDict()
 
   return (
-    <SectionContainer className="min-h-screen flex flex-col justify-center">
-      <div className="absolute inset-0 z-0">
+    <SectionContainer className="relative flex min-h-[100svh] flex-col justify-center min-[1920px]:min-h-[800px] min-[1920px]:h-[900px] min-[1920px]:max-h-[900px]">
+      <div className="absolute inset-x-0 top-0 z-0">
         <HeroBackground image_url={HeroImage.src} />
       </div>
       <GridLines />
 
       <PageContainer>
-        <div className="mt-50 lg:mt-0 lg:max-w-[65%]">
+        <div className="mt-50 lg:mt-24 lg:max-w-[65%]">
           <HeroMainHeadline
             title={dict.common.slogan}
             description={dict.hero.description}

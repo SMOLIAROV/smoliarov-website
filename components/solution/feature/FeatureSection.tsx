@@ -16,7 +16,7 @@ export function FeatureSection({
   const hasOddItems = items.length % 2 !== 0
 
   return (
-    <SectionContainer>
+    <SectionContainer className="pt-0">
       <div
         id={NAVIGATION_SLUG.ABOUT_SOLUTION}
         className="grid items-start gap-10 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.4fr)] lg:gap-16"

@@ -29,11 +29,11 @@ import BotPreview from "@/public/images/solutions/previews/bots.webp"
 import AutomationPreview from "@/public/images/solutions/previews/automation.webp"
 import CustomPreview from "@/public/images/solutions/previews/custom.webp"
 
-import WebsiteImage from "@/public/images/solutions/hero/sites.png"
-import ServiceImage from "@/public/images/solutions/hero/services.png"
-import BotImage from "@/public/images/solutions/hero/bots.png"
-import AutomationImage from "@/public/images/solutions/hero/automation.png"
-import CustomImage from "@/public/images/solutions/hero/custom.png"
+import WebsiteImage from "@/public/images/solutions/hero/sites.webp"
+import ServiceImage from "@/public/images/solutions/hero/services.webp"
+import BotImage from "@/public/images/solutions/hero/bots.webp"
+import AutomationImage from "@/public/images/solutions/hero/automation.webp"
+import CustomImage from "@/public/images/solutions/hero/custom.webp"
 
 export const SOLUTION_TYPES = {
   WEBSITE: "website",

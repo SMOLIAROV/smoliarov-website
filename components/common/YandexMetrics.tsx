@@ -26,7 +26,7 @@ export function YandexMetrics() {
           <img
             src="https://mc.yandex.ru/watch/110341240"
             style={{ position: "absolute", left: "-9999px" }}
-            alt=""
+            alt="YandexMetrika"
           />
         </div>
       </noscript>
