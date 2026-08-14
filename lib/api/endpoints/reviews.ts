@@ -16,16 +16,16 @@ export const getAllReviews = () =>
     }
   )
 
-export const getLatestReviews = (projectType?: string, count: number = 3) => {
+export const getLatestReviews = (solution_type?: string, count: number = 3) => {
   const params = new URLSearchParams()
 
-  if (projectType) {
-    params.append("project_type", projectType)
+  if (solution_type) {
+    params.append("solution_type", solution_type)
   }
   params.append("count", String(count))
 
   return cache(
-    CacheKeys.reviews.latest(projectType, count),
+    CacheKeys.reviews.latest(solution_type, count),
     () =>
       api<ReviewResponse[]>(`/api/v1/reviews/latest?${params.toString()}`, {
         method: "GET",

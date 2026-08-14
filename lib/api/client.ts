@@ -30,7 +30,7 @@ export async function api<T = any>(
       throw new ApiError(body)
     }
 
-    throw new Error(`${res.status}`)
+    throw new Error(`${res.statusText}`)
   }
 
   if (res.status === 204) return null as T

@@ -1,0 +1,54 @@
+{
+  "name": "Denis Smoliarov",
+  "loading": "Loading",
+  "discuss": "Discuss",
+  "discuss_task": "Discuss your project",
+  "slogan": "A reliable foundation for your business",
+  "legal": {
+    "privacy": "Privacy Policy",
+    "cookies": "Cookie Policy",
+    "offer": "Public Offer"
+  },
+  "avaliable": "Available for projects",
+  "back_home": "Back to home",
+  "step": "Step",
+  "solution_type": {
+    "website": {
+      "title": "Website",
+      "description": "A website that presents your business, helps attract customers, and turns visitors into leads."
+    },
+    "service": {
+      "title": "Web Service",
+      "description": "A client portal, CRM, online platform, or internal service for managing customers and data."
+    },
+    "bot": {
+      "title": "Telegram Bot",
+      "description": "Accepts requests, responds to customers, sends notifications, and automates repetitive tasks."
+    },
+    "automation": {
+      "title": "Automation",
+      "description": "Connect your tools and automate processes that your employees currently handle manually."
+    },
+    "custom": {
+      "title": "Custom Solution",
+      "description": "We build a custom digital product when off-the-shelf solutions are not enough for your business needs."
+    }
+  },
+  "up_to": "Up to",
+  "more_then": "More than",
+  "min": "min.",
+  "consent": {
+    "i_agree": "I agree to the",
+    "privacy": "processing of personal data",
+    "i_accept_terms": "I accept the",
+    "offer": "Public Offer"
+  },
+  "price": "Price",
+  "from": "From",
+  "speed": "Speed",
+  "open_instantly": "Loads instantly",
+  "security": "Security",
+  "protected_data": "Your data is protected",
+  "popular": "Popular",
+  "learn_more": "Learn more"
+}

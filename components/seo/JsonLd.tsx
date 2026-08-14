@@ -91,7 +91,7 @@ export function JsonLd() {
           name: "SMOLIAROV",
         },
         url: siteUrl,
-        image: `${siteUrl}/images/metadata/og-image.jpg`,
+        image: `${siteUrl}/images/metadata/og-image.png`,
         description:
           "Разрабатываем сайты, CRM-системы, веб-приложения, Telegram-ботов и цифровые решения для бизнеса. Автоматизируем продажи, обработку заявок, документооборот и внутренние процессы. Разработка под ключ.",
         provider: {

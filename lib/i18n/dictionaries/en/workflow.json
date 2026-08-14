@@ -1,0 +1,49 @@
+{
+  "title": "How We Work",
+  "subtitle": "What to expect at every stage",
+  "description": "No chaos or unexpected surprises. We agree on every stage with you and regularly show you the progress.",
+  "steps": {
+    "analysis": {
+      "title": "Discuss the Task",
+      "description": "We understand how your processes work today, identify the problems, and define the result you want to achieve.",
+      "details": [
+        "Understand your business needs",
+        "Suggest solution options",
+        "Estimate timeline and budget"
+      ]
+    },
+    "design": {
+      "title": "Design the Solution",
+      "description": "We plan the structure of the future product, user workflows, and technical architecture.",
+      "details": [
+        "Create a prototype",
+        "Prepare the technical specification",
+        "Plan development stages"
+      ]
+    },
+    "development": {
+      "title": "Build",
+      "description": "We develop the product step by step and regularly show you the progress.",
+      "details": ["Work in sprints", "Demonstrate progress", "Collect feedback"]
+    },
+    "testing": {
+      "title": "Test",
+      "description": "We test all functionality, fix issues, and prepare the project for launch.",
+      "details": ["Test functionality", "Fix issues", "Final testing"]
+    },
+    "deploy": {
+      "title": "Launch",
+      "description": "We deploy the project to the server, connect the necessary services, and hand over access credentials.",
+      "details": [
+        "Deploy the project",
+        "Configure integrations",
+        "Hand over documentation"
+      ]
+    },
+    "support": {
+      "title": "Keep Improving",
+      "description": "After launch, we stay available to help develop the product and add new functionality.",
+      "details": ["Warranty support", "Consultations", "Further development"]
+    }
+  }
+}

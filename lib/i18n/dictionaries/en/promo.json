@@ -1,0 +1,26 @@
+{
+  "subtitle": "Promotion",
+  "time_left": "Time left",
+  "promo_is_over": "Promo is over",
+  "timer": {
+    "day": "d",
+    "hour": "h",
+    "minute": "m",
+    "second": "s"
+  },
+  "promo_terms": "Terms of the Promotion",
+  "items": {
+    "websites": {
+      "title": {
+        "first": "DOMAIN + HOSTING",
+        "second": "1 MONTH FREE"
+      },
+      "order": "Order a website",
+      "remark": "Order a website development and get a domain (.by, .ru, .online, .site, etc.) and CloudVPS Light 1 hosting plan included",
+      "notice": {
+        "title": "Bonus with your website",
+        "description": "Free domain and 1 month of hosting when you order a website"
+      }
+    }
+  }
+}

@@ -4,7 +4,7 @@ import React, { useCallback } from "react"
 import { usePathname, useRouter, useSearchParams } from "next/navigation"
 
 import { FORM_PARAMS } from "@/constants/form/form"
-import { NAVIGATION } from "@/constants/navigation/navigation"
+import { NAVIGATION_SLUG } from "@/constants/navigation/navigation"
 
 export function useContactFormNavigation() {
   const router = useRouter()
@@ -12,16 +12,16 @@ export function useContactFormNavigation() {
   const searchParams = useSearchParams()
 
   const scrollToForm = useCallback(() => {
-    document.getElementById(NAVIGATION.CONTACT_FORM)?.scrollIntoView({
+    document.getElementById(NAVIGATION_SLUG.CONTACT_FORM)?.scrollIntoView({
       behavior: "smooth",
       block: "start",
     })
   }, [])
 
-  const navigateToProject = useCallback(
-    (project: string) => {
+  const navigateToSolution = useCallback(
+    (solution: string) => {
       const params = new URLSearchParams(searchParams.toString())
-      params.set(FORM_PARAMS.PROJECT_TYPE, project)
+      params.set(FORM_PARAMS.SOLUTION_TYPE, solution)
 
       router.replace(`${pathname}?${params.toString()}`, {
         scroll: false,
@@ -31,10 +31,10 @@ export function useContactFormNavigation() {
   )
 
   const handleLinkClick = useCallback(
-    (project: string) => (e: React.MouseEvent<HTMLAnchorElement>) => {
-      const currentProject = searchParams.get(FORM_PARAMS.PROJECT_TYPE)
+    (solution: string) => (e: React.MouseEvent<HTMLAnchorElement>) => {
+      const currentSolution = searchParams.get(FORM_PARAMS.SOLUTION_TYPE)
 
-      if (currentProject === project) {
+      if (currentSolution === solution) {
         e.preventDefault()
         scrollToForm()
       }
@@ -44,7 +44,7 @@ export function useContactFormNavigation() {
 
   return {
     scrollToForm,
-    navigateToProject,
+    navigateToSolution: navigateToSolution,
     handleLinkClick,
   }
 }

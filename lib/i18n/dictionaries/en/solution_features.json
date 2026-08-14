@@ -1,0 +1,123 @@
+{
+  "title": "What's Included",
+  "subtitle": "About the solution",
+  "features": {
+    "website": {
+      "description": "We create websites that clearly present your business, help attract customers, and turn visitors into leads.",
+      "items": {
+        "responsive": {
+          "title": "Responsive Design",
+          "description": "The website works correctly across smartphones, tablets, and desktop computers."
+        },
+        "design": {
+          "title": "Purpose-Built Design",
+          "description": "We design the structure, visual presentation, and user journey around your business goals."
+        },
+        "performance": {
+          "title": "Fast Loading",
+          "description": "We optimize pages, images, and the interface so users can quickly find the information they need."
+        },
+        "seo": {
+          "title": "SEO Foundation",
+          "description": "We set up page structure, headings, metadata, and the technical foundation for future search engine optimization."
+        },
+        "backend": {
+          "title": "Integrations",
+          "description": "We connect forms, CRM systems, analytics, external services, APIs, and other tools your business needs."
+        }
+      }
+    },
+    "service": {
+      "description": "We build web applications for process automation, customer management, and data handling — from internal tools to full-featured online services.",
+      "items": {
+        "interface": {
+          "title": "Clear Interface",
+          "description": "We design intuitive interfaces that help users quickly find information and complete the actions they need."
+        },
+        "data": {
+          "title": "Centralized Data",
+          "description": "We bring the necessary information together in one place so employees can quickly find, process, and manage data."
+        },
+        "auth": {
+          "title": "Access & Roles",
+          "description": "We implement registration, authentication, and different access levels for employees, customers, and other users."
+        },
+        "integrations": {
+          "title": "Integrations",
+          "description": "We connect CRM systems, payment services, email, messengers, external APIs, and other services you already use."
+        },
+        "scalability": {
+          "title": "Built to Grow",
+          "description": "We design the system so new features, users, and integrations can be added over time."
+        }
+      }
+    },
+    "bot": {
+      "description": "We develop Telegram bots for customer communication, lead processing, notifications, and automation of repetitive tasks.",
+      "items": {
+        "scenarios": {
+          "title": "Customer Workflows",
+          "description": "We create clear interaction flows for requests, consultations, bookings, orders, notifications, and other customer actions."
+        },
+        "data": {
+          "title": "Data Management",
+          "description": "We store requests, user data, and other necessary information within your system."
+        },
+        "integrations": {
+          "title": "Integrations",
+          "description": "We connect CRM systems, APIs, payment services, notifications, and other external tools."
+        },
+        "automation": {
+          "title": "Automated Processing",
+          "description": "The bot can accept requests, send notifications, collect data, and perform predefined actions automatically."
+        }
+      }
+    },
+    "automation": {
+      "description": "We automate repetitive processes to reduce manual work, minimize errors, and speed up task processing.",
+      "items": {
+        "processes": {
+          "title": "Reduce Manual Work",
+          "description": "We identify repetitive operations and move them from manual workflows into automated processes."
+        },
+        "integrations": {
+          "title": "Connect Your Tools",
+          "description": "We connect CRM systems, spreadsheets, email, messengers, APIs, and other tools into a unified workflow."
+        },
+        "notifications": {
+          "title": "Automated Notifications",
+          "description": "The system automatically sends messages and notifications when specific events occur, without employee involvement."
+        },
+        "timeSaving": {
+          "title": "Save Time",
+          "description": "Employees spend less time on routine tasks and more time focusing on customers and work that requires their involvement."
+        }
+      }
+    },
+    "custom": {
+      "description": "We develop custom digital solutions for unique business needs when off-the-shelf services are not enough.",
+      "items": {
+        "customLogic": {
+          "title": "Built Around Your Business",
+          "description": "We design the solution around your specific processes, requirements, and business needs."
+        },
+        "fromScratch": {
+          "title": "Built from Scratch",
+          "description": "We create the required functionality without the limitations of ready-made platforms and template-based solutions."
+        },
+        "integrations": {
+          "title": "Integrations",
+          "description": "We connect existing systems, APIs, and third-party services to bring the necessary processes together."
+        },
+        "backend": {
+          "title": "Complete System",
+          "description": "We build the backend, databases, and required integrations so the solution works as a unified product."
+        },
+        "scalability": {
+          "title": "Built to Evolve",
+          "description": "We lay the foundation for adding new features, integrations, and scaling the project in the future."
+        }
+      }
+    }
+  }
+}

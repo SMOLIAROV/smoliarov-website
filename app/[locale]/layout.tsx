@@ -7,7 +7,7 @@ import { getDictionary } from "@/lib/i18n/dictionaries"
 import { I18nProvider } from "@/lib/i18n/provider"
 
 import { notFound } from "next/navigation"
-import { isValidLocale } from "@/lib/i18n/config"
+import { isValidLocale, Locale } from "@/lib/i18n/config"
 import { YandexMetrics } from "@/components/common/YandexMetrics"
 import React from "react"
 
@@ -16,7 +16,7 @@ export default async function LocaleLayout({
   params,
 }: {
   children: React.ReactNode
-  params: Promise<{ locale: string }>
+  params: Promise<{ locale: Locale }>
 }) {
   const { locale } = await params
 

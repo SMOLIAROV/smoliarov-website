@@ -3,16 +3,14 @@ import "@/styles/global.css"
 import { fontVariables } from "@/styles/fonts"
 
 import React from "react"
-import { siteMetadata } from "./metadata"
-
-export const metadata = siteMetadata
+import { Locale } from "@/lib/i18n/config"
 
 export default async function RootLayout({
   children,
   params,
 }: {
   children: React.ReactNode
-  params: Promise<{ locale: string }>
+  params: Promise<{ locale: Locale }>
 }) {
   const { locale } = await params
 

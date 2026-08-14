@@ -9,7 +9,7 @@ export const createApplication = (body: ContactSubmissionPayload) => {
 
   formData.append("name", body.name)
   formData.append("email", body.email)
-  formData.append("project_type", body.project_type)
+  formData.append("solution_type", body.solution_type)
   formData.append("message", body.message)
   formData.append("consent_privacy", String(body.consent_privacy))
   formData.append("consent_offer", String(body.consent_offer))

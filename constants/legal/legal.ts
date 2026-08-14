@@ -2,7 +2,7 @@ export const LEGAL_SLUGS = {
   PRIVACY: "privacy",
   COOKIES: "cookies",
   OFFER: "offer",
-  PROMO: "promo",
+  PROMO__FREE_DOMAIN_AND_HOSTING: "free_domain_and_hosting",
 } as const
 
 export type LegalSlug = (typeof LEGAL_SLUGS)[keyof typeof LEGAL_SLUGS]
@@ -16,7 +16,7 @@ export const LEGAL_DOCS_META: LegalDocMeta[] = [
   { slug: LEGAL_SLUGS.PRIVACY, showInFooter: true },
   { slug: LEGAL_SLUGS.COOKIES, showInFooter: true },
   { slug: LEGAL_SLUGS.OFFER, showInFooter: true },
-  { slug: LEGAL_SLUGS.PROMO, showInFooter: false },
+  { slug: LEGAL_SLUGS.PROMO__FREE_DOMAIN_AND_HOSTING, showInFooter: false },
 ]
 
 export function isLegalSlug(value: string): value is LegalSlug {

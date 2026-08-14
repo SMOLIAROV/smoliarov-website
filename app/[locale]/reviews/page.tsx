@@ -1,35 +1,25 @@
-import { ReviewCard } from "@/components/landing/reviews/ReviewCard"
-import { BackHomeButton } from "@/components/common/Buttons/BackHomeButton"
-import { ReviewsHeader } from "@/components/landing/reviews/ReviewsHeader"
-import { PageContainer } from "@/components/common/PageContainer"
-import { SwitchLocaleButton } from "@/components/common/Buttons/SwitchLocaleButton"
-import { getAllReviews } from "@/lib/api/endpoints/reviews"
+import { Metadata } from "next"
+import { getMetadata } from "@/lib/metadata"
+import { METADATA_PAGES } from "@/constants/metadata/metadata"
+import { Locale } from "@/lib/i18n/config"
+import ReviewsPage from "./ReviewsPage"
 
-export default async function ReviewsPage() {
-  const reviews = await getAllReviews()
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: Locale }>
+}): Promise<Metadata> {
+  const { locale } = await params
 
-  return (
-    <div className="min-h-screen bg-black text-white mb-10">
-      <PageContainer className="pt-24">
-        <div className="flex items-center justify-between w-full mb-10">
-          <BackHomeButton />
-          <SwitchLocaleButton />
-        </div>
+  return getMetadata(METADATA_PAGES.REVIEWS, locale)
+}
 
-        <ReviewsHeader />
+export default async function Page({
+  params,
+}: {
+  params: Promise<{ locale: Locale }>
+}) {
+  const { locale } = await params
 
-        {reviews.length > 0 ? (
-          <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3 mb-6">
-            {reviews.map((review) => (
-              <ReviewCard key={review.id} review={review} />
-            ))}
-          </div>
-        ) : (
-          <p className="py-20 text-center text-white/50">Пока нет отзывов.</p>
-        )}
-
-        <BackHomeButton />
-      </PageContainer>
-    </div>
-  )
+  return <ReviewsPage locale={locale} />
 }

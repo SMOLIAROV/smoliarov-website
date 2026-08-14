@@ -5,12 +5,15 @@ import { TimelineStepProps } from "../types"
 
 export function TimelineStep({ step, index }: TimelineStepProps) {
   return (
-    <div className="relative flex flex-col gap-6 lg:flex-row lg:gap-14">
+    <div className="relative flex flex-col gap-6 lg:flex-row lg:gap-8 xl:gap-12">
       <TimelineStepCounter index={index} />
 
-      <div className="flex-1">
-        <div className="flex flex-col lg:flex-row lg:items-center gap-8 lg:gap-12 rounded-2xl border border-foreground/15 bg-black p-6 md:p-8">
-          <TimelineStepHeader index={index} step={step} />
+      <div className="min-w-0 flex-1">
+        <div className="flex min-w-0 flex-col overflow-hidden rounded-2xl border border-foreground/15 bg-black lg:flex-row lg:items-stretch lg:gap-6 xl:gap-10 p-6 md:p-8">
+          <div className="min-w-0 flex-1">
+            <TimelineStepHeader index={index} step={step} />
+          </div>
+
           <TimelineStepImage step={step} />
         </div>
       </div>

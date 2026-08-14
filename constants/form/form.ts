@@ -1,7 +1,7 @@
 import * as z from "zod"
 
 export const FORM_PARAMS = {
-  PROJECT_TYPE: "project",
+  SOLUTION_TYPE: "solution",
   BUDGET_TYPE: "budget",
 } as const
 
@@ -21,11 +21,11 @@ export const createFormSchema = (dict: any) =>
           "Введите корректный адрес электронной почты"
       ),
     phone: z.string().optional().or(z.literal("")),
-    project_type: z
+    solution_type: z
       .string()
       .min(
         1,
-        dict.contact_form?.validation?.project_type ||
+        dict.contact_form?.validation?.solution_type ||
           "Пожалуйста, выберите тип проекта"
       ),
     budget: z.string().optional().or(z.literal("")),

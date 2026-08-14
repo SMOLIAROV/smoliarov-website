@@ -13,7 +13,7 @@ import { contactFormGoal } from "@/lib/yandex-metrics-goals/contact_form"
 
 type SubmitStatus = "idle" | "success" | "error"
 
-export function useContactForm() {
+export function useContactForm(defaultSolutionType?: string) {
   const dict = useDict()
   const formSchema = createContactFormSchema(dict)
 
@@ -26,7 +26,7 @@ export function useContactForm() {
       name: "",
       email: "",
       phone: "",
-      project_type: "",
+      solution_type: defaultSolutionType ?? "",
       budget: "",
       message: "",
       consent_privacy: false,
@@ -69,7 +69,7 @@ export function useContactForm() {
         name: "",
         email: "",
         phone: "",
-        project_type: "",
+        solution_type: "",
         budget: "",
         message: "",
         consent_privacy: false,

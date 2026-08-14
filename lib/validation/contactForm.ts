@@ -1,15 +1,16 @@
 import { z } from "zod"
-import { PROJECT_TYPE_VALUES } from "@/constants/project/projects"
 import { Dictionary } from "../i18n/dictionaries"
+import { SOLUTION_TYPE_VALUES } from "@/constants/solution/solution.data"
 
 export const createContactFormSchema = (dict: Dictionary) => {
   const messages = {
     nameRequired: dict.contact_form.fields.name.errors.required,
+    nameMax: dict.contact_form.fields.name.errors.max,
     nameLetters: dict.contact_form.fields.name.errors.invalid,
     email: dict.contact_form.fields.email.errors.invalid,
     phone: dict.contact_form.fields.phone.errors.invalid,
-    projectRequired: dict.contact_form.fields.project_type.errors.required,
-    projectInvalid: dict.contact_form.fields.project_type.errors.invalid,
+    solutionRequired: dict.contact_form.fields.solution_type.errors.required,
+    solutionInvalid: dict.contact_form.fields.solution_type.errors.invalid,
     messageMin: dict.contact_form.fields.message.errors.min,
     messageMax: dict.contact_form.fields.message.errors.max,
     consentPrivacy: dict.contact_form.fields.consent_privacy.errors.required,
@@ -20,6 +21,7 @@ export const createContactFormSchema = (dict: Dictionary) => {
     name: z
       .string()
       .min(2, messages.nameRequired)
+      .max(15, messages.nameMax)
       .regex(/^[a-zA-Zа-яА-ЯёЁіІўЎ\s'-]+$/, messages.nameLetters),
 
     email: z.string().email(messages.email),
@@ -36,11 +38,11 @@ export const createContactFormSchema = (dict: Dictionary) => {
         { message: messages.phone }
       ),
 
-    project_type: z
+    solution_type: z
       .string()
-      .min(1, messages.projectRequired)
-      .refine((value) => (PROJECT_TYPE_VALUES as string[]).includes(value), {
-        message: messages.projectInvalid,
+      .min(1, messages.solutionRequired)
+      .refine((value) => (SOLUTION_TYPE_VALUES as string[]).includes(value), {
+        message: messages.solutionInvalid,
       }),
 
     budget: z.string().optional().or(z.literal("")),
@@ -72,7 +74,7 @@ export const contactFormServerSchema = z.object({
   name: z
     .string()
     .min(2)
-    .max(100)
+    .max(15)
     .regex(/^[a-zA-Zа-яА-ЯёЁіІўЎ\s'-]+$/),
 
   email: z.string().email().max(255),
@@ -87,10 +89,10 @@ export const contactFormServerSchema = z.object({
       return /^\+?375\s?\d{2}\s?\d{3}\s?\d{2}\s?\d{2}$/.test(value)
     }),
 
-  project_type: z
+  solution_type: z
     .string()
     .min(1)
-    .refine((value) => (PROJECT_TYPE_VALUES as string[]).includes(value)),
+    .refine((value) => (SOLUTION_TYPE_VALUES as string[]).includes(value)),
 
   budget: z.string().max(50).optional().or(z.literal("")),
 

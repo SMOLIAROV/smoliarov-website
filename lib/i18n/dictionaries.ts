@@ -1,7 +1,8 @@
 import type { Locale } from "./config"
 
-import ru from "./dictionaries/ru.json"
-import en from "./dictionaries/en.json"
+import ru from "./dictionaries/ru"
+import en from "./dictionaries/en"
+import { ERRORS } from "../errors"
 
 const dictionaries = {
   ru,
@@ -14,7 +15,7 @@ export function getDictionary(locale: Locale): Dictionary {
   const dictionary = dictionaries[locale]
 
   if (!dictionary) {
-    throw new Error(`Dictionary not found for locale: ${locale}`)
+    throw new Error(`${ERRORS.I18N.NOT_FOUND}: ${locale}`)
   }
 
   return dictionary

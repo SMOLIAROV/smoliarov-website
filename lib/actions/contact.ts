@@ -18,7 +18,7 @@ export async function submitContactForm(data: unknown) {
       name: validated.data.name,
       email: validated.data.email,
       phone: validated.data.phone || undefined,
-      project_type: validated.data.project_type,
+      solution_type: validated.data.solution_type,
       budget: validated.data.budget || undefined,
       message: validated.data.message,
       consent_privacy: validated.data.consent_privacy,

@@ -1,4 +1,4 @@
-import { Solution } from "@/constants/solutions/solutions.data"
+import { Solution } from "@/constants/solution/types"
 
 export interface SolutionCardProps {
   solution: Solution

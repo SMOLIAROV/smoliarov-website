@@ -10,7 +10,7 @@ export function WorkflowMobileSliderHeader({
   step: WorkflowStep
 }) {
   return (
-    <div className="p-6">
+    <div className="p-5 sm:p-5 md:p-6">
       <WorkflowMobileSliderCounter index={index} />
 
       <h3 className="text-2xl font-display tracking-tight mb-4">
