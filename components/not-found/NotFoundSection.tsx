@@ -12,7 +12,9 @@ import NotFoundImage from "@/public/images/not-found-portal.png"
 export function NotFoundSection() {
   return (
     <section className="relative min-h-screen flex flex-col overflow-hidden bg-black">
-      <HeroBackground image_url={NotFoundImage.src} />
+      <div className="absolute inset-x-0 top-0 z-0">
+        <HeroBackground image_url={NotFoundImage.src} />
+      </div>
 
       <PageContainer className="relative z-10 flex flex-1 flex-col">
         <div className="pt-8 md:pt-10">

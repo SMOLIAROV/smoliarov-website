@@ -47,7 +47,7 @@ export const siteMetadata: Metadata = {
         url: OgImage.src,
         width: 1200,
         height: 630,
-        alt: "SMOLIAROV — Разработка сайтов и автоматизация бизнеса",
+        alt: "Разработка сайтов и бизнес-сервисов под ключ — SMOLIAROV",
       },
     ],
   },

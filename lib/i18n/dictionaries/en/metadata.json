@@ -1,28 +1,50 @@
 {
   "home": {
-    "title": "Website, CRM, Telegram Bot Development & Business Automation",
-    "description": "We develop websites, CRM systems, web applications, Telegram bots, and digital solutions for businesses. We automate sales, lead management, and business processes."
+    "title": "Website Development, Business Services & Automation",
+    "description": "We build websites, web services, CRM systems and Telegram bots for businesses. Automate sales, lead management and business processes with solutions tailored to your needs."
   },
   "reviews": {
     "title": "Client Reviews",
-    "description": "Client reviews of our website, web application, Telegram bot, and business automation development services."
+    "description": "Client reviews of our website development, web services, CRM, Telegram bot and business automation projects."
+  },
+  "solution": {
+    "website": {
+      "title": "Website Development for Businesses",
+      "description": "We build business websites from scratch, including corporate websites, landing pages and catalogs. We focus on structure, responsive design and a reliable launch."
+    },
+    "service": {
+      "title": "Service and WEB-Application Development",
+      "description": "We develop custom web services for business processes, including client portals, dashboards, online platforms and internal business systems."
+    },
+    "bot": {
+      "title": "Telegram Bot Development for Businesses",
+      "description": "We build Telegram bots for leads, sales, customer support and business automation. Integrate your bot with CRM systems, websites and other services."
+    },
+    "automation": {
+      "title": "Business Process Automation",
+      "description": "We automate repetitive business processes such as lead management, sales, employee workflows, notifications and data exchange between services."
+    },
+    "custom": {
+      "title": "Custom Software Development for Businesses",
+      "description": "We develop custom digital solutions for complex business needs, including internal systems, software, web services and process automation."
+    }
   },
   "legal": {
     "privacy": {
       "title": "Privacy Policy",
-      "description": "Privacy Policy of the SMOLIAROV website."
+      "description": "Privacy policy and personal data processing information for the SMOLIAROV website."
     },
     "cookies": {
       "title": "Cookie Policy",
-      "description": "Cookie Policy of the SMOLIAROV website."
+      "description": "Information about the use of cookies on the SMOLIAROV website."
     },
     "offer": {
       "title": "Public Offer",
-      "description": "Public Offer of the SMOLIAROV website."
+      "description": "Terms of the public offer for website development, business services and digital solutions by SMOLIAROV."
     },
     "free_domain_and_hosting": {
-      "title": "Promotion Terms: Free Domain and Hosting for One Month with Website Development",
-      "description": "Terms of the promotion offering a free domain and one month of hosting with a website development order."
+      "title": "Free Domain & Hosting — Promotion Terms",
+      "description": "Promotion terms: get a domain and one month of hosting free when ordering website development from SMOLIAROV."
     }
   }
 }
