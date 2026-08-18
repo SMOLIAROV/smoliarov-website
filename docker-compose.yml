@@ -11,6 +11,3 @@ services:
 
     env_file:
       - .env.docker
-
-volumes:
-  redis_data:
