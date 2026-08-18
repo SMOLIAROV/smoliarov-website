@@ -68,6 +68,9 @@ jobs:
 
             cd ${{ secrets.PROJECT_PATH }}
 
+            git fetch origin main
+            git reset --hard origin/main
+
             docker compose --env-file .env.docker pull
             docker compose --env-file .env.docker up -d --no-build
 
