@@ -12,10 +12,5 @@ services:
     env_file:
       - .env.docker
 
-    environment:
-      NODE_ENV: ${NODE_ENV}
-      API_URL: ${API_URL}
-      REDIS_URL: ${REDIS_URL}
-
 volumes:
   redis_data:

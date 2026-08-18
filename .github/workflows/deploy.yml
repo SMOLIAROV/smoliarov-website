@@ -69,6 +69,6 @@ jobs:
             cd ${{ secrets.PROJECT_PATH }}
 
             docker compose --env-file .env.docker pull
-            docker compose --env-file .env.docker up -d
+            docker compose --env-file .env.docker up -d --no-build
 
             docker image prune -f
