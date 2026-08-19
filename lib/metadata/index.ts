@@ -1,5 +1,5 @@
 import type { Metadata } from "next"
-import Favicon from "@/public/images/metadata/favicon.ico"
+import Favicon from "@/app/favicon.ico"
 import AppleTouchIcon from "@/public/images/metadata/apple-touch-icon.png"
 import OgImage from "@/public/images/metadata/og-image.png"
 import { metadataConfigs } from "./config"

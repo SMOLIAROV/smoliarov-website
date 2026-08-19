@@ -44,7 +44,7 @@ export default [
   },
 
   {
-    files: ["scripts/**/*.mjs"],
+    files: ["runserver.mjs", "scripts/**/*.mjs"],
     languageOptions: {
       ecmaVersion: "latest",
       sourceType: "module",

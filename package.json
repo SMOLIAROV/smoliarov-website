@@ -1,5 +1,6 @@
 {
   "scripts": {
+    "server": "node ./runserver.mjs",
     "dev": "next dev",
     "build": "next build",
     "start": "next start",

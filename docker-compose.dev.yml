@@ -2,12 +2,21 @@ services:
   app:
     container_name: web
 
-    image: ghcr.io/lilscottypippen/smoliarov.site-v2:latest
+    build:
+      context: .
+      dockerfile: Dockerfile
+
+      args:
+        NEXT_PUBLIC_SITE_URL: ${NEXT_PUBLIC_SITE_URL}
+        NEXT_PUBLIC_CURRENCY: ${NEXT_PUBLIC_CURRENCY}
 
     expose:
       - "3000"
 
     restart: unless-stopped
+
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
 
     env_file:
       - .env.docker
@@ -17,17 +26,13 @@ services:
     container_name: web-nginx
 
     ports:
-      - "80:80"
-      - "443:443"
+      - "8080:80"
 
     depends_on:
       - app
 
     volumes:
-      - ./nginx/prod.conf:/etc/nginx/nginx.conf:ro
-
-      - /etc/letsencrypt:/etc/letsencrypt:ro
-
+      - ./nginx/dev.conf:/etc/nginx/nginx.conf:ro
       - nginx-cache:/var/cache/nginx
 
     restart: unless-stopped
