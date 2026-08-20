@@ -17,12 +17,10 @@ export function ReviewCardFooterAvatar({ review }: ReviewCardProps) {
           <User className="h-6 w-6 text-white/40" />
         </div>
       ) : (
-        <Image
+        <img
           src={review.avatar}
           alt={review.name}
-          fill
-          className="object-cover"
-          sizes="48px"
+          className="h-full w-full object-cover"
           onError={() => setHasError(true)}
         />
       )}
