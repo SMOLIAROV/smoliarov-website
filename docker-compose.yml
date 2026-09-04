@@ -2,7 +2,7 @@ services:
   app:
     container_name: web
 
-    image: ghcr.io/lilscottypippen/smoliarov.site-v2:latest
+    image: ghcr.io/smoliarov/smoliarov-website:latest
 
     expose:
       - "3000"
