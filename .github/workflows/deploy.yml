@@ -14,7 +14,7 @@ permissions:
   packages: write
 
 env:
-  IMAGE_NAME: ghcr.io/lilscottypippen/smoliarov.site-v2
+  IMAGE_NAME: ghcr.io/smoliarov/smoliarov-website
 
 jobs:
   build:
