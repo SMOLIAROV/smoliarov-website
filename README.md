@@ -1,4 +1,4 @@
-<img width="1536" height="1024" alt="Group 59" src="https://github.com/user-attachments/assets/6593113f-b17f-4726-bf17-eaedfedc3fd3" />
+<img width="1536" height="1024" alt="Banner" src="https://github.com/user-attachments/assets/edd399ac-03c7-4eba-89bd-6ba4c8871263" />
 
 ## About
 
